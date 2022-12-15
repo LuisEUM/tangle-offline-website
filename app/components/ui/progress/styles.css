@@ -1,0 +1,92 @@
+.progress {
+  display: flex;
+  filter: drop-shadow(0px 0px 20px #00ade4);
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.progress svg {
+  /* background: blue; */
+  filter: drop-shadow(0px 0px 3px #00ade4);
+}
+
+line {
+  stroke-dashoffset: 0;
+  stroke-width: 2px;
+  fill: none;
+}
+
+.bg {
+  stroke: #00ade4;
+  opacity: 0.2;
+}
+
+.progress .indicator {
+  stroke: #00ade4;
+}
+
+/* horizontal */
+
+.progress.horizontal{
+  display: flex;
+  filter: drop-shadow(0px 0px 20px red);
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.progress.horizontal svg{
+  /* background: blue; */
+  filter: drop-shadow(0px 0px 3px red);
+}
+
+line.horizontal{
+  stroke-dashoffset: 0;
+  stroke-width: 1px;
+  fill: none;
+}
+
+.bg.horizontal{
+  stroke: red;
+  opacity: 0.2;
+}
+
+
+
+
+/* curve */
+
+.progress.curve{
+  display: flex;
+  filter: drop-shadow(0px 0px 20px red);
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.progress.curve svg{
+  /* background: blue; */
+  filter: drop-shadow(0px 0px 3px red);
+}
+
+line.curve{
+  stroke-dashoffset: 0;
+  stroke-width: 2px;
+  fill: none;
+}
+
+.bg.curve{
+  stroke: red;
+  opacity: 0.2;
+}
+
+.progress .indicator.horizontal{
+  stroke: red;
+}
