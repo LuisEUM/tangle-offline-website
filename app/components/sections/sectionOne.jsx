@@ -93,12 +93,12 @@ export default function SectionOne () {
               <WordsAnimation className='text-base sm:text-xl md:text-2xl lg:text-3xl font-title' text='The offline world wide wed' tag='h2' />
             </motion.div>
             <motion.div>
-              <WordsAnimation className='mt-2 mb-5 text-base max-w-3xl' text='A real-life social network to meet people, discover your city, and engage in offline activities.' />
+              <WordsAnimation className='mt-2 mb-5 text-base max-w-3xl' text='A real-life social network to meet people, discover your city, and engage in offline hola.' />
             </motion.div>
           </motion.div>
           <motion.div variants={fadeInAnimation} className='flex flex-row align-top items-start '>
 
-            <motion.div variants={fadeInAnimation} className='relative mt-5 z-50'>
+            <motion.div variants={fadeInAnimation} className='relative mt-10 z-50'>
 
               <motion.div variants={child} className=' flex ml-12 -mb-12 gap-4 align-top items-start absolute -top-6  z-10 '>
                 <ButtonApps type='apple' />

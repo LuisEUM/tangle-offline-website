@@ -36,7 +36,6 @@ export default function WordsAnimation ({ text, tag, className }) {
   if (tag === 'h1') {
     return (
       <motion.h1
-        style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
         className={`${className}`}
         variants={container}
         initial='hidden'
@@ -48,7 +47,6 @@ export default function WordsAnimation ({ text, tag, className }) {
   } else if (tag === 'h2') {
     return (
       <motion.h2
-        style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
         className={`${className}`}
         variants={container}
         initial='hidden'
@@ -60,7 +58,6 @@ export default function WordsAnimation ({ text, tag, className }) {
   } else if (tag === 'h3') {
     return (
       <motion.h3
-        style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
         className={`${className}`}
         variants={container}
         initial='hidden'
@@ -72,7 +69,6 @@ export default function WordsAnimation ({ text, tag, className }) {
   } else if (tag === 'h4') {
     return (
       <motion.h4
-        style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
         className={`${className}`}
         variants={container}
         initial='hidden'
@@ -84,7 +80,6 @@ export default function WordsAnimation ({ text, tag, className }) {
   } else if (tag === 'h5') {
     return (
       <motion.h5
-        style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
         className={`${className}`}
         variants={container}
         initial='hidden'
@@ -96,7 +91,6 @@ export default function WordsAnimation ({ text, tag, className }) {
   } else if (tag === 'h6') {
     return (
       <motion.h6
-        style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
         className={`${className}`}
         variants={container}
         initial='hidden'
@@ -108,8 +102,7 @@ export default function WordsAnimation ({ text, tag, className }) {
   } else {
     return (
       <motion.p
-        style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
-        className={`${className}`}
+        className={`${className} `}
         variants={container}
         initial='hidden'
         animate='visible'
@@ -127,7 +120,7 @@ function Item ({ words, child, className }) {
         variants={child}
         style={{ marginRight: '5px' }}
         key={index}
-        className={`${className}`}
+        className={`${className} inline-flex`}
       >
         {word + '\u00A0'}
       </motion.span>

@@ -124,7 +124,7 @@ export default function LettersAnimation ({ text, tag, className }) {
 function Item ({ letters, child, className }) {
   return (
     letters.map((letter, index) => (
-      <motion.span variants={child} key={index} className={className}>
+      <motion.span variants={child} key={index} className={`${className} inline-flex`}>
         {letter === ' ' ? '\u00A0' : letter}
       </motion.span>
     ))
