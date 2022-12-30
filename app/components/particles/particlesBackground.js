@@ -25,7 +25,7 @@ const ParticlesBackground = () => {
       options={{
         background: {
           color: {
-            value: 'transparent'
+            value: ' transparent'
           }
         },
         fullScreen: {

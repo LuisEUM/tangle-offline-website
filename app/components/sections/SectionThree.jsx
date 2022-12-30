@@ -47,8 +47,8 @@ export default function SectionThree () {
                         <motion.div className='max-w-full'>
                           <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-title' text='Problem' tag='h4' />
                         </motion.div>
-                        <motion.div className='max-w-full'>
-                          <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body' text='Find people to hang out with, have social interactions, think creatively, and build strong communication skills. Do all of this, and more, on Tangle, by joining events and taking part in activities happening all around your city.' tag='p' />
+                        <motion.div className='max-w-full pr-2'>
+                          <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body ' text='Find people to hang out with, have social interactions, think creatively, and build strong communication skills. Do all of this, and more, on Tangle, by joining events and taking part in activities happening all around your city.' tag='p' />
                         </motion.div>
                       </div>
                     </div>

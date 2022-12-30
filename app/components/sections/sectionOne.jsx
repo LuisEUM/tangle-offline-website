@@ -93,7 +93,7 @@ export default function SectionOne () {
 
             </motion.div>
             <motion.div className='w-4/5 md:w-3/4 lg:w-1/2 mt-5 mb-12'>
-              <WordsAnimation className='text-lg  md:text-2xl lg:text-3xl font-body' text='A real-life social network to meet people, discover your city, and engage in offline.' tag='p' />
+              <WordsAnimation className='font-normal text-base  md:text-2xl lg:text-3xl font-body' text='A real-life social network to meet people, discover your city, and engage in offline.' tag='p' />
             </motion.div>
           </motion.div>
           <motion.div variants={fadeInAnimation} className='flex flex-row align-top items-start '>

@@ -38,9 +38,9 @@ export default function SectionTwo () {
                       <Ellipse icon='heart' className='h-16 p-12 my-5 max-w-[30px] ' />
                     </div>
                     <div className='bg-red- py-5'>
-                      <div className='lg:w-3/4 mt-5 flex flex-col align-middle justify-start'>
-                        <motion.div>
-                          <WordsAnimation className='text-lg md:text-2xl lg:text-3xl font-title' text='Tangle Offline is changing how people interact' tag='h4' />
+                      <div className=' mt-5 flex flex-col align-middle justify-start'>
+                        <motion.div className='pr-2'>
+                          <WordsAnimation className='text-lg md:text-2xl lg:text-3xl font-title ' text='Tangle Offline is changing how people interact' tag='h4' />
                         </motion.div>
                         <motion.div>
                           <h3 className='mt-2 text-3xl md:text-6xl lg:text-6xl font-bold '>We bring <span className='text-tangle-cyan-process'>thousands</span>  <br /> of people out to <em>{first}</em></h3>
