@@ -2,13 +2,73 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 export default function LettersAnimation ({ text, tag, className }) {
-  const letters = Array.from(text)
+  const words = text.split(' ')
 
+  if (tag === 'h1') {
+    return (
+      <h1
+        className={`${className}`}
+      >
+        <Item words={words} className={className} />
+      </h1>
+    )
+  } else if (tag === 'h2') {
+    return (
+      <h2
+        className={`${className}`}
+      >
+        <Item words={words} className={className} />
+      </h2>
+    )
+  } else if (tag === 'h3') {
+    return (
+      <h3
+        className={`${className}`}
+      >
+        <Item words={words} className={className} />
+      </h3>
+    )
+  } else if (tag === 'h4') {
+    return (
+      <h4
+        className={`${className}`}
+      >
+        <Item words={words} className={className} />
+      </h4>
+    )
+  } else if (tag === 'h5') {
+    return (
+      <h5
+        className={`${className}`}
+      >
+        <Item words={words} className={className} />
+      </h5>
+    )
+  } else if (tag === 'h6') {
+    return (
+      <h6
+        className={`${className}`}
+      >
+        <Item words={words} className={className} />
+      </h6>
+    )
+  } else {
+    return (
+      <p
+        className={`${className}`}
+      >
+        <Item words={words} className={className} />
+      </p>
+    )
+  }
+}
+
+function Item ({ words, className }) {
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.12, delayChildren: 0.04 * i }
+      transition: { staggerChildren: 0.15, delayChildren: 0.5 * i }
     })
   }
 
@@ -35,99 +95,30 @@ export default function LettersAnimation ({ text, tag, className }) {
     }
   }
 
-  if (tag === 'h1') {
-    return (
-      <motion.h1
-        style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
-        variants={container}
-        initial='hidden'
-        animate='visible'
-        className={`${className}`}
-      >
-        <Item letters={letters} child={child} className={className} />
-      </motion.h1>
-    )
-  } else if (tag === 'h2') {
-    return (
-      <motion.h2
-        style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
-        variants={container}
-        initial='hidden'
-        animate='visible'
-        className={`${className}`}
-      >
-        <Item letters={letters} child={child} className={className} />
-      </motion.h2>
-    )
-  } else if (tag === 'h3') {
-    return (
-      <motion.h3
-        style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
-        variants={container}
-        initial='hidden'
-        animate='visible'
-        className={`${className}`}
-      >
-        <Item letters={letters} child={child} className={className} />
-      </motion.h3>
-    )
-  } else if (tag === 'h4') {
-    return (
-      <motion.h4
-        style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
-        variants={container}
-        initial='hidden'
-        animate='visible'
-        className={`${className}`}
-      >
-        <Item letters={letters} child={child} className={className} />
-      </motion.h4>
-    )
-  } else if (tag === 'h5') {
-    return (
-      <motion.h5
-        style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
-        variants={container}
-        initial='hidden'
-        animate='visible'
-        className={`${className}`}
-      >
-        <Item letters={letters} child={child} className={className} />
-      </motion.h5>
-    )
-  } else if (tag === 'h6') {
-    return (
-      <motion.h6
-        style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
-        variants={container}
-        initial='hidden'
-        animate='visible'
-        className={`${className}`}
-      >
-        <Item letters={letters} child={child} className={className} />
-      </motion.h6>
-    )
-  } else {
-    return (
-      <motion.p
-        style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
-        variants={container}
-        initial='hidden'
-        animate='visible'
-        className={`${className}`}
-      >
-        <Item letters={letters} child={child} className={className} />
-      </motion.p>
-    )
-  }
-}
-
-function Item ({ letters, child, className }) {
   return (
-    letters.map((letter, index) => (
-      <motion.span variants={child} key={index} className={`${className} inline-flex`}>
-        {letter === ' ' ? '\u00A0' : letter}
-      </motion.span>
-    ))
+    <motion.span variants={container} initial='hidden' animate='visible'>
+      {words.map((word, index) => {
+        if (word === '<br/>') {
+          return <br key={index} />
+        }
+        return (
+          <motion.span
+            key={index}
+            style={{ marginRight: '5px' }}
+            className={`${className} inline-flex`}
+          >
+            {word.split('').map((letter, i) => (
+              <motion.span
+                variants={child}
+                key={i}
+              >
+                {letter}
+              </motion.span>
+            ))}
+            {'\u00A0'}
+          </motion.span>
+        )
+      })}
+    </motion.span>
   )
 }

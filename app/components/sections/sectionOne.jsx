@@ -89,9 +89,7 @@ export default function SectionOne () {
               <LettersAnimation className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-title' text='Tangle' tag='h1' />
             </motion.div> */}
             <motion.div>
-              <LettersAnimation className='text-4xl md:text-6xl lg:text-7xl font-title' text='The offline' tag='h2' />
-              <LettersAnimation className='text-4xl md:text-6xl lg:text-7xl font-title' text='world wide wed' tag='h2' />
-
+              <LettersAnimation className='text-4xl md:text-6xl lg:text-7xl font-title' text='The offline <br/> world wide wed' tag='h2' />
             </motion.div>
             <motion.div className='w-4/5 md:w-3/4 lg:w-1/2 mt-5 mb-12'>
               <WordsAnimation className='font-normal text-base  md:text-2xl lg:text-3xl font-body' text='A real-life social network to meet people, discover your city, and engage in offline.' tag='p' />

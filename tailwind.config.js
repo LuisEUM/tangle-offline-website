@@ -18,7 +18,8 @@ module.exports = {
       },
       backgroundImage: {
         'hero-desktop': "url('/backgrounds/girlWalkingPhone.jpeg')",
-        'hero-mobile': "url('/backgrounds/girlWalkingPhoneCentered.jpeg')"
+        'hero-mobile': "url('/backgrounds/girlWalkingPhoneCentered.jpeg')",
+        'img-coffe': "url('/backgrounds/partneringWithOfflineBusinesses.png')"
       }
     }
   },

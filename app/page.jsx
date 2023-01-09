@@ -8,6 +8,11 @@ import SectionSix from './components/sections/SectionSix'
 import SectionSeven from './components/sections/SectionSeven'
 import SectionEight from './components/sections/SectionEight'
 import StarsBackground from './components/particles/startsBackground'
+import SectionNine from './components/sections/SectionNine'
+import SectionTen from './components/sections/SectionTen'
+import SectionEleven from './components/sections/SectionEleven'
+import SectionTwelve from './components/sections/SectionTwelve'
+import SectionThirteen from './components/sections/SectionThirteen'
 
 export default function Homepage () {
   return (
@@ -42,7 +47,21 @@ export default function Homepage () {
             <StarsBackground />
           </div>
         </div>
-
+        <SectionAnimation>
+          <SectionNine />
+        </SectionAnimation>
+        <SectionAnimation>
+          <SectionTen />
+        </SectionAnimation>
+        <SectionAnimation>
+          <SectionEleven />
+        </SectionAnimation>
+        <SectionAnimation>
+          <SectionTwelve />
+        </SectionAnimation>
+        <SectionAnimation>
+          <SectionThirteen />
+        </SectionAnimation>
       </div>
     </div>
   )
