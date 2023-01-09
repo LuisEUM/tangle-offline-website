@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import LettersAnimation from '../ui/animation/lettersAnimation'
 import SectionAnimation from '../ui/animation/sectionsAnimation'
 import WordsAnimation from '../ui/animation/wordsAnimation'
 import ButtonApps from '../ui/buttons/buttonApps'
@@ -83,13 +84,13 @@ export default function SectionOne () {
     <motion.div variants={fadeInAnimationLong} initial='hidden' animate='visible' className='grid grid-cols-1 w-full '>
       <motion.div variants={fadeInAnimation} className='z-50 pt-[36rem] md:pt[42rem] lg:pt-96  bg-no-repeat lg:bg-right bg-center bg-cover bg-hero-mobile  lg:bg-hero-desktop '>
         <motion.div variants={titleVariants} initial='hidden' animate='visible' className='w-full  '>
-          <motion.div variants={fadeInAnimation} className=' px-4 md:px-14 lg:px-32 max-w-full'>
+          <motion.div variants={fadeInAnimation} className=' px-14 md:px-24 lg:px-40 max-w-full'>
             {/* <motion.div variants={fadeInAnimation} className='max-w-full '>
               <LettersAnimation className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-title' text='Tangle' tag='h1' />
             </motion.div> */}
             <motion.div>
-              <WordsAnimation className='text-4xl md:text-6xl lg:text-7xl font-title' text='The offline' tag='h2' />
-              <WordsAnimation className='text-4xl md:text-6xl lg:text-7xl font-title' text='world wide wed' tag='h2' />
+              <LettersAnimation className='text-4xl md:text-6xl lg:text-7xl font-title' text='The offline' tag='h2' />
+              <LettersAnimation className='text-4xl md:text-6xl lg:text-7xl font-title' text='world wide wed' tag='h2' />
 
             </motion.div>
             <motion.div className='w-4/5 md:w-3/4 lg:w-1/2 mt-5 mb-12'>
@@ -104,7 +105,7 @@ export default function SectionOne () {
                 <ButtonApps />
               </motion.div>
               <motion.div variants={fadeInAnimation} className='flex'>
-                <motion.div className='max-w-[42px] h-[150px] '>
+                <motion.div className='max-w-[42px] h-[150px]'>
                   <CurveLine />
                 </motion.div>
                 <motion.div className='max-w-[250px] h-[42px]'>

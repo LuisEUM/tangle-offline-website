@@ -14,7 +14,7 @@ export default function VerticalLine ({ color, heigth, width }) {
   return (
     <section
       style={{ minHeight: heigth, maxWidth: width }}
-      className=''
+      className='max-h-full'
     >
       <div ref={ref}>
         <figure
@@ -28,17 +28,17 @@ export default function VerticalLine ({ color, heigth, width }) {
             width='100%'
           >
             <line
-              x1='20'
+              x1='21'
               y1='0'
-              x2='20'
+              x2='21'
               y2={heigth}
               className='stroke-[2px] opacity-20'
               stroke={`${color}`}
             />
             <motion.line
-              x1='20'
+              x1='21'
               y1='0'
-              x2='20'
+              x2='21'
               y2={heigth}
               className='stroke-[2px] fill-none'
               stroke={`${color}`}

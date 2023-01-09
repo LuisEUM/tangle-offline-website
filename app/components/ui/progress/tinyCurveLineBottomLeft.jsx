@@ -27,7 +27,7 @@ export default function TinyCurveBottomLeft ({ color, heigth, width }) {
           >
             <path
               className={`stroke-[${color}] opacity-20 stroke-[2px]`}
-              d='M20,0C21,21 42,21 42,21'
+              d='M21,42c0-11.6-9.4-21-21-21'
               stroke={`${color}`}
               style={{ pathLength: scrollYProgress, filter: `drop-shadow(0px 0px 15px ${color})` }}
 
@@ -35,7 +35,7 @@ export default function TinyCurveBottomLeft ({ color, heigth, width }) {
             <motion.path
               className={`stroke-[${color}] stroke-[2px] fill-none]`}
               whileInView={{ pathLength: scrollYProgress }}
-              d='M20,0C21,21 42,21 42,21'
+              d='M21,42c0-11.6-9.4-21-21-21'
               stroke={`${color}`}
               style={{ pathLength: scrollYProgress, filter: `drop-shadow(0px 0px 15px ${color})` }}
             />

@@ -8,7 +8,7 @@ export default function LettersAnimation ({ text, tag, className }) {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.03, delayChildren: 0.04 * i }
+      transition: { staggerChildren: 0.12, delayChildren: 0.04 * i }
     })
   }
 
@@ -34,6 +34,7 @@ export default function LettersAnimation ({ text, tag, className }) {
       }
     }
   }
+
   if (tag === 'h1') {
     return (
       <motion.h1

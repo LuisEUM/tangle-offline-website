@@ -27,14 +27,14 @@ export default function CurvelLine ({ color }) {
           >
             <path
               className={`stroke-[${color}] opacity-20 stroke-[2px]`}
-              d='M43 20C43 20 20 20 20 41C20 61 20 120.667 20 900'
+              d='M42 20C40 20 21 21 21 41C20 61 21 121.667 21 900'
               stroke={`${color}`}
               style={{ pathLength: scrollYProgress, filter: `drop-shadow(0px 0px 15px ${color})` }}
             />
             <motion.path
               className={`stroke-[${color}] stroke-[2px] fill-none]`}
               whileInView={{ pathLength: scrollYProgress }}
-              d='M43 20C43 20 20 20 20 41C20 61 20 120.667 20 900'
+              d='M42 20C40 20 21 21 21 41C20 61 21 121.667 21 900'
               stroke={`${color}`}
               style={{ pathLength: scrollYProgress, filter: `drop-shadow(0px 0px 15px ${color})` }}
             />
