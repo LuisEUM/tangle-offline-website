@@ -19,11 +19,9 @@ export default function VerticalLine ({ color, heigth, width }) {
       <div ref={ref}>
         <figure
           style={{ filter: `drop-shadow(0px 0px 15px ${color})`, minHeight: heigth, minWidth: width }}
-          // className='bg-blue-400'
         >
           <svg
             style={{ filter: `drop-shadow(0px 0px 15px ${color})`, minHeight: heigth, minWidth: width }}
-            // className='bg-red-400'
             height='100%'
             width='100%'
           >
@@ -43,6 +41,7 @@ export default function VerticalLine ({ color, heigth, width }) {
               className='stroke-[2px] fill-none'
               stroke={`${color}`}
               style={{ pathLength: scrollYProgress }}
+              // transition={{ type: 'spring', damping: 12, stiffness: 100, duration: 4 }}
             />
           </svg>
         </figure>

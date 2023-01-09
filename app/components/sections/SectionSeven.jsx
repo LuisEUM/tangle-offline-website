@@ -11,7 +11,7 @@ export default function SectionSeven () {
       <motion.div className='  '>
         <div>
           <div className='flex gap-12 '>
-            <div className='bg- flex justify-center content-center  align-middle relative h-[500px] bg-green-'>
+            <div className='bg- flex justify-center content-center  align-middle relative h-[550px] bg-green-'>
               <div className='bg- flex justify-center content-center  align-middle gap-6 bg-blue-'>
                 <div className='bg-red- py-5 bg-red-'>
                   <div className='flex flex-col mt-10 align-middle content-top justify-top   pl-10'>
@@ -31,7 +31,7 @@ export default function SectionSeven () {
                 </div>
               </div>
               <div className='bg-yellow- flex absolute -z-30 right-5 top-0 '>
-                <VerticalLine color='rgb(1, 209, 46)' width={42} heigth={500} />
+                <VerticalLine color='rgb(1, 209, 46)' width={42} heigth={550} />
               </div>
             </div>
           </div>

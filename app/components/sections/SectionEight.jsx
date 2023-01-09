@@ -10,8 +10,8 @@ export default function SectionEight () {
     <div className='grid grid-cols-1 relative max-w-full'>
       <div className='flex w-full flex-col  max-w-full'>
         <div className='flex px-5 max-w-full relative mx-2 md:mx-14 lg:mx-32 '>
-          <div className=' '>
-            <div className='-rotate-90'>
+          <div className='ml-48 md:ml-0 lg:ml-0  '>
+            <div className='-scale-x-100'>
               <TinyCurveBottomLeft color='rgb(1, 209, 46)' heigth={42} width={42} />
             </div>
             <div className='md:max-h-60  overflow-hidden'>
@@ -21,14 +21,14 @@ export default function SectionEight () {
           <div className='w-1/2 max-w-full  h-[42px]  overflow-hidden'>
             <HorizonatalLineBottom heigth={42} width={3000} color='rgb(1, 209, 46)' />
           </div>
-          <div className='w-1/2 max-w-full  h-[42px]  overflow-hidden -rotate-180'>
+          <div className='w-1/2 max-w-full  h-[42px]  overflow-hidden -rotate-180 '>
             <HorizonatalLineBottom heigth={42} width={3000} color='rgb(1, 209, 46)' />
           </div>
-          <div className=' h-[42px] rotate-90'>
+          <div className=' h-[42px] -rotate-180 -scale-x-100'>
             <TinyCurveBottomLeft color='rgb(1, 209, 46)' heigth={42} width={42} />
           </div>
         </div>
-        <div className='flex flex-col w-full  items-center align-middle absolute top-0 -mt-28'>
+        <div className='flex flex-col w-full  items-center align-middle absolute top-0 -mt-28 px-5'>
           <div className='grid grid-cols-1 h-48 md:grid-cols-3 gap-y-5 gap-x-4 lg:gap-6 max-w-4xl'>
             <div className='gird grid-cols-1  shadow h-full bg-tangle-oxford-blue rounded-lg px-5 py-10 my-5'>
               <div className='flex flex-col align-middle content-center justify-center h-full'>
