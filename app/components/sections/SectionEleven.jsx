@@ -47,13 +47,13 @@ export default function SectionEleven () {
       animate={isInView ? 'visible' : 'hidden'}
       ref={ref}
     >
-      <motion.div className='h-full w-full row-span-1 col-span-2 rounded-2xl bg-no-repeat bg-center bg-cover bg-img-coffe' variants={child} />
-      <motion.div className='h-full w-full rounded-2xl bg-no-repeat bg-center bg-cover bg-img-coffe row-span-1' variants={child} />
-      <motion.div className='h-full w-full rounded-2xl bg-no-repeat bg-center bg-cover bg-img-coffe  row-span-2 col-span-1' variants={child} />
-      <motion.div className='h-full w-full rounded-2xl bg-no-repeat bg-center bg-cover bg-img-coffe col-span-3 row-span-2' variants={child} />
-      <motion.div className='h-full w-full rounded-2xl bg-no-repeat bg-center bg-cover bg-img-coffe row-span-1 col-span-1' variants={child} />
-      <motion.div className='h-full w-full rounded-2xl bg-no-repeat bg-center bg-cover bg-img-coffe row-span-1 col-span-2' variants={child} />
-      <motion.div className='h-full w-full rounded-2xl bg-no-repeat bg-center bg-cover bg-img-coffe row-span-1 col-span-2' variants={child} />
+      <motion.div className='h-full w-full row-span-1 col-span-2 rounded-2xl bg-no-repeat bg-center bg-cover bg-collage-1' variants={child} />
+      <motion.div className='h-full w-full rounded-2xl bg-no-repeat bg-center bg-cover bg-collage-2 row-span-1' variants={child} />
+      <motion.div className='h-full w-full rounded-2xl bg-no-repeat bg-center bg-cover bg-collage-3  row-span-2 col-span-1' variants={child} />
+      <motion.div className='h-full w-full rounded-2xl bg-no-repeat bg-center bg-cover bg-collage-4 col-span-3 row-span-2' variants={child} />
+      <motion.div className='h-full w-full rounded-2xl bg-no-repeat bg-center bg-cover bg-collage-5 row-span-1 col-span-1' variants={child} />
+      <motion.div className='h-full w-full rounded-2xl bg-no-repeat bg-center bg-cover bg-collage-6 row-span-1 col-span-2' variants={child} />
+      <motion.div className='h-full w-full rounded-2xl bg-no-repeat bg-center bg-cover bg-collage-7 row-span-1 col-span-2' variants={child} />
     </motion.div>
   )
 }

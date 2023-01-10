@@ -23,12 +23,8 @@ export default function SectionThree () {
   }, [])
 
   return (
-    <>
-      <div className='relative  '>
-        <SectionAnimation>
-          <VideoPlayer />
-        </SectionAnimation>
-      </div>
-    </>
+    <SectionAnimation>
+      <VideoPlayer />
+    </SectionAnimation>
   )
 }
