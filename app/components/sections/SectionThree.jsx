@@ -1,7 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
 import VideoPlayer from '../video-player/VideoPlayer'
-import SectionAnimation from '../ui/animation/sectionsAnimation'
 
 export default function SectionThree () {
   const wordArray = ['Clubbling', 'Bowling', 'Cafe', 'Restaurant', 'Boat', 'Tour']
@@ -23,8 +22,8 @@ export default function SectionThree () {
   }, [])
 
   return (
-    <SectionAnimation>
+    <>
       <VideoPlayer />
-    </SectionAnimation>
+    </>
   )
 }
