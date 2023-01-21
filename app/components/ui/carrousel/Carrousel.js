@@ -7,17 +7,18 @@ const variants = {
   enter: (direction) => {
     return {
       x: direction > 0 ? 1000 : -1000,
-      opacity: 0
+      opacity: 0,
+      zindex: 0
     }
   },
   center: {
-    zIndex: 1,
+    zindex: 1,
     x: 0,
     opacity: 1
   },
   exit: (direction) => {
     return {
-      zIndex: 0,
+      zindex: 0,
       x: direction < 0 ? 1000 : -1000,
       opacity: 0
     }
@@ -61,7 +62,6 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
                 className='absolute h-full w-full object-cover'
                 key={index}
                 src={image}
-                zIndex='1'
                 custom={direction}
                 variants={variants}
                 initial={!isCurrent ? 'enter' : 'center'}
@@ -150,13 +150,13 @@ Carrousel.propTypes = {
 //     }
 //   },
 //   center: {
-//     zIndex: 1,
+//     zindex: 1,
 //     x: 0,
 //     opacity: 1
 //   },
 //   exit: (direction) => {
 //     return {
-//       zIndex: 0,
+//       zindex: 0,
 //       x: direction < 0 ? 1000 : -1000,
 //       opacity: 0
 //     }

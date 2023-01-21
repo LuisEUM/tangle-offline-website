@@ -1,14 +1,25 @@
 'use client'
 import { motion } from 'framer-motion'
+import HorizonatalLine from '../ui/progress/horizonatalLine'
 import LettersAnimation from '../ui/animation/lettersAnimation'
 import SectionAnimation from '../ui/animation/sectionsAnimation'
 import WordsAnimation from '../ui/animation/wordsAnimation'
 import ButtonApps from '../ui/buttons/buttonApps'
-import CurveLine from '../ui/progress/curveLine'
-import HorizonatalLine from '../ui/progress/horizonatalLine'
+import CurveLineWithVertical from '../ui/progress/curveLineWithVertical'
 import SectionTwo from './SectionTwo'
+import { TaskContext } from '../../context/languageContext'
+import { useContext, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function SectionOne () {
+  const { textData } = useContext(TaskContext)
+  const pathname = usePathname()
+
+  useEffect(() => {
+    const finalText = getText(pathname, textData)
+    console.log(finalText)
+  }, [])
+
   const titleVariants = {
     hidden: {
       scale: 0.1,
@@ -82,7 +93,7 @@ export default function SectionOne () {
 
   return (
     <motion.div variants={fadeInAnimationLong} initial='hidden' animate='visible' className='grid grid-cols-1 w-full '>
-      <motion.div variants={fadeInAnimation} className='z-50 pt-[36rem] md:pt[42rem] lg:pt-96  bg-no-repeat lg:bg-right bg-center bg-cover bg-hero-mobile  lg:bg-hero-desktop '>
+      <motion.div variants={fadeInAnimation} className='z-40 pt-[36rem] md:pt[42rem] lg:pt-96  bg-no-repeat lg:bg-right bg-center bg-cover bg-hero-mobile  lg:bg-hero-desktop '>
         <motion.div variants={titleVariants} initial='hidden' animate='visible' className='w-full  '>
           <motion.div variants={fadeInAnimation} className=' px-14 md:px-24 lg:px-40 max-w-full'>
             {/* <motion.div variants={fadeInAnimation} className='max-w-full '>
@@ -104,10 +115,10 @@ export default function SectionOne () {
               </motion.div>
               <motion.div variants={fadeInAnimation} className='flex'>
                 <motion.div className='max-w-[42px] h-[150px]'>
-                  <CurveLine />
+                  <CurveLineWithVertical color='rgba(0,173,228,0.8)' />
                 </motion.div>
-                <motion.div className='max-w-[250px] h-[42px]'>
-                  <HorizonatalLine />
+                <motion.div className='-mt-[1px]'>
+                  <HorizonatalLine heigth={42} width={250} color='rgba(0,173,228,0.8)' />
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -124,4 +135,17 @@ export default function SectionOne () {
 
     </motion.div>
   )
+}
+
+function getText (pathname, textData) {
+  switch (pathname) {
+    case '/en':
+      return textData.home.en
+    case '/es':
+      return textData.home.es
+    case '/nl':
+      return textData.home.nl
+    default:
+      return textData.home.en
+  }
 }

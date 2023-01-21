@@ -1,0 +1,20 @@
+[
+  {
+    "id": "en",
+    "name_es": "Inglés",
+    "name_en": "English",
+    "name_nl": "Engels"
+  },
+  {
+    "id": "es",
+    "name_es": "Español",
+    "name_en": "Spanish",
+    "name_nl": "Spaans"
+  },
+  {
+    "id": "nl",
+    "name_es": "Neerlandés",
+    "name_en": "Dutch",
+    "name_nl": "Nederlands"
+  }
+]

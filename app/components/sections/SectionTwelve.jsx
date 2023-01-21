@@ -28,7 +28,7 @@ export default function SectionTwelve () {
                 </div>
               </div>
               <div className='bg-yellow- flex absolute -z-30 left-5 top-0'>
-                <VerticalLine width={42} heigth={325} />
+                <VerticalLine width={42} heigth={325} color='rgba(0,173,228,0.8)' />
               </div>
             </div>
           </div>

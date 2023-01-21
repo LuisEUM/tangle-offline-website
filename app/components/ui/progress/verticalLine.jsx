@@ -55,9 +55,3 @@ VerticalLine.propTypes = {
   heigth: PropTypes.number,
   width: PropTypes.number
 }
-
-VerticalLine.defaultProps = {
-  color: 'rgba(0,173,228,0.8)',
-  heigth: 150,
-  width: 42
-}

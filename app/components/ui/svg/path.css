@@ -1,0 +1,47 @@
+#path {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 100%
+}
+
+#path svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0
+}
+
+#path svg path {
+  width: 100%;
+  stroke: #0089cf;
+  stroke-width: 0.1em
+}
+
+@media (min-width: 1024px) {
+  #path svg path {
+    stroke-width: 0.03em
+  }
+}
+
+#path svg .animated-path {
+  width: 2.5em;
+  height: 2.5em
+}
+
+#path .path-wrapper {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  padding-bottom: 11%;
+}
+
+/* .path-wrapper {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 100%;
+} */

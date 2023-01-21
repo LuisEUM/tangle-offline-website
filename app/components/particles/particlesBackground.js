@@ -3,12 +3,9 @@
 import { useCallback } from 'react'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
-import './particles.css'
 
-const ParticlesBackground = () => {
+const ParticlesBackground = ({ id }) => {
   const particlesInit = useCallback(async engine => {
-    console.log(engine)
-
     await loadFull(engine)
   }, [])
 
@@ -18,8 +15,8 @@ const ParticlesBackground = () => {
 
   return (
     <Particles
-      id='tsparticles'
-      className='-z-10 h-full'
+      id={id}
+      className='-z-10 h-full absolute top-0 right-0 w-1/2 '
       init={particlesInit}
       loaded={particlesLoaded}
       options={{

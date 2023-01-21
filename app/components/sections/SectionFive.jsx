@@ -1,8 +1,8 @@
 'use client'
 import { useInView, motion } from 'framer-motion'
 import { useRef } from 'react'
-import HorizonatalLineBottom from '../ui/progress/horizonatalLineBottom'
-import TinyCurveBottomLeft from '../ui/progress/tinyCurveLineBottomLeft'
+import HorizonatalLine from '../ui/progress/horizonatalLine'
+import CurveLine from '../ui/progress/curveLine'
 import VerticalLine from '../ui/progress/verticalLine'
 
 export default function SectionFive () {
@@ -48,17 +48,17 @@ export default function SectionFive () {
       <div className='flex w-full flex-col  max-w-full'>
         <div className='flex pl-5 max-w-full relative mx-2 md:mx-14 lg:mx-32'>
           <div className='-rotate-180 h-[42px]'>
-            <TinyCurveBottomLeft color='red' heigth={42} width={42} />
+            <CurveLine color='red' heigth={42} width={42} />
           </div>
           <div className='w-1/2 max-w-full  h-[42px]  overflow-hidden'>
-            <HorizonatalLineBottom heigth={42} width={3000} color='red' />
+            <HorizonatalLine heigth={42} width={3000} color='red' />
           </div>
           <div className='w-1/2 max-w-full  h-[42px]  overflow-hidden -rotate-180'>
-            <HorizonatalLineBottom heigth={42} width={3000} color='red' />
+            <HorizonatalLine heigth={42} width={3000} color='red' />
           </div>
           <div className='mr-5 '>
             <div className='mr-48 md:mr-0 lg:mr-0'>
-              <TinyCurveBottomLeft color='red' heigth={42} width={42} />
+              <CurveLine color='red' heigth={42} width={42} />
               <div className=' md:max-h-60  overflow-hidden'>
                 <VerticalLine color='red' heigth={625} width={42} />
               </div>

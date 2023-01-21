@@ -1,7 +1,7 @@
 'use client'
 
-import HorizonatalLineBottom from '../ui/progress/horizonatalLineBottom'
-import TinyCurveBottomLeft from '../ui/progress/tinyCurveLineBottomLeft'
+import HorizonatalLine from '../ui/progress/horizonatalLine'
+import CurveLine from '../ui/progress/curveLine'
 import VerticalLine from '../ui/progress/verticalLine'
 import { Icon } from '../ui/svg/Icon'
 
@@ -12,20 +12,20 @@ export default function SectionEight () {
         <div className='flex px-5 max-w-full relative mx-2 md:mx-14 lg:mx-32 '>
           <div className='ml-48 md:ml-0 lg:ml-0  '>
             <div className='-scale-x-100'>
-              <TinyCurveBottomLeft color='rgb(1, 209, 46)' heigth={42} width={42} />
+              <CurveLine color='rgb(1, 209, 46)' heigth={42} width={42} />
             </div>
             <div className='md:max-h-60  overflow-hidden'>
               <VerticalLine color='rgb(1, 209, 46)' heigth={625} width={42} />
             </div>
           </div>
           <div className='w-1/2 max-w-full  h-[42px]  overflow-hidden'>
-            <HorizonatalLineBottom heigth={42} width={3000} color='rgb(1, 209, 46)' />
+            <HorizonatalLine color='rgb(1, 209, 46)' heigth={42} width={3000} />
           </div>
           <div className='w-1/2 max-w-full  h-[42px]  overflow-hidden -rotate-180 '>
-            <HorizonatalLineBottom heigth={42} width={3000} color='rgb(1, 209, 46)' />
+            <HorizonatalLine color='rgb(1, 209, 46)' heigth={42} width={3000} />
           </div>
           <div className=' h-[42px] -rotate-180 -scale-x-100'>
-            <TinyCurveBottomLeft color='rgb(1, 209, 46)' heigth={42} width={42} />
+            <CurveLine color='rgb(1, 209, 46)' heigth={42} width={42} />
           </div>
         </div>
         <div className='flex flex-col w-full  items-center align-middle absolute top-0 -mt-28 px-5'>

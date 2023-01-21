@@ -1,43 +1,39 @@
 'use client'
-
 import { useRef } from 'react'
 import { motion, useScroll } from 'framer-motion'
 import PropTypes from 'prop-types'
 
-export default function TinyCurveBottomRigth ({ color, heigth, width }) {
+export default function CurveLineWithVertical ({ color }) {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['50% 50%', 'end center']
+    offset: ['50% 100%', 'end center']
   })
-  // offset: ['50% 50%', 'end center']
-  // offset: ['0% 100%', 'center end'] nice
 
   return (
     <section
-      className=''
+      className='mb-16'
     >
       <motion.div ref={ref}>
         <figure
           style={{ filter: `drop-shadow(0px 0px 15px ${color})` }}
         >
           <svg
-            style={{ filter: `drop-shadow(0px 0px 15px ${color})`, minHeight: heigth, minWidth: width }}
+            style={{ filter: `drop-shadow(0px 0px 15px ${color})` }}
             width='42'
-            height='42'
+            height='150'
             fill='none'
           >
             <path
               className={`stroke-[${color}] opacity-20 stroke-[2px]`}
-              d='M20,43C20,20 1,20 0,20'
+              d='M42 20C40 20 21 21 21 41C20 61 21 121.667 21 900'
               stroke={`${color}`}
               style={{ pathLength: scrollYProgress, filter: `drop-shadow(0px 0px 15px ${color})` }}
-
             />
             <motion.path
               className={`stroke-[${color}] stroke-[2px] fill-none]`}
               whileInView={{ pathLength: scrollYProgress }}
-              d='M20,43C20,20 1,20 0,20'
+              d='M42 20C40 20 21 21 21 41C20 61 21 121.667 21 900'
               stroke={`${color}`}
               style={{ pathLength: scrollYProgress, filter: `drop-shadow(0px 0px 15px ${color})` }}
             />
@@ -48,14 +44,6 @@ export default function TinyCurveBottomRigth ({ color, heigth, width }) {
   )
 }
 
-TinyCurveBottomRigth.propTypes = {
-  color: PropTypes.string,
-  heigth: PropTypes.number,
-  width: PropTypes.number
-}
-
-TinyCurveBottomRigth.defaultProps = {
-  color: 'rgba(0,173,228,0.8)',
-  heigth: 42,
-  width: 42
+CurveLineWithVertical.propTypes = {
+  color: PropTypes.string
 }

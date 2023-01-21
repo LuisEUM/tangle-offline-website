@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         'tangle-oxford-blue': '#181F31',
         'tangle-rich-black-FOGBRA-29': '#0D111B',
-        'tangle-cyan-process': '#00ADE4'
+        'tangle-cyan-process': '#00ADE4',
+        'tangle-green-blue-crayola': '#0086D3'
       },
       fontFamily: {
         title: ['Righteous'],
