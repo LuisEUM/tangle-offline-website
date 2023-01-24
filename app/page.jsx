@@ -15,46 +15,46 @@ import SectionTwelve from './components/sections/SectionTwelve'
 import SectionThirteen from './components/sections/SectionThirteen'
 import SectionFifteen from './components/sections/SectionFifteen'
 import NavBar from './components/navbar/NavBar'
-import { TaskProvider } from './context/languageContext'
 import { useContext, useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { LanguageContext } from './context/languageContext'
 
 export default function Homepage () {
-  // const { textData } = useContext(TaskContext)
-  // const pathname = usePathname()
-  // const [text, setText] = useState(null)
+  const { textData } = useContext(LanguageContext)
+  const pathname = usePathname()
+  const [text, setText] = useState(null)
 
-  // useEffect(() => {
-  //   const finalText = getText(pathname, textData)
-  //   console.log(textData)
+  useEffect(() => {
+    const finalText = getText(pathname, textData)
+    console.log(textData)
 
-  //   setText(finalText)
-  // }, [])
+    setText(finalText)
+  }, [])
 
-  // if (text === null) {
-  //   return (<p>loading...</p>)
-  // }
+  if (text === null) {
+    return (<p>loading...</p>)
+  }
 
   // console.log(text)
 
   return (
-    <TaskProvider>
+    <>
       <div className='max-w-full'>
         <div className='grid grid-cols-1'>
           <div className='bg-red-700 z-50'>
             <NavBar />
           </div>
           <SectionAnimation>
-            <SectionOne />
+            <SectionOne text={[text[0], text[1]]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionThree />
+            <SectionThree text={text[2]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionFour />
+            <SectionFour text={text[3]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionFive />
+            <SectionFive text={text[4]} />
           </SectionAnimation>
           <SectionAnimation>
             <SectionSix />
@@ -95,7 +95,7 @@ export default function Homepage () {
           </div>
         </div>
       </div>
-    </TaskProvider>
+    </>
   )
 }
 

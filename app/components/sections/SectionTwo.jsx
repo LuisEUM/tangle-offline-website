@@ -6,19 +6,20 @@ import VerticalLine from '../ui/progress/verticalLine'
 import WordsAnimation from '../ui/animation/wordsAnimation'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import LettersAnimation from '../ui/animation/lettersAnimation'
 
-export default function SectionTwo () {
-  const wordArray = ['Clubbling', 'Bowling', 'Cafe', 'Restaurant', 'Boat', 'Tour']
-  const [first, setfirst] = useState(wordArray[0])
+export default function SectionTwo ({ text }) {
+  const activitiesArray = text.activities
+  const [activity, setActivity] = useState(text.activities[0])
 
   useEffect(() => {
     let count = 0
     setInterval(() => {
-      if (wordArray.length <= count) {
+      if (activitiesArray.length <= count) {
         count = 0
       }
 
-      setfirst(wordArray[count])
+      setActivity(activitiesArray[count])
       count++
     }, 3000)
 
@@ -40,10 +41,10 @@ export default function SectionTwo () {
                     <div className='bg-red- py-5'>
                       <div className=' mt-5 flex flex-col align-middle justify-start'>
                         <motion.div className='pr-5'>
-                          <WordsAnimation className='text-lg md:text-2xl lg:text-3xl font-title ' text='Tangle Offline is changing how people interact' tag='h4' />
+                          <WordsAnimation className='text-lg md:text-2xl lg:text-3xl font-title ' text={text.subHeader} tag='h4' />
                         </motion.div>
                         <motion.div>
-                          <h3 className='mt-2 mr-2 text-3xl md:text-6xl lg:text-6xl font-bold '>We bring <span className='text-tangle-cyan-process'>thousands</span>  <br /> of people out to <em>{first}</em></h3>
+                          <LettersAnimation className='mt-2 mr-2 text-3xl md:text-6xl lg:text-6xl font-bold ' text={`${text.header} <em> ${activity} </em>`} tag='h3' />
                           <div className='grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-20 max-h-[64px] mt-11'>
                             <div className='self-center'>
                               <Image src='/logos/merchantLogo4.png' alt='Logo The Amsterdam Dungeon' width={181} height={38} className='max-w-full max-h-full m-auto' />

@@ -1,10 +1,11 @@
+'use client'
 import { createContext } from 'react'
 import textDataAll from '../data/text.json'
 
-export const TaskContext = createContext()
+export const LanguageContext = createContext()
 
-export const TaskProvider = ({ children }) => {
+export const LanguageProvider = ({ children }) => {
   const textData = textDataAll
 
-  return <TaskContext.Provider value={{ textData }}>{children}</TaskContext.Provider>
+  return <LanguageContext.Provider value={{ textData }}>{children}</LanguageContext.Provider>
 }

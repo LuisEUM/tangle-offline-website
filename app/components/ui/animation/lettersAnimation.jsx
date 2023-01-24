@@ -101,6 +101,24 @@ function Item ({ words, className }) {
         if (word === '<br/>') {
           return <br key={index} />
         }
+        if (word === '<span>') {
+          return <motion.span key={index} variants={child} className='text-tangle-cyan-process'>{words[index + 1]}</motion.span>
+        }
+        if (words[index - 1] === '<span>') {
+          return ''
+        }
+        if (word === '</span>') {
+          return ''
+        }
+        if (word === '<em>') {
+          return <motion.em key={index} variants={child}>{words[index + 1]}</motion.em>
+        }
+        if (words[index - 1] === '<em>') {
+          return ''
+        }
+        if (word === '</em>') {
+          return ''
+        }
         return (
           <motion.span
             key={index}

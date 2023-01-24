@@ -3,20 +3,22 @@
     "en": [
       {
         "section": 1,
-        "header": "The offline world wide web",
+        "header": "The offline <br/> world wide web",
         "subHeader": "A real-life social network to meet people, discover your city and engage in offline.",
         "appleStore": "Comming Soon",
-        "playStore": "Comming Soon"
+        "appleStoreUrl": "#",
+        "playStore": "Comming Soon",
+        "playStoreUrl": "#"     
       },
       {
         "section": 2,
         "subHeader": "Tangle Offline is changing how people interact",
-        "header": "We bring thousands of people out to ",
+        "header": "We bring <span> thousands </span> <br/> of people out to",
         "activities": ["Bowling", "Cafe", "Restaurant", "Boat", "Tour", "Clubbling"]
       },
       {
         "section": 3,
-        "alt": "Tangle video about what matters the most"
+        "tittle": "Tangle video about what matters the most"
       },
       {
         "section": 4,
@@ -91,20 +93,22 @@
     "es": [
       {
         "section": 1,
-        "header": "La red mundial offline",
+        "header": "La red mundial <br/> offline",
         "subHeader": "Una red social real para conocer gente, descubrir tu ciudad y participar en actividades offline.",
         "appleStore": "Próximamente",
-        "playStore": "Próximamente"
+        "appleStoreUrl": "#",
+        "playStore": "Próximamente",
+        "playStoreUrl": "#"   
       },
       {
         "section": 2,
         "subHeader": "Tangle Offline está cambiando la forma de relacionarse",
-        "header": "Traemos a miles de personas a",
+        "header": "Traemos a <span> miles </span> <br/> de personas a",
         "activities": ["Bolera", "Cafetería", "Restaurante", "Barco", "Excursión", "Clubbling"]
-      },
+      }, 
       {
         "section": 3,
-        "alt": "Vídeo sobre lo que más importa"
+        "tittle": "Vídeo sobre lo que más importa"
       },
       {
         "section": 4,
@@ -179,20 +183,22 @@
     "nl": [
       {
         "section": 1,
-        "header": "Het offline wereld wijde web",
+        "header": "Het offline <br/> wereld wijde web",
         "subHeader": "Een real-life sociaal netwerk om mensen te ontmoeten, je stad te ontdekken en je offline in te zetten.",
         "appleStore": "Binnenkort",
-        "playStore": "Binnenkort"
+        "appleStoreUrl": "#",
+        "playStore": "Binnenkort",
+        "playStoreUrl": "#"  
       },
       {
         "section": 2,
         "subHeader": "Tangle Offline verandert hoe mensen met elkaar omgaan",
-        "header": "We brengen duizenden mensen naar ",
+        "header": "We brengen <span> duizenden </span> <br/> mensen naar",
         "activities": ["Bowling", "Café", "Restaurant", "Boot", "Tour", "Clubbling"]
       },
       {
         "section": 3,
-        "alt": "Tangle video over wat het belangrijkst is"
+        "tittle": "Tangle video over wat het belangrijkst is"
       },
       {
         "section": 4,

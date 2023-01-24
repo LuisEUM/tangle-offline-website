@@ -1,10 +1,10 @@
 'use client'
 import VideoPlayer from '../video-player/VideoPlayer'
 
-export default function SectionThree () {
+export default function SectionThree ({ text }) {
   return (
     <>
-      <VideoPlayer />
+      <VideoPlayer text={text} />
     </>
   )
 }

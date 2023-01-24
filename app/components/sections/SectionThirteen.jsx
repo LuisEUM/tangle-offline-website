@@ -5,7 +5,7 @@ import LettersAnimation from '../ui/animation/lettersAnimation'
 import WordsAnimation from '../ui/animation/wordsAnimation'
 import VerticalLine from '../ui/progress/verticalLine'
 
-export default function SectionThirteen () {
+export default function SectionThirteen ({ text }) {
   return (
     <>
       <div className=' px-2 md:px-14 lg:px-32 w-full flex flex-col align-middle justify-center content-center '>

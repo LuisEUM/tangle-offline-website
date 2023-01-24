@@ -1,10 +1,10 @@
 'use client'
 // import { usePathname, useRouter } from 'next/navigation'
 // import { useContext, useEffect } from 'react'
-// import { TaskContext } from '../context/languageContext'
+// import { LanguageContext } from '../context/languageContext'
 
 export default function Merchants () {
-  // const { textData } = useContext(TaskContext)
+  // const { textData } = useContext(LanguageContext)
   // const pathname = usePathname()
   // const router = useRouter()
 

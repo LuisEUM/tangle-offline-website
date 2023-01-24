@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import VerticalLine from '../ui/progress/verticalLine'
 import WordsAnimation from '../ui/animation/wordsAnimation'
 
-export default function SectionFour () {
+export default function SectionFour ({ text }) {
   return (
     <div className='px-2 md:px-14 lg:px-32 w-full'>
       <motion.div className='  '>
@@ -18,10 +18,10 @@ export default function SectionFour () {
                 <div className='bg-red- py-5'>
                   <div className='flex flex-col mt-10 align-middle content-top justify-top pr-10'>
                     <motion.div className='max-w-full pt-2'>
-                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-title' text='Problem' tag='h4' />
+                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-title' text={text.header} tag='h4' />
                     </motion.div>
                     <motion.div className='max-w-full md:w-full lg:w-4/5 pr-2 pt-2'>
-                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body ' text='Find people to hang out with, have social interactions, think creatively, and build strong communication skills. Do all of this, and more, on Tangle, by joining events and taking part in activities happening all around your city.' tag='p' />
+                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body ' text={text.description} tag='p' />
                     </motion.div>
                   </div>
                 </div>

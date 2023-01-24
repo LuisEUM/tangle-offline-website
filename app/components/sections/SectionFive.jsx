@@ -5,7 +5,7 @@ import HorizonatalLine from '../ui/progress/horizonatalLine'
 import CurveLine from '../ui/progress/curveLine'
 import VerticalLine from '../ui/progress/verticalLine'
 
-export default function SectionFive () {
+export default function SectionFive ({ text }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: false })
 
@@ -75,20 +75,20 @@ export default function SectionFive () {
           >
             <motion.div className='gird grid-cols-1  shadow h-full bg-tangle-oxford-blue rounded-lg px-5 py-10 my-5' variants={child}>
               <div className='flex flex-col align-middle content-center justify-center h-full'>
-                <h3 className='text-center font-bold text-[#D90026] text-4xl lg:text-5xl mb-3'>160 times</h3>
-                <p className='text-center'>a day an average person picks up a mobile phone</p>
+                <h3 className='text-center font-bold text-[#D90026] text-4xl lg:text-5xl mb-3'>{text.headerCardOne}</h3>
+                <p className='text-center'>{text.descriptionCardOne}</p>
               </div>
             </motion.div>
             <motion.div className='gird grid-cols-1 shadow h-full bg-tangle-oxford-blue rounded-lg px-5 py-10 my-5' variants={child}>
               <div className='flex flex-col align-middle content-center justify-center h-full'>
-                <h3 className='text-center font-bold text-[#D90026] text-4xl lg:text-5xl mb-3'>2.5 hours</h3>
-                <p className='text-center'>spent on social media, 80% of people consider a waste of time </p>
+                <h3 className='text-center font-bold text-[#D90026] text-4xl lg:text-5xl mb-3'>{text.headerCardTwo}</h3>
+                <p className='text-center'>{text.descriptionCardTwo}</p>
               </div>
             </motion.div>
             <motion.div className='gird grid-cols-1  shadow h-full bg-tangle-oxford-blue rounded-lg px-5 py-10 my-5' variants={child}>
               <div className='flex flex-col align-middle content-center justify-center h-full'>
-                <h3 className='text-center font-bold text-[#D90026] text-4xl lg:text-5xl mb-3'>62 Days</h3>
-                <p className='text-center'>a year wasted on social media and online entertainment</p>
+                <h3 className='text-center font-bold text-[#D90026] text-4xl lg:text-5xl mb-3'>{text.headerCardThree}</h3>
+                <p className='text-center'>{text.descriptionCardThree}</p>
               </div>
             </motion.div>
           </motion.div>
