@@ -5,7 +5,7 @@ import VerticalLine from '../ui/progress/verticalLine'
 import WordsAnimation from '../ui/animation/wordsAnimation'
 import LettersAnimation from '../ui/animation/lettersAnimation'
 
-export default function SectionTwelve () {
+export default function SectionTwelve ({ text }) {
   return (
     <div className='px-2 md:px-14 lg:px-32 w-full'>
       <motion.div className='  '>
@@ -19,10 +19,10 @@ export default function SectionTwelve () {
                 <div className=' py-5'>
                   <div className='flex flex-col mt-10 align-middle content-top justify-top pr-10'>
                     <motion.div className='max-w-full pt-2'>
-                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-title' text='Tangle Offline is changing how people interact' tag='h4' />
+                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-title' text={text.subHeader} tag='h4' />
                     </motion.div>
                     <motion.div className='max-w-full'>
-                      <LettersAnimation className='py-2 text-3xl md:text-6xl lg:text-6xl font-bold ' text='We bring people out' tag='h3' />
+                      <LettersAnimation className='py-2 text-3xl md:text-6xl lg:text-6xl font-bold ' text={text.header} tag='h3' />
                     </motion.div>
                   </div>
                 </div>

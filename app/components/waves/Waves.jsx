@@ -1,16 +1,11 @@
+'use client'
 import React, { useEffect, useRef } from 'react'
-import './path.css'
+import dataImages from '../../data/images.json'
 
-function Path () {
+export default function Waves () {
   const ref = useRef()
 
-  function importAll (r) {
-    return r.keys().map(r)
-  }
-
-  const importedImages = importAll(
-    require.context('../resources/circlesPeople', false, /\.png$/)
-  )
+  const importedImages = dataImages.waves
 
   useEffect(() => {
     const images = [].slice.call(
@@ -73,26 +68,28 @@ function Path () {
   }, [])
 
   return (
-    <div id='path'>
-      <div className='path-wrapper'>
+    <div id='path' className='h-0 w-full absolute left-0 bottom-24 pb-[13%]'>
+      <div className='h-0 w-full p-0'>
         <svg
           viewBox='-200 -25 430 500'
           preserveAspectRatio='xMidYMin slice'
           x='0'
           y='15'
+          className='absolute h-full w-full left-0 top-0'
         >
           <path
             ref={ref}
             fill='none'
             d='M -360 0 L -241 0 C -37 -32 32 32 245 -1 L 386 0'
+            width='100%'
+            stroke='#0089cf'
+            strokeWidth='0.03rem'
           />
           {importedImages.map((e, i) => {
-            return <image key={i} className='animated-path' href={e} />
+            return <image key={i} className='animated-path w-10 h-10' href={e} />
           })}
         </svg>
       </div>
     </div>
   )
 }
-
-export default Path

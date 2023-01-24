@@ -5,7 +5,7 @@ import VerticalLine from '../ui/progress/verticalLine'
 import WordsAnimation from '../ui/animation/wordsAnimation'
 import LettersAnimation from '../ui/animation/lettersAnimation'
 
-export default function SectionSeven () {
+export default function SectionSeven ({ text }) {
   return (
     <div className='px-2 md:px-14 lg:px-32 w-full'>
       <motion.div className='  '>
@@ -16,13 +16,13 @@ export default function SectionSeven () {
                 <div className='bg-red- py-5 bg-red-'>
                   <div className='flex flex-col mt-10 align-middle content-top justify-top   pl-10'>
                     <motion.div className='max-w-full pt-2'>
-                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-title text-end' text='Solution' tag='h4' />
+                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-title text-end' text={text.subHeader} tag='h4' />
                     </motion.div>
                     <motion.div className='max-w-full self-end'>
-                      <LettersAnimation className='py-2 text-3xl md:text-6xl lg:text-6xl font-bold text-end ' text='Focus on what matters' tag='h3' />
+                      <LettersAnimation className='py-2 text-3xl md:text-6xl lg:text-6xl font-bold text-end ' text={text.header} tag='h3' />
                     </motion.div>
                     <motion.div className='max-w-full md:w-full lg:w-3/5 pl-2 bg-yellow- self-end'>
-                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body text-end' text='Find people to hang out with, have social interactions, think creatively, and build strong communication skills. Do all of this, and more, on Tangle, by joining events and taking part in activities happening all around your city.' tag='p' />
+                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body text-end' text={text.description} tag='p' />
                     </motion.div>
                   </div>
                 </div>

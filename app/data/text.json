@@ -67,13 +67,12 @@
       {
         "section": 12,
         "subHeader": "Tangle Offline is changing how people interact",
-        "header": "We bring people out",
-        "description": "Find people to hang out with, have social interactions, think creatively, and build strong communication skills. Do all of this, and more, on Tangle, by joining events and taking part in activities happening all around your city."
+        "header": "We bring people out"
       },
       {
         "section": 13,
-        "header": "Partnering with Offline Businesses",
-        "subHeader": "Our goal is simple, minimize your digital interactions on our platform, and maximize the time you spend offline. To do that, We engineered a set of features aiming to generate excitement toward meeting people in real life.",
+        "header": "Partnering with <br/> Offline Businesses",
+        "description": "Our goal is simple, minimize your digital interactions on our platform, and maximize the time you spend offline. To do that, We engineered a set of features aiming to generate excitement toward meeting people in real life.",
         "button": "Become a Merchant"
       },
       {
@@ -118,11 +117,11 @@
       {
         "section": 5,
         "headerCardOne": "160 veces",
-        "descriptionCardOne": "al día en que una persona media coge un teléfono móvil",
+        "descriptionCardOne": "al día una persona media coge un teléfono móvil",
         "headerCardTwo": "2,5 horas",
         "descriptionCardTwo": "dedicadas a las redes sociales, que el 80% de las personas considera una pérdida de tiempo",
         "headerCardThree": "62 días",
-        "descriptionCardThree": "Un año malgastado en redes sociales y entretenimiento online"
+        "descriptionCardThree": "Al año malgastados en redes sociales y entretenimiento online"
       },
       {
         "section": 6,
@@ -157,13 +156,12 @@
       {
         "section": 12,
         "subHeader": "Tangle Offline está cambiando la forma de relacionarse",
-        "header": "Sacamos a la gente",
-        "description": "Encuentra gente con la que pasar el rato, interactuar socialmente, pensar de forma creativa y desarrollar sólidas habilidades comunicativas. Haz todo esto y mucho más en Tangle, uniéndote a eventos y participando en actividades que se celebran por toda tu ciudad."
+        "header": "Sacamos a la gente"
       },
       {
         "section": 13,
-        "header": "Asociación con empresas fuera de línea",
-        "subHeader": "Nuestro objetivo es sencillo: minimizar tus interacciones digitales en nuestra plataforma y maximizar el tiempo que pasas fuera de ella. Para ello, hemos diseñado una serie de funciones que te ayudarán a conocer gente en la vida real.",
+        "header": "Asociación con empresas <br/> fuera de línea",
+        "description": "Nuestro objetivo es sencillo: minimizar tus interacciones digitales en nuestra plataforma y maximizar el tiempo que pasas fuera de ella. Para ello, hemos diseñado una serie de funciones que te ayudarán a conocer gente en la vida real.",
         "button": "Conviértase en comerciante"
       },
       {
@@ -247,13 +245,12 @@
       {
         "section": 12,
         "subHeader": "Tangle Offline verandert hoe mensen met elkaar omgaan",
-        "header": "We brengen mensen naar buiten",
-        "description": "Vind mensen om mee om te gaan, heb sociale interacties, denk creatief, en bouw sterke communicatieve vaardigheden op. Doe dit alles, en meer, op Tangle, door deel te nemen aan evenementen en activiteiten in je stad."
+        "header": "We brengen mensen naar buiten"
       },
       {
         "section": 13,
-        "header": "Samenwerking met offline bedrijven",
-        "subHeader": "Ons doel is eenvoudig, het minimaliseren van uw digitale interacties op ons platform, en het maximaliseren van de tijd die u offline doorbrengt. Om dat te doen, hebben we een aantal functies ontworpen die erop gericht zijn mensen in het echt te ontmoeten.",
+        "header": "Samenwerking met <br/> offline bedrijven",
+        "description": "Ons doel is eenvoudig, het minimaliseren van uw digitale interacties op ons platform, en het maximaliseren van de tijd die u offline doorbrengt. Om dat te doen, hebben we een aantal functies ontworpen die erop gericht zijn mensen in het echt te ontmoeten.",
         "button": "Handelaar worden"
       },
       {

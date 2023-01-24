@@ -12,13 +12,13 @@ export default function SectionThirteen ({ text }) {
         <div className='h-full grid grid-cols-1 gap-y-12 lg:grid-cols-2  align-middle justify-center content-center bg-tangle-oxford-blue p-8 md:p-10 lg:p-16 rounded-2xl'>
           <div className='m-auto lg:pr-16 order-2'>
             <motion.div className='max-w-full mb-10'>
-              <LettersAnimation className='text-3xl md:text-4xl lg:text-5xl font-bold text-[#00ADE4] ' text='Partnering with <br/> Offline Businesses' tag='h3' />
+              <LettersAnimation className='text-3xl md:text-4xl lg:text-5xl font-bold text-[#00ADE4] ' text={text.header} tag='h3' />
             </motion.div>
             <motion.div className='max-w-full mb-7 md:mb-8  lg:mb-20'>
-              <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body' text='Our goal is simple, minimize your digital interactions on our platform, and maximize the time you spend offline. To do that, We engineered a set of features aiming to generate excitement toward meeting people in real life.' tag='p' />
+              <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body' text={text.description} tag='p' />
             </motion.div>
             <motion.button className='bg-[#0086D3] rounded-full w-full py-3'>
-              Become a merchant
+              {text.button}
             </motion.button>
           </div>
           <div className='m-auto lg:pl-16 h-[165px] md:h-[372px] lg:h-[400px] w-full order-1 lg:order-2'>

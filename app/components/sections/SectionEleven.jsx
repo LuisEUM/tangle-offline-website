@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import Carrousel from '../ui/carrousel/Carrousel'
 import dataImages from '../../data/images.json'
 
-export default function SectionEleven () {
+export default function SectionEleven ({ text }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: false })
 

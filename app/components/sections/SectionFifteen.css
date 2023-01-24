@@ -26,15 +26,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 15px;
   gap: 8px;
-  background: #ffffff;
-  border: 1px solid #bcbcbc;
-  border-radius: 8px;
+  border: 0px solid transparent;
 }
 
 .ReactFlagsSelect-module_flagsSelect__2pfa2 {
-  width: 25%;
+  width: 70%;
 }
 
 
@@ -45,11 +42,26 @@
 
 .ReactFlagsSelect-module_flagsSelect__2pfa2 {
   padding: 0px !important;
-  border-radius: 20px;
+  border-radius: 8px;
 }
 
 .ReactFlagsSelect-module_selectOptionWithlabel__2GpmM {
-  color: black;
+  color: white;
 }
 
+.ReactFlagsSelect-module_selectOptions__3LNBJ, .ReactFlagsSelect-module_filterBox__3m8EU, .ReactFlagsSelect-module_filterBox__3m8EU input {
+  background: #0C101C !important;
+  color: white !important;
+  border: 0px solid transparent !important;
+  margin-top: 0px !important; 
+}
+
+.ReactFlagsSelect-module_selectOption__3pcgW, .ReactFlagsSelect-module_filterBox__3m8EU{
+  margin: 0px !important;
+  border: 1px solid #171e32 !important
+}
+
+.ReactFlagsSelect-module_selectOption__3pcgW:hover{
+  background-color: #171e32 !important;
+}
 

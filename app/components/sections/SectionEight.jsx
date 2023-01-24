@@ -5,7 +5,7 @@ import CurveLine from '../ui/progress/curveLine'
 import VerticalLine from '../ui/progress/verticalLine'
 import { Icon } from '../ui/svg/Icon'
 
-export default function SectionEight () {
+export default function SectionEight ({ text }) {
   return (
     <div className='grid grid-cols-1 relative max-w-full'>
       <div className='flex w-full flex-col  max-w-full'>
@@ -35,7 +35,7 @@ export default function SectionEight () {
                 <div className=' flex h-[63px] m-auto rounded-full '>
                   <Icon icon='sun' className='h-16 p-12 my-5 max-w-[30px] ' color='rgb(1, 209, 46)' />
                 </div>
-                <h3 className='text-center font-bold text-white text-xl lg:text-2xl mb-3'>Minimize digital interactions</h3>
+                <h3 className='text-center font-bold text-white text-xl lg:text-2xl mb-3'>{text.headerCardOne}</h3>
               </div>
             </div>
             <div className='gird grid-cols-1 shadow h-full bg-tangle-oxford-blue rounded-lg px-5 py-10 my-5'>
@@ -43,7 +43,7 @@ export default function SectionEight () {
                 <div className=' flex h-[63px] m-auto rounded-full '>
                   <Icon icon='search' className='h-16 p-12 my-5 max-w-[30px] ' color='rgb(1, 209, 46)' />
                 </div>
-                <h3 className='text-center font-bold text-white text-xl lg:text-2xl mb-3'>Join activities and events</h3>
+                <h3 className='text-center font-bold text-white text-xl lg:text-2xl mb-3'>{text.headerCardTwo}</h3>
               </div>
             </div>
             <div className='gird grid-cols-1  shadow h-full bg-tangle-oxford-blue rounded-lg px-5 py-10 my-5'>
@@ -51,7 +51,7 @@ export default function SectionEight () {
                 <div className=' flex h-[63px] m-auto rounded-full '>
                   <Icon icon='map' className='h-16 p-12 my-5 max-w-[30px] ' color='rgb(1, 209, 46)' />
                 </div>
-                <h3 className='text-center font-bold text-white text-xl lg:text-2xl mb-3'>Explore your city and discover new ones </h3>
+                <h3 className='text-center font-bold text-white text-xl lg:text-2xl mb-3'>{text.headerCardThree} </h3>
               </div>
             </div>
           </div>

@@ -57,37 +57,37 @@ export default function Homepage () {
             <SectionFive text={text[4]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionSix />
+            <SectionSix text={text[5]} />
           </SectionAnimation>
           <div className='relative w-full'>
             <SectionAnimation>
-              <SectionSeven />
+              <SectionSeven text={text[6]} />
             </SectionAnimation>
             <SectionAnimation>
-              <SectionEight />
+              <SectionEight text={text[7]} />
             </SectionAnimation>
             <div className='w-full flex'>
               <StarsBackground id='stars1' />
             </div>
           </div>
           <SectionAnimation>
-            <SectionNine />
+            <SectionNine text={text[8]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionTen />
+            <SectionTen text={text[9]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionEleven />
+            <SectionEleven text={text[10]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionTwelve />
+            <SectionTwelve text={text[11]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionThirteen />
+            <SectionThirteen text={text[12]} />
           </SectionAnimation>
           <div className='relative w-full'>
             <SectionAnimation>
-              <SectionFifteen />
+              <SectionFifteen text={text[14]} />
             </SectionAnimation>
             <div className='w-full flex'>
               <StarsBackground id='stars2' />
