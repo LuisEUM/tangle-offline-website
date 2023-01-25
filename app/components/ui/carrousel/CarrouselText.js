@@ -27,7 +27,7 @@ const variants = {
 
 const initialIndex = 0
 
-export default function Carrousel ({ numbers, bullets, arrows, className, immagesArray }) {
+export default function CarrouselText ({ numbers, bullets, arrows, className, immagesArray, text }) {
   const [page, setPage] = useState(initialIndex)
   const images = immagesArray
   const paginationBullets = bullets || false
@@ -52,8 +52,9 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
 
   return (
     <div className={`${className}`}>
-      <div className='overflow-hidden rounded-3xl shadow relative flex w-full min-h-[300px] justify-center items-center'>
+      <div className='overflow-hidden shadow relative flex w-full min-h-[589px] md:min-h-[934px] justify-center items-center'>
         <AnimatePresence initial={false} custom={page}>
+          <p className='z-50 text-base'>{text[page]}</p>
           {images.map((image, index) => {
             const isCurrent = index === page
             const direction = index - page
@@ -103,12 +104,12 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
 
       {paginationBullets && (
         <>
-          <div className='flex content-center justify-center w-full my-2'>
+          <div className='flex content-center justify-center w-full -mt-6 z-50'>
             {images.map((image, index) => {
               const isCurrent = index === page
               return (
                 <div
-                  className={`bullet w-2 h-2 rounded-full bg-tangle-oxford-blue mx-2 my-0 cursor-pointer ${isCurrent ? 'bg-tangle-cyan-process' : ''}`}
+                  className={`z-50 bullet w-2 h-2 rounded-full bg-slate-400 mx-2 my-0 cursor-pointer ${isCurrent ? 'bg-slate-200' : ''}`}
                   onClick={() => setPage(index)}
                   key={index}
                 />
@@ -120,10 +121,10 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
 
       {paginationNumbers && (
         <>
-          <div className='flex content-center justify-center w-full'>
-            <div className='mr-2'>{page + 1}</div>
-            <div className=''>/ </div>
-            <div className='ml-2'>{images.length}</div>
+          <div className='flex content-center justify-center w-full z-50'>
+            <div className='mr-2 z-50'>{page + 1}</div>
+            <div className='z-50'>/ </div>
+            <div className='ml-2 z-50'>{images.length}</div>
           </div>
         </>
       )}
@@ -132,6 +133,6 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
   )
 }
 
-Carrousel.propTypes = {
+CarrouselText.propTypes = {
   heigth: PropTypes.string
 }

@@ -27,7 +27,7 @@ export default function SectionThirteen ({ text }) {
         </div>
       </div>
       <div className='flex px-5 max-w-full relative mx-2 md:mx-14 lg:mx-32'>
-        <div className='md:max-h-60 overflow-hidden'>
+        <div className='max-h-28 md:max-h-52 overflow-hidden'>
           <VerticalLine heigth={625} width={42} color='rgba(0,173,228,0.8)' />
         </div>
       </div>

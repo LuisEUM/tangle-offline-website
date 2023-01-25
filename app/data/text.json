@@ -77,16 +77,16 @@
       },
       {
         "section": 14,
-        "gallery": "Tangle old gallery"
+        "gallery": ["Create", "Memories", "Not", "Just", "Stories"]
       },
       {
         "section": 15,
         "header": "Do you live in ",
-        "countries": ["Amsterdam", "Berlin", "Barcelona", "New York"],
+        "cities": ["Amsterdam", "Berlin", "Barcelona", "New York"],
         "description": "We will invite you to our next exclusive event",
         "placeholder":"Your email",
         "button":"Submit!",
-        "Submited":"Submited"
+        "submited":"Submited"
       }
     ],
     "es": [
@@ -166,16 +166,16 @@
       },
       {
         "section": 14,
-        "gallery": "Antigua galeria de Tangle"
+        "gallery": ["Crea", "Recuerdos", "No", "Solo", "Historias"]
       },
       {
         "section": 15,
-        "header": "Do you live in ",
-        "countries": ["Amsterdam", "Berlín", "Barcelona", "Nueva York"],
+        "header": "¿Vives en ",
+        "cities": ["Amsterdam", "Berlín", "Barcelona", "Nueva York"],
         "description": "Le invitaremos a nuestro próximo evento exclusivo",
         "placeholder":"Tu correo electrónico",
         "button":"¡Envíalo!",
-        "Submited":"Envíado"
+        "submited":"Envíado"
       }
     ],
     "nl": [
@@ -255,16 +255,16 @@
       },
       {
         "section": 14,
-        "gallery": "Tangle oude galerij"
+        "gallery": ["Creëer", "herinneringen", "niet", "alleen", "verhalen"]
       },
       {
         "section": 15,
         "header": "Woont u in ",
-        "countries": ["Amsterdam", "Berlijn", "Barcelona", "New York"],
+        "cities": ["Amsterdam", "Berlijn", "Barcelona", "New York"],
         "description": "We zullen u uitnodigen voor ons volgende exclusieve evenement",
         "placeholder":"Uw e-mail",
         "button":"Subtmit!",
-        "Submited":"Ingezonden"
+        "submited":"Ingezonden"
       }
     ]
   }

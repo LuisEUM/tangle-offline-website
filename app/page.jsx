@@ -18,6 +18,7 @@ import NavBar from './components/navbar/NavBar'
 import { useContext, useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { LanguageContext } from './context/languageContext'
+import SectionFourteen from './components/sections/SectionFourteen'
 
 export default function Homepage () {
   const { textData } = useContext(LanguageContext)
@@ -84,6 +85,9 @@ export default function Homepage () {
           </SectionAnimation>
           <SectionAnimation>
             <SectionThirteen text={text[12]} />
+          </SectionAnimation>
+          <SectionAnimation>
+            <SectionFourteen text={text[13]} />
           </SectionAnimation>
           <div className='relative w-full'>
             <SectionAnimation>

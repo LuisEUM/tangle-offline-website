@@ -27,7 +27,12 @@ module.exports = {
         'collage-4': "url('/collagePeople/top-view-from-colorful-stylish-happy-young-company-friends-lying-grass-park-man-women-having-fun-together.jpg')",
         'collage-5': "url('/collagePeople//pexels-mathias-pr-reding-4386145.jpg')",
         'collage-6': "url('/collagePeople/pexels-matheus-bertelli-8533826.jpg')",
-        'collage-7': "url('/collagePeople/pexels-helena-lopes-745045.jpg')"
+        'collage-7': "url('/collagePeople/pexels-helena-lopes-745045.jpg')",
+        'activity-1': "url('/activities/restaurant.jpeg')",
+        'activity-2': "url('/activities/museum.jpeg')",
+        'activity-3': "url('/activities/balloons.jpeg')",
+        'activity-4': "url('/activities/castle.jpeg')",
+        'activity-5': "url('/activities/stadium.jpeg')"
       }
     }
   },

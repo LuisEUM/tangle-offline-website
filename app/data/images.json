@@ -27,5 +27,13 @@
       "/circlesPeople/face14.png",
       "/circlesPeople/face15.png",
       "/circlesPeople/face16.png"
+    ],
+    "activities":
+    [
+      "/activities/restaurant.jpeg",
+      "/activities/museum.jpeg",
+      "/activities/balloons.jpeg",
+      "/activities/castle.jpeg",
+      "/activities/stadium.jpeg"
     ]
 }
