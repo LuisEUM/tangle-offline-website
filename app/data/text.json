@@ -1,6 +1,31 @@
 {
-  "home": {
-    "en": [
+  "en": {
+    "menu": [
+      {
+        "id": "en",
+        "current_language": "English",
+        "home":"Home",
+        "home_pathname": "/en",
+        "merchant":"Become a merchant",
+        "merchant_pathname":"/en/merchants",
+        "languages":"Languages",
+        "languages_options":[
+          {
+            "name": "English",
+            "pathname": "/en"
+          },
+          {
+            "name": "Spanish",
+            "pathname": "/es"
+          },
+          {
+            "name": "Dutch",
+            "pathname": "/nl"
+          }  
+        ]
+      }
+    ],
+    "home": [
       {
         "section": 1,
         "header": "The offline <br/> world wide web",
@@ -88,8 +113,35 @@
         "button":"Submit!",
         "submited":"Submited"
       }
+    ]
+  },
+  "es":{
+    "menu": [
+      {
+        "id": "es",
+        "current_language": "Español",
+        "home":"Inicio",
+        "home_pathname": "/es",
+        "merchant":"Conviértase en comerciante",
+        "merchant_pathname":"/en/merchants",
+        "languages":"Lenguajes",
+        "languages_options":[
+          {
+            "name": "Inglés",
+            "pathname": "/en"
+          },
+          {
+            "name": "Español",
+            "pathname": "/es"
+          },
+          {
+            "name": "Neerlandés",
+            "pathname": "/nl"
+          }  
+        ]
+      }
     ],
-    "es": [
+    "home": [
       {
         "section": 1,
         "header": "La red mundial <br/> offline",
@@ -177,95 +229,121 @@
         "button":"¡Envíalo!",
         "submited":"Envíado"
       }
-    ],
-    "nl": [
-      {
-        "section": 1,
-        "header": "Het offline <br/> wereld wijde web",
-        "subHeader": "Een real-life sociaal netwerk om mensen te ontmoeten, je stad te ontdekken en je offline in te zetten.",
-        "appleStore": "Binnenkort",
-        "appleStoreUrl": "#",
-        "playStore": "Binnenkort",
-        "playStoreUrl": "#"  
-      },
-      {
-        "section": 2,
-        "subHeader": "Tangle Offline verandert hoe mensen met elkaar omgaan",
-        "header": "We brengen <span> duizenden </span> <br/> mensen naar",
-        "activities": ["Bowling", "Café", "Restaurant", "Boot", "Tour", "Clubbling"]
-      },
-      {
-        "section": 3,
-        "tittle": "Tangle video over wat het belangrijkst is"
-      },
-      {
-        "section": 4,
-        "header": "Probleem",
-        "description": "Vind mensen om mee om te gaan, heb sociale interacties, denk creatief, en bouw sterke communicatieve vaardigheden op. Doe dit alles, en meer, op Tangle, door deel te nemen aan evenementen en activiteiten in je stad."
-      },
-      {
-        "section": 5,
-        "headerCardOne": "160 keer",
-        "descriptionCardOne": "een gemiddelde persoon per dag een mobiele telefoon pakt",
-        "headerCardTwo": "2.5 uur",
-        "descriptionCardTwo": "besteed aan sociale media, beschouwt 80% van de mensen als tijdverspilling...",
-        "headerCardThree": "62 dagen",
-        "descriptionCardThree": "Een jaar verspild aan sociale media en online entertainment"
-      },
-      {
-        "section": 6,
-        "tv": "Tangle tv met parallax"
-      },
-      {
-        "section": 7,
-        "subHeader": "Oplossing",
-        "header": "Focus op wat belangrijk is",
-        "description": "Vind mensen om mee om te gaan, heb sociale interacties, denk creatief, en bouw sterke communicatieve vaardigheden op. Doe dit alles, en meer, op Tangle, door deel te nemen aan evenementen en activiteiten in je stad."
-      },
-      {
-        "section": 8,
-        "headerCardOne": "Minimaliseer digitale interacties",
-        "headerCardTwo": "Deelnemen aan activiteiten en evenementen",
-        "headerCardThree": "Verken uw stad en ontdek nieuwe"
-      },
-      {
-        "section": 9,
-        "map": "Klitkaart met radar"
-      },
-      {
-        "section": 10,
-        "subHeader": "Neem deel aan bestaande evenementen en creëer uw eigen ",
-        "header": "Levenslange vrienden maken",
-        "description": "Vind mensen om mee om te gaan, heb sociale interacties, denk creatief, en bouw sterke communicatieve vaardigheden op. Doe dit alles, en meer, op Tangle, door deel te nemen aan evenementen en activiteiten in je stad."
-      },
-      {
-        "section": 11,
-        "gallery": "Tangle galerij"
-      },
-      {
-        "section": 12,
-        "subHeader": "Tangle Offline verandert hoe mensen met elkaar omgaan",
-        "header": "We brengen mensen naar buiten"
-      },
-      {
-        "section": 13,
-        "header": "Samenwerking met <br/> offline bedrijven",
-        "description": "Ons doel is eenvoudig, het minimaliseren van uw digitale interacties op ons platform, en het maximaliseren van de tijd die u offline doorbrengt. Om dat te doen, hebben we een aantal functies ontworpen die erop gericht zijn mensen in het echt te ontmoeten.",
-        "button": "Handelaar worden"
-      },
-      {
-        "section": 14,
-        "gallery": ["Creëer", "herinneringen", "niet", "alleen", "verhalen"]
-      },
-      {
-        "section": 15,
-        "header": "Woont u in ",
-        "cities": ["Amsterdam", "Berlijn", "Barcelona", "New York"],
-        "description": "We zullen u uitnodigen voor ons volgende exclusieve evenement",
-        "placeholder":"Uw e-mail",
-        "button":"Subtmit!",
-        "submited":"Ingezonden"
-      }
     ]
-  }
+  },
+  "nl":{
+    "menu": [
+      {
+        "id": "nl",
+        "current_language": "Nederlands",
+        "home":"Home",
+        "home_pathname": "/nl",
+        "merchant":"Handelaar worden",
+        "merchant_pathname":"/nl/merchants",
+        "languages":"Talen",
+        "languages_options":[
+          {
+            "name": "Engels",
+            "pathname": "/en"
+          },
+          {
+            "name": "Spaans",
+            "pathname": "/es"
+          },
+          {
+            "name": "Nederlands",
+            "pathname": "/nl"
+          }  
+        ]
+      }
+    ],
+    "home": [
+    {
+      "section": 1,
+      "header": "Het offline <br/> wereld wijde web",
+      "subHeader": "Een real-life sociaal netwerk om mensen te ontmoeten, je stad te ontdekken en je offline in te zetten.",
+      "appleStore": "Binnenkort",
+      "appleStoreUrl": "#",
+      "playStore": "Binnenkort",
+      "playStoreUrl": "#"  
+    },
+    {
+      "section": 2,
+      "subHeader": "Tangle Offline verandert hoe mensen met elkaar omgaan",
+      "header": "We brengen <span> duizenden </span> <br/> mensen naar",
+      "activities": ["Bowling", "Café", "Restaurant", "Boot", "Tour", "Clubbling"]
+    },
+    {
+      "section": 3,
+      "tittle": "Tangle video over wat het belangrijkst is"
+    },
+    {
+      "section": 4,
+      "header": "Probleem",
+      "description": "Vind mensen om mee om te gaan, heb sociale interacties, denk creatief, en bouw sterke communicatieve vaardigheden op. Doe dit alles, en meer, op Tangle, door deel te nemen aan evenementen en activiteiten in je stad."
+    },
+    {
+      "section": 5,
+      "headerCardOne": "160 keer",
+      "descriptionCardOne": "een gemiddelde persoon per dag een mobiele telefoon pakt",
+      "headerCardTwo": "2.5 uur",
+      "descriptionCardTwo": "besteed aan sociale media, beschouwt 80% van de mensen als tijdverspilling...",
+      "headerCardThree": "62 dagen",
+      "descriptionCardThree": "Een jaar verspild aan sociale media en online entertainment"
+    },
+    {
+      "section": 6,
+      "tv": "Tangle tv met parallax"
+    },
+    {
+      "section": 7,
+      "subHeader": "Oplossing",
+      "header": "Focus op wat belangrijk is",
+      "description": "Vind mensen om mee om te gaan, heb sociale interacties, denk creatief, en bouw sterke communicatieve vaardigheden op. Doe dit alles, en meer, op Tangle, door deel te nemen aan evenementen en activiteiten in je stad."
+    },
+    {
+      "section": 8,
+      "headerCardOne": "Minimaliseer digitale interacties",
+      "headerCardTwo": "Deelnemen aan activiteiten en evenementen",
+      "headerCardThree": "Verken uw stad en ontdek nieuwe"
+    },
+    {
+      "section": 9,
+      "map": "Klitkaart met radar"
+    },
+    {
+      "section": 10,
+      "subHeader": "Neem deel aan bestaande evenementen en creëer uw eigen ",
+      "header": "Levenslange vrienden maken",
+      "description": "Vind mensen om mee om te gaan, heb sociale interacties, denk creatief, en bouw sterke communicatieve vaardigheden op. Doe dit alles, en meer, op Tangle, door deel te nemen aan evenementen en activiteiten in je stad."
+    },
+    {
+      "section": 11,
+      "gallery": "Tangle galerij"
+    },
+    {
+      "section": 12,
+      "subHeader": "Tangle Offline verandert hoe mensen met elkaar omgaan",
+      "header": "We brengen mensen naar buiten"
+    },
+    {
+      "section": 13,
+      "header": "Samenwerking met <br/> offline bedrijven",
+      "description": "Ons doel is eenvoudig, het minimaliseren van uw digitale interacties op ons platform, en het maximaliseren van de tijd die u offline doorbrengt. Om dat te doen, hebben we een aantal functies ontworpen die erop gericht zijn mensen in het echt te ontmoeten.",
+      "button": "Handelaar worden"
+    },
+    {
+      "section": 14,
+      "gallery": ["Creëer", "herinneringen", "niet", "alleen", "verhalen"]
+    },
+    {
+      "section": 15,
+      "header": "Woont u in ",
+      "cities": ["Amsterdam", "Berlijn", "Barcelona", "New York"],
+      "description": "We zullen u uitnodigen voor ons volgende exclusieve evenement",
+      "placeholder":"Uw e-mail",
+      "button":"Subtmit!",
+      "submited":"Ingezonden"
+    }
+  ]}
 }

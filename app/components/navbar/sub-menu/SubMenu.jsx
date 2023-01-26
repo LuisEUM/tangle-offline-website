@@ -1,6 +1,5 @@
 'use client'
 import { AnimatePresence, motion } from 'framer-motion'
-import React from 'react'
 import { usePathname } from 'next/navigation'
 
 function SubMenu ({
@@ -13,6 +12,7 @@ function SubMenu ({
   className
 }) {
   const pathname = usePathname()
+  const currentLanguage = categories.filter((category) => category.pathname === pathname)
 
   return (
     <>
@@ -22,24 +22,30 @@ function SubMenu ({
         animate={isOpen ? 'open' : 'closed'}
         whileTap={{ scale: 0.97 }}
         whileHover={{ color: 'black' }}
-        className={`text-center text-tangle-rich-black-FOGBRA-29  font-bold  w-full content-center ${className}`}
+        className={`text-center  font-bold  w-full content-center ${className}`}
         onClick={() => setIsOpenList(!subIsOpen)}
       >
-        {name}
+        <div className='flex justify-between align-middle items-center hover:text-tangle-green-blue-crayola'>
+          <p className='hover:text-tangle-green-blue-crayola '>{name}</p>
+          <div className={`${subIsOpen ? 'rotate-90' : ''}`}>
+            <svg width='8' height='15' viewBox='0 0 8 15' fill='none' xmlns='http://www.w3.org/2000/svg'>
+              <path className='hover:stroke-tangle-green-blue-crayola' d='M1 13.5L7 7.5L1 1.5' stroke='#0D111B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />
+            </svg>
+          </div>
+        </div>
         <AnimatePresence>
           {isOpen &&
             subIsOpen &&
             categories.map((category, index) => (
               <motion.li
-                // {...categoryListAnimation}
                 variants={itemVariants}
                 initial='closed'
                 animate={isOpen ? 'open' : 'closed'}
                 exit='closed'
                 key={index}
-                className='text-center border-b-2 text-neutral-600 font-normal mt-5 flex-row w-full content-center justify-center'
+                className='text-left border-b-2 hover:text-tangle-green-blue-crayola  text-neutral-600 font-normal mt-5 flex-row w-full content-center justify-center'
               >
-                {getLanguague(pathname, category)}
+                <a href={category.pathname} className={`${currentLanguage[0].pathname === category.pathname ? 'text-tangle-green-blue-crayola' : ''}`}> {category.name} </a>
               </motion.li>
             ))}
         </AnimatePresence>
@@ -49,16 +55,3 @@ function SubMenu ({
 }
 
 export default SubMenu
-
-function getLanguague (pathname, category) {
-  switch (pathname) {
-    case '/en':
-      return (<a href={`/${category.id}`}> {category.name_en} </a>)
-    case '/es':
-      return (<a href={`/${category.id}`}> {category.name_es} </a>)
-    case '/nl':
-      return (<a href={`/${category.id}`}> {category.name_nl} </a>)
-    default:
-      return (<a href={`/${category.id}`}> {category.name_en} </a>)
-  }
-}

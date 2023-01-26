@@ -64,9 +64,9 @@ export default function NavBar ({ text }) {
           </a>
         </div>
         <div className='hidden md:flex'>
-          <div className='  flex justify-center px-4'>
+          <div className='flex justify-center px-4'>
             <motion.button className='bg-[#0086D3] rounded-full py-3 px-5 h-12 self-center'>
-              {text.button}
+              {text.home[12].button}
             </motion.button>
           </div>
           <div className='flex justify-center pr-8 pl-4'>

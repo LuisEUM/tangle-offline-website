@@ -1,9 +1,9 @@
 'use client'
 import './Select.css'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
-import languagesOptionsData from '../../../data/menu.languages.json'
+import { LanguageContext } from '../../../context/languageContext'
 
 const itemVariants = {
   open: (i = 1) => ({
@@ -29,10 +29,11 @@ const itemVariants = {
   }
 }
 export default function SelectList () {
+  const { text } = useContext(LanguageContext)
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
-  const currentLanguage = languagesOptionsData.filter((category) => category.pathname === pathname)
-  const [selectedCategory, setSelectedCategory] = useState(currentLanguage[0].official_name)
+  const currentLanguage = text.menu[0].languages_options.filter((category) => category.pathname === pathname)
+  const [selectedCategory, setSelectedCategory] = useState(text.menu[0].current_language)
 
   return (
     <motion.nav
@@ -64,9 +65,11 @@ export default function SelectList () {
           style={{ originY: 0.55 }}
           className='select-list'
         >
+
           <svg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <path d='M1 1L7 7L13 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />
           </svg>
+
         </motion.div>
       </motion.button>
       <AnimatePresence>
@@ -97,9 +100,9 @@ export default function SelectList () {
             style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
           >
             <AnimatePresence>
-              {isOpen && languagesOptionsData.map((category, i) => (
+              {isOpen && text.menu[0].languages_options.map((category, index) => (
                 <motion.li
-                  key={category.id}
+                  key={index}
                   className='text-center text-base last:border-b-0  border-b-2 text-neutral-600 font-normal first:mt-0 mt-2 flex-row w-full content-center justify-center'
                   whileHover={{ color: 'rgb(24,31,49)', fontSize: '18px' }}
                   whileTap={{ color: 'rgb(24,31,49)', fontSize: '14px' }}
@@ -113,7 +116,7 @@ export default function SelectList () {
                     setSelectedCategory(category)
                   }}
                 >
-                  {getLanguague(pathname, category)}
+                  <a href={category.pathname} className={`${currentLanguage[0].pathname === category.pathname ? 'text-tangle-green-blue-crayola' : ''}`}> {category.name} </a>
                 </motion.li>
               )
               )}

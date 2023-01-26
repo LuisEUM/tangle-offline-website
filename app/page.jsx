@@ -15,83 +15,66 @@ import SectionTwelve from './components/sections/SectionTwelve'
 import SectionThirteen from './components/sections/SectionThirteen'
 import SectionFifteen from './components/sections/SectionFifteen'
 import NavBar from './components/navbar/NavBar'
-import { useContext, useEffect, useState } from 'react'
-import { usePathname } from 'next/navigation'
+import { useContext } from 'react'
 import { LanguageContext } from './context/languageContext'
 import SectionFourteen from './components/sections/SectionFourteen'
 
 export default function Homepage () {
-  const { textData } = useContext(LanguageContext)
-  const pathname = usePathname()
-  const [text, setText] = useState(null)
-
-  useEffect(() => {
-    const finalText = getText(pathname, textData)
-    console.log(textData)
-
-    setText(finalText)
-  }, [])
-
-  if (text === null) {
-    return (<p>loading...</p>)
-  }
-
-  // console.log(text)
-
+  const { text } = useContext(LanguageContext)
   return (
     <>
       <div className='max-w-full'>
         <div className='grid grid-cols-1'>
           <div className='bg-red-700 z-50'>
-            <NavBar text={text[12]} />
+            <NavBar text={text} />
           </div>
           <SectionAnimation>
-            <SectionOne text={[text[0], text[1]]} />
+            <SectionOne text={[text.home[0], text.home[1]]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionThree text={text[2]} />
+            <SectionThree text={text.home[2]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionFour text={text[3]} />
+            <SectionFour text={text.home[3]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionFive text={text[4]} />
+            <SectionFive text={text.home[4]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionSix text={text[5]} />
+            <SectionSix text={text.home[5]} />
           </SectionAnimation>
           <div className='relative w-full'>
             <SectionAnimation>
-              <SectionSeven text={text[6]} />
+              <SectionSeven text={text.home[6]} />
             </SectionAnimation>
             <SectionAnimation>
-              <SectionEight text={text[7]} />
+              <SectionEight text={text.home[7]} />
             </SectionAnimation>
             <div className='w-full flex'>
               <StarsBackground id='stars1' />
             </div>
           </div>
           <SectionAnimation>
-            <SectionNine text={text[8]} />
+            <SectionNine text={text.home[8]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionTen text={text[9]} />
+            <SectionTen text={text.home[9]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionEleven text={text[10]} />
+            <SectionEleven text={text.home[10]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionTwelve text={text[11]} />
+            <SectionTwelve text={text.home[11]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionThirteen text={text[12]} />
+            <SectionThirteen text={text.home[12]} />
           </SectionAnimation>
           <SectionAnimation>
-            <SectionFourteen text={text[13]} />
+            <SectionFourteen text={text.home[13]} />
           </SectionAnimation>
           <div className='relative w-full'>
             <SectionAnimation>
-              <SectionFifteen text={text[14]} />
+              <SectionFifteen text={text.home[14]} />
             </SectionAnimation>
             <div className='w-full flex'>
               <StarsBackground id='stars2' />
@@ -103,15 +86,3 @@ export default function Homepage () {
   )
 }
 
-function getText (pathname, textData) {
-  switch (pathname) {
-    case '/en':
-      return textData?.home.en
-    case '/es':
-      return textData?.home.es
-    case '/nl':
-      return textData?.home.nl
-    default:
-      return textData?.home.en
-  }
-}
