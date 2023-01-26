@@ -18,6 +18,7 @@ import NavBar from './components/navbar/NavBar'
 import { useContext } from 'react'
 import { LanguageContext } from './context/languageContext'
 import SectionFourteen from './components/sections/SectionFourteen'
+import Footer from './components/footer/Footer'
 
 export default function Homepage () {
   const { text } = useContext(LanguageContext)
@@ -26,7 +27,7 @@ export default function Homepage () {
       <div className='max-w-full'>
         <div className='grid grid-cols-1'>
           <div className='bg-red-700 z-50'>
-            <NavBar text={text} />
+            <NavBar />
           </div>
           <SectionAnimation>
             <SectionOne text={[text.home[0], text.home[1]]} />
@@ -75,6 +76,7 @@ export default function Homepage () {
           <div className='relative w-full'>
             <SectionAnimation>
               <SectionFifteen text={text.home[14]} />
+              <Footer />
             </SectionAnimation>
             <div className='w-full flex'>
               <StarsBackground id='stars2' />
@@ -85,4 +87,3 @@ export default function Homepage () {
     </>
   )
 }
-

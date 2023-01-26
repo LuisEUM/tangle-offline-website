@@ -32,7 +32,8 @@ export default function SelectList () {
   const { text } = useContext(LanguageContext)
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
-  const currentLanguage = text.menu[0].languages_options.filter((category) => category.pathname === pathname)
+  const currentLanguage = text.menu[0].languages_options.filter((category) => pathname.includes(category.pathname))
+  console.log(currentLanguage)
   const [selectedCategory, setSelectedCategory] = useState(text.menu[0].current_language)
 
   return (
@@ -116,7 +117,7 @@ export default function SelectList () {
                     setSelectedCategory(category)
                   }}
                 >
-                  <a href={category.pathname} className={`${currentLanguage[0].pathname === category.pathname ? 'text-tangle-green-blue-crayola' : ''}`}> {category.name} </a>
+                  <a href={`${currentLanguage[0].pathname === category.pathname ? pathname : (category.pathname + pathname.slice(3))}`} className={`${currentLanguage[0].pathname === category.pathname ? 'text-tangle-green-blue-crayola' : ''}`}> {category.name} </a>
                 </motion.li>
               )
               )}
@@ -125,17 +126,4 @@ export default function SelectList () {
       </AnimatePresence>
     </motion.nav>
   )
-}
-
-function getLanguague (pathname, category) {
-  switch (pathname) {
-    case '/en':
-      return (<a href={`/${category.id}`}> {category.name_en} </a>)
-    case '/es':
-      return (<a href={`/${category.id}`}> {category.name_es} </a>)
-    case '/nl':
-      return (<a href={`/${category.id}`}> {category.name_nl} </a>)
-    default:
-      return (<a href={`/${category.id}`}> {category.name_en} </a>)
-  }
 }

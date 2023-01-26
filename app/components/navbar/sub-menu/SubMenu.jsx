@@ -12,7 +12,7 @@ function SubMenu ({
   className
 }) {
   const pathname = usePathname()
-  const currentLanguage = categories.filter((category) => category.pathname === pathname)
+  const currentLanguage = categories.filter((category) => pathname.includes(category.pathname))
 
   return (
     <>
@@ -45,7 +45,7 @@ function SubMenu ({
                 key={index}
                 className='text-left border-b-2 hover:text-tangle-green-blue-crayola  text-neutral-600 font-normal mt-5 flex-row w-full content-center justify-center'
               >
-                <a href={category.pathname} className={`${currentLanguage[0].pathname === category.pathname ? 'text-tangle-green-blue-crayola' : ''}`}> {category.name} </a>
+                <a href={`${currentLanguage[0].pathname === category.pathname ? pathname : (category.pathname + pathname.slice(3))}`} className={`${currentLanguage[0].pathname === category.pathname ? 'text-tangle-green-blue-crayola' : ''}`}> {category.name} </a>
               </motion.li>
             ))}
         </AnimatePresence>

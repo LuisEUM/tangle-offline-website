@@ -1,10 +1,11 @@
 'use client'
-import { useRef, React, useState, useEffect } from 'react'
+import { useRef, React, useState, useEffect, useContext } from 'react'
 import { AnimatePresence, motion, useCycle } from 'framer-motion'
 import { useDimensions } from './hook/use-dimensions.jsx'
 import { ToggleMenu } from './toggle-menu/ToggleMenu'
 import MainMenu from './main-menu/MainMenu'
 import SelectList from '../ui/select-list/SelectList.js'
+import { LanguageContext } from '../../context/languageContext.js'
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -27,7 +28,8 @@ const sidebar = {
   }
 }
 
-export default function NavBar ({ text }) {
+export default function NavBar () {
+  const { text } = useContext(LanguageContext)
   const [isOpen, toggleOpen] = useCycle(false, true)
   const containerRef = useRef(null)
   const { height } = useDimensions(containerRef)
