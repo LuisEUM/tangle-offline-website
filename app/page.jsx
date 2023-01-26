@@ -43,7 +43,7 @@ export default function Homepage () {
       <div className='max-w-full'>
         <div className='grid grid-cols-1'>
           <div className='bg-red-700 z-50'>
-            <NavBar />
+            <NavBar text={text[12]} />
           </div>
           <SectionAnimation>
             <SectionOne text={[text[0], text[1]]} />

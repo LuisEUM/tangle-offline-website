@@ -1,18 +1,24 @@
 [
   {
     "id": "en",
+    "pathname": "/en",
+    "official_name": "English",
     "name_es": "Inglés",
     "name_en": "English",
     "name_nl": "Engels"
   },
   {
     "id": "es",
+    "pathname": "/es",
+    "official_name": "Español",
     "name_es": "Español",
     "name_en": "Spanish",
     "name_nl": "Spaans"
   },
   {
     "id": "nl",
+    "pathname": "/nl",
+    "official_name": "Nederlands",
     "name_es": "Neerlandés",
     "name_en": "Dutch",
     "name_nl": "Nederlands"
