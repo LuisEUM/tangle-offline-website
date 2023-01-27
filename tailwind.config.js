@@ -21,6 +21,7 @@ module.exports = {
         'hero-desktop': "url('/backgrounds/girlWalkingPhone.jpeg')",
         'hero-mobile': "url('/backgrounds/girlWalkingPhoneCentered.jpeg')",
         'img-coffe': "url('/backgrounds/partneringWithOfflineBusinesses.png')",
+        'img-merchant': "url('/backgrounds/becomeAMerchant.jpeg')",
         'collage-1': "url('/collagePeople/pexels-caleb-oquendo-11140378.jpg')",
         'collage-2': "url('/collagePeople/pexels-sangeet-rao-5775283.jpg')",
         'collage-3': "url('/collagePeople/pexels-alessandro-kelvin-2376268.jpg')",

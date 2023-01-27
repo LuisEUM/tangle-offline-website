@@ -8,7 +8,6 @@ export const LanguageContext = createContext()
 export const LanguageProvider = ({ children }) => {
   const pathname = usePathname()
   const [text, setText] = useState(null)
-  const [menu, setMenu] = useState(null)
 
   useEffect(() => {
     const finalText = getText(pathname, textData)
@@ -17,7 +16,7 @@ export const LanguageProvider = ({ children }) => {
     console.log(text)
   }, [])
 
-  if ((text || menu) === null) {
+  if ((text) === null) {
     return (<p>loading...</p>)
   }
 
@@ -25,14 +24,13 @@ export const LanguageProvider = ({ children }) => {
 }
 
 function getText (pathname, textData) {
-  switch (pathname) {
-    case '/en':
-      return textData.en
-    case '/es':
-      return textData.es
-    case '/nl':
-      return textData.nl
-    default:
-      return textData.en
+  if (pathname.includes('/es')) {
+    return textData.es
+  } else if (pathname.includes('/es')) {
+    return textData.es
+  } else if (pathname.includes('/nl')) {
+    return textData.nl
+  } else {
+    return textData.en
   }
 }

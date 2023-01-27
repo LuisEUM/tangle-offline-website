@@ -17,9 +17,11 @@ export default function SectionThirteen ({ text }) {
             <motion.div className='max-w-full mb-7 md:mb-8  lg:mb-20'>
               <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body' text={text.description} tag='p' />
             </motion.div>
-            <motion.button className='bg-[#0086D3] rounded-full w-full py-3'>
-              {text.button}
-            </motion.button>
+            <a href={text.button_url} className='self-center'>
+              <motion.button className='bg-[#0086D3] rounded-full w-full py-3'>
+                {text.button}
+              </motion.button>
+            </a>
           </div>
           <div className='m-auto lg:pl-16 h-[165px] md:h-[372px] lg:h-[400px] w-full order-1 lg:order-2'>
             <div className='h-full rounded-2xl w-full bg-no-repeat bg-center bg-cover bg-img-coffe' />

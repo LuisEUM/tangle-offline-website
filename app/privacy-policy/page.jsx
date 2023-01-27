@@ -7,7 +7,7 @@ export default function PrivacyPolicy () {
   return (
     <div>
       <div className='grid grid-cols-1'>
-        <div className='bg-red-700 z-50'>
+        <div className='z-50'>
           <NavBar />
         </div>
       </div>

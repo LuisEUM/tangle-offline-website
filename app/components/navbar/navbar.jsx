@@ -61,15 +61,17 @@ export default function NavBar () {
         className={`flex h-20 absolute justify-between md:fixed top-0 w-full ${scrolled ? 'bg-opacity-50 bg-tangle-oxford-blue' : ''}`}
       >
         <div className=' ml-8 col-span-2 flex justify-center items-center'>
-          <a href='/' className='w-full self-center'>
+          <a href={text.menu[0].home_pathname} className='w-full self-center'>
             <img src='/logos/TangleLogoNewWhite.png' alt='Tangle Logo' width='150px' height='auto' />
           </a>
         </div>
         <div className='hidden md:flex'>
           <div className='flex justify-center px-4'>
-            <motion.button className='bg-[#0086D3] rounded-full py-3 px-5 h-12 self-center'>
-              {text.home[12].button}
-            </motion.button>
+            <a href={text.home[12].button_url} className='self-center'>
+              <motion.button className='bg-[#0086D3] rounded-full py-3 px-5 h-12 self-center'>
+                {text.home[12].button}
+              </motion.button>
+            </a>
           </div>
           <div className='flex justify-center pr-8 pl-4'>
             <SelectList />

@@ -107,7 +107,8 @@
         "section": 13,
         "header": "Partnering with <br/> Offline Businesses",
         "description": "Our goal is simple, minimize your digital interactions on our platform, and maximize the time you spend offline. To do that, We engineered a set of features aiming to generate excitement toward meeting people in real life.",
-        "button": "Become a Merchant"
+        "button": "Become a Merchant",
+        "button_url": "/en/merchants"
       },
       {
         "section": 14,
@@ -122,6 +123,30 @@
         "button":"Submit!",
         "submited":"Submited"
       }
+    ],
+    "merchant": [
+      {
+      "header": [{ "text": "Be among the first ones!" }, { "text": "" }],
+      "videoLink": "https://www.youtube.com/embed/hWHSanK6Rd4",
+      "lottieText": "Done",
+      "form": {
+        "header": "Get started",
+        "body": [
+          { "text": "Store name" },
+          { "text": "Store address" },
+          { "text": "Business type" },
+          { "text": "Website link" },
+          { "text": "Store KvK number (registration)" },
+          { "text": "Name" },
+          { "text": "Last name" },
+          { "text": "Email address" },
+          { "text": "Phone number" },
+          { "text": "Share your feedback with us (Optional)" },
+          { "text": "Submit" }
+        ]
+      },
+      "description": "We are helping Oflline Businesses go further. At Tangle we are doubling down on helping local commercial activities that revolve around offline social interactions to grow and prosper."
+    }
     ]
   },
   "es":{
@@ -232,7 +257,8 @@
         "section": 13,
         "header": "Asociación con empresas <br/> fuera de línea",
         "description": "Nuestro objetivo es sencillo: minimizar tus interacciones digitales en nuestra plataforma y maximizar el tiempo que pasas fuera de ella. Para ello, hemos diseñado una serie de funciones que te ayudarán a conocer gente en la vida real.",
-        "button": "Conviértase en comerciante"
+        "button": "Conviértase en comerciante",
+        "button_url": "/es/merchants"
       },
       {
         "section": 14,
@@ -247,7 +273,32 @@
         "button":"¡Envíalo!",
         "submited":"Envíado"
       }
+    ],
+    "merchant": [
+      {
+      "header": [{ "text": "¡Se uno de nosotros!" }, { "text": "" }],
+      "videoLink": "https://www.youtube.com/embed/hWHSanK6Rd4",
+      "lottieText": "Listo",
+      "form": {
+        "header": "Comencemos",
+        "body": [
+          { "text": "Nombre de la tienda" },
+          { "text": "Dirección de la tienda" },
+          { "text": "Tipo de negocio" },
+          { "text": "Enlace web" },
+          { "text": "Numero de tienda KvK (registro)" },
+          { "text": "Nombre" },
+          { "text": "Apellido" },
+          { "text": "Dirección de correo" },
+          { "text": "Numero de teléfono" },
+          { "text": "Comparte tu opinión con nosotros (opcional)" },
+          { "text": "Enviar" }
+        ]
+      },
+      "description": "Estamos ayudando a los negocios offline a llegar más lejos. En Tangle estamos redoblando nuestros esfuerzos para ayudar a crecer y prosperar a las actividades comerciales locales que giran en torno a las interacciones sociales fuera de línea."
+      }
     ]
+    
   },
   "nl":{
     "menu": [
@@ -357,7 +408,8 @@
       "section": 13,
       "header": "Samenwerking met <br/> offline bedrijven",
       "description": "Ons doel is eenvoudig, het minimaliseren van uw digitale interacties op ons platform, en het maximaliseren van de tijd die u offline doorbrengt. Om dat te doen, hebben we een aantal functies ontworpen die erop gericht zijn mensen in het echt te ontmoeten.",
-      "button": "Handelaar worden"
+      "button": "Handelaar worden",
+      "button_url": "/nl/merchants"
     },
     {
       "section": 14,
@@ -372,5 +424,30 @@
       "button":"Subtmit!",
       "submited":"Ingezonden"
     }
-  ]}
+    ],
+    "merchant": [
+      {
+        "header": [{ "text": "Wees een van de eersten!" }, { "text": "" }],
+        "videoLink": "https://www.youtube.com/embed/-4qMa7GmKio",
+        "lottieText": "Klaar",
+        "form": {
+          "header": "Aan de slag",
+          "body": [
+            { "text": "Naam winkel" },
+            { "text": "Winkeladres" },
+            { "text": "Type bedrijf" },
+            { "text": "Website link" },
+            { "text": "Store KvK number (registration)" },
+            { "text": "Naam" },
+            { "text": "Achternaam" },
+            { "text": "E-mailadres" },
+            { "text": "Telefoonnummer" },
+            { "text": "Deel uw feedback met ons (optioneel)" },
+            { "text": "Verzenden" }
+          ]
+        },
+        "description": "We helpen offline bedrijven verder te gaan. Bij Tangle verdubbelen we onze inspanningen om lokale commerciële ondernemingen die draaien om offline sociale interacties te helpen groeien en bloeien."      
+      }
+    ]
+  }
 }
