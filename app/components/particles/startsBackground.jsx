@@ -54,22 +54,15 @@ const StarsBackground = ({ id }) => {
         },
 
         particles: {
+          twinkle: {
+            enable: true,
+            frequency: 50,
+            opacity: 0.5
+          },
           life: {
             duration: {
               sync: false,
               value: 5
-            }
-          },
-          twinkle: {
-            lines: {
-              enable: true,
-              frequency: 5,
-              opacity: 1
-            },
-            particles: {
-              enable: true,
-              frequency: 0.5,
-              opacity: 0.5
             }
           },
           color: {
@@ -95,7 +88,7 @@ const StarsBackground = ({ id }) => {
           number: {
             density: {
               enable: true,
-              area: 1000
+              area: 9000
             },
             value: 200
           },

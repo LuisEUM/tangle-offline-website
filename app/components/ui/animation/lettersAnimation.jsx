@@ -122,13 +122,13 @@ function Item ({ words, className }) {
         return (
           <motion.span
             key={index}
-            style={{ marginRight: '5px' }}
-            className={`${className} inline-flex`}
+            className={`${className} inline-flex mr-1 last:mr-0`}
           >
             {word.split('').map((letter, i) => (
               <motion.span
                 variants={child}
                 key={i}
+                className='last:mr-0'
               >
                 {letter}
               </motion.span>
