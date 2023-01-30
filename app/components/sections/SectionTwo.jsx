@@ -1,6 +1,6 @@
 'use client'
 import { Ellipse } from '../ui/svg/elipse'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import ParticlesBackground from '../particles/particlesBackground'
 import VerticalLine from '../ui/progress/verticalLine'
 import WordsAnimation from '../ui/animation/wordsAnimation'
@@ -9,22 +9,34 @@ import Image from 'next/image'
 import LettersAnimation from '../ui/animation/lettersAnimation'
 
 export default function SectionTwo ({ text }) {
-  const activitiesArray = text.activities
-  const [activity, setActivity] = useState(text.activities[0])
+  const [index, setIndex] = useState(0)
+  const currentWord = text.activities[index]
 
   useEffect(() => {
-    let count = 0
-    setInterval(() => {
-      if (activitiesArray.length <= count) {
-        count = 0
-      }
+    const i = setInterval(() => {
+      setIndex((i) => (i + 1) % text.activities.length)
+    }, 5000)
 
-      setActivity(activitiesArray[count])
-      count++
-    }, 3000)
+    return () => {
+      clearInterval(i)
+    }
+  }, [text.activities.length])
 
-    // return clearInterval(wordCounter)
-  }, [])
+  const variants = {
+    initial: {
+      opacity: 0,
+      scale: 0
+    },
+    enter: {
+      opacity: 1,
+      scale: 1
+    },
+    exit: {
+      position: 'absolute',
+      opacity: 0,
+      scale: 0
+    }
+  }
 
   return (
     <div>
@@ -44,7 +56,31 @@ export default function SectionTwo ({ text }) {
                           <WordsAnimation className='text-lg md:text-2xl lg:text-3xl font-title ' text={text.subHeader} tag='h4' />
                         </motion.div>
                         <motion.div>
-                          <LettersAnimation className='mt-2 mr-2 text-3xl md:text-6xl lg:text-6xl font-bold ' text={`${text.header} <em> ${activity} </em>`} tag='h3' />
+                          <div className='flex flex-col'>
+                            <div className='-mr-8 '>
+                              <LettersAnimation className='mt-2 mr-2 text-3xl md:text-6xl lg:text-6xl font-bold ' text={`${text.header}`} tag='h3'>
+                                <span className='text-center inline-block relative self-baseline'>
+                                  <AnimatePresence>
+                                    <motion.em
+                                      className=' inline-block relative w-[max-content] self-baseline mt-2 mr-2 text-3xl md:text-6xl lg:text-6xl font-bold '
+                                      variants={variants}
+                                      initial='initial'
+                                      animate='enter'
+                                      exit='exit'
+                                      transition={{
+                                        duration: 3,
+                                        type: 'spring',
+                                        stiffness: 300,
+                                        damping: 24
+                                      }}
+                                    >
+                                      {currentWord || text.activities[0]}
+                                    </motion.em>
+                                  </AnimatePresence>
+                                </span>
+                              </LettersAnimation>
+                            </div>
+                          </div>
                           <div className='grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-20 max-h-[64px] mt-11'>
                             <div className='self-center'>
                               <Image src='/logos/merchantLogo4.png' alt='Logo The Amsterdam Dungeon' width={181} height={38} className='max-w-full max-h-full m-auto' />

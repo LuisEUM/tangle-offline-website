@@ -13,7 +13,6 @@ export const LanguageProvider = ({ children }) => {
     const finalText = getText(pathname, textData)
 
     setText(finalText)
-    console.log(text)
   }, [])
 
   if ((text) === null) {

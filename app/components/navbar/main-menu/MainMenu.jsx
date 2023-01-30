@@ -33,7 +33,6 @@ const MainMenu = ({ isOpen }) => {
     }
   }
 
-  console.log(text)
   return (
     <motion.ul
       variants={itemVariants}

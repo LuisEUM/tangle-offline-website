@@ -56,7 +56,7 @@ export default function SectionSeven ({ text }) {
                   </div>
                 </div>
                 <div className=' flex h-[63px] mr-0.5 bg-tangle-rich-black-FOGBRA-29 rounded-full px-5 py-10 mt-10' style={{ background: 'radial-gradient(50% 50% at 50% 50%, rgba(13, 17, 28, 1) 85%, rgba(13, 17, 28, 0.6) 100%)' }}>
-                  <Ellipse icon='heart' className='h-16 p-12 my-5 max-w-[30px] ' color='rgb(1, 209, 46, 0.4)' />
+                  <Ellipse icon='happy' className='h-16 p-12 my-5 max-w-[30px] ' color='rgb(1, 209, 46, 0.4)' />
                 </div>
               </div>
               <div className='bg-yellow-  absolute -z-30 right-5 top-0 overflow-hidden max-h-full'>

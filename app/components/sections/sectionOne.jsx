@@ -80,8 +80,6 @@ export default function SectionOne ({ text }) {
     }
   }
 
-  console.log(text)
-
   return (
     <motion.div variants={fadeInAnimationLong} initial='hidden' animate='visible' className='grid grid-cols-1 w-full '>
       <motion.div variants={fadeInAnimation} className='z-40 pt-[36rem] md:pt[42rem] lg:pt-96  bg-no-repeat lg:bg-right bg-center bg-cover bg-hero-mobile  lg:bg-hero-desktop '>

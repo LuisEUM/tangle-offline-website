@@ -22,6 +22,8 @@ module.exports = {
         'hero-mobile': "url('/backgrounds/girlWalkingPhoneCentered.jpeg')",
         'img-coffe': "url('/backgrounds/partneringWithOfflineBusinesses.png')",
         'img-merchant': "url('/backgrounds/becomeAMerchant.jpeg')",
+        'img-map': "url('/backgrounds/map.png')",
+        'activity-basket': "url('/activities/basketCard.png')",
         'collage-1': "url('/collagePeople/pexels-caleb-oquendo-11140378.jpg')",
         'collage-2': "url('/collagePeople/pexels-sangeet-rao-5775283.jpg')",
         'collage-3': "url('/collagePeople/pexels-alessandro-kelvin-2376268.jpg')",

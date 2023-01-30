@@ -33,7 +33,6 @@ export default function SelectList () {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
   const currentLanguage = text.menu[0].languages_options.filter((category) => pathname.includes(category.pathname))
-  console.log(currentLanguage)
   const [selectedCategory, setSelectedCategory] = useState(text.menu[0].current_language)
 
   return (

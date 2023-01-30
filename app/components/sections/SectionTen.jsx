@@ -11,27 +11,29 @@ export default function SectionTen ({ text }) {
       <motion.div className='  '>
         <div>
           <div className='flex gap-12'>
-            <div className='bg- flex justify-center content-center  align-middle relative h-[450px]'>
-              <div className='bg- flex justify-center content-center  align-middle gap-6'>
-                <div className=' flex h-[63px] ml-0.5 bg-tangle-rich-black-FOGBRA-29 rounded-full  px-5 py-10 self-start mt-10' style={{ background: 'radial-gradient(50% 50% at 50% 50%, rgba(13, 17, 28, 1) 85%, rgba(13, 17, 28, 0.6) 100%)' }}>
-                  <Ellipse icon='heart' className='h-16 p-12 my-5 max-w-[30px] ' color='rgba(1, 209, 46, 0.4)' />
-                </div>
-                <div className=' py-5'>
-                  <div className='flex flex-col mt-10 align-middle content-top justify-top pr-10'>
-                    <motion.div className='max-w-full pt-2'>
-                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-title' text={text.subHeader} tag='h4' />
-                    </motion.div>
-                    <motion.div className='max-w-full'>
-                      <LettersAnimation className='py-2 text-3xl md:text-6xl lg:text-6xl font-bold' text={text.header} tag='h3' />
-                    </motion.div>
-                    <motion.div className='max-w-full md:w-full lg:w-4/5 pr-2 pt-2'>
-                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body ' text={text.description} tag='p' />
-                    </motion.div>
+            <div className='bg-red- flex justify-center content-center  align-middle relative h-[600px]'>
+              <div className='bg-fuchsia- flex justify-center content-center  align-middle gap-6'>
+                <div className='bg-green- py-5 flex flex-col mt-10 align-bottom content-bottom mb-12 pr-10 self-end relative'>
+                  <div className='flex align-bottom content-bottom self-end gap-6'>
+                    <div className='flex h-[63px] ml-0.5 bg-tangle-rich-black-FOGBRA-29 rounded-full  px-5 py-10 self-start mt-10' style={{ background: 'radial-gradient(50% 50% at 50% 50%, rgba(13, 17, 28, 1) 85%, rgba(13, 17, 28, 0.6) 100%)' }}>
+                      <Ellipse icon='share' className='h-16 p-12 my-5 max-w-[30px] ' color='rgba(1, 209, 46, 0.4)' />
+                    </div>
+                    <div className='flex flex-col align-bottom content-bottom pr-10 self-end'>
+                      <motion.div className='max-w-full pt-2 ml-'>
+                        <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-title' text={text.subHeader} tag='h4' />
+                      </motion.div>
+                      <motion.div className='max-w-full'>
+                        <LettersAnimation className='py-2 text-3xl md:text-6xl lg:text-6xl font-bold' text={text.header} tag='h3' />
+                      </motion.div>
+                      <motion.div className='max-w-full md:w-full lg:w-4/5 pr-2 pt-2'>
+                        <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body ' text={text.description} tag='p' />
+                      </motion.div>
+                    </div>
                   </div>
                 </div>
               </div>
               <div className='bg-yellow- flex absolute -z-30 left-5 top-0'>
-                <VerticalLine color='rgb(1, 209, 46)' width={42} heigth={450} />
+                <VerticalLine color='rgb(1, 209, 46)' width={42} heigth={600} />
               </div>
             </div>
           </div>
