@@ -5,7 +5,7 @@ import { useDimensions } from './hook/use-dimensions.jsx'
 import { ToggleMenu } from './toggle-menu/ToggleMenu'
 import MainMenu from './main-menu/MainMenu'
 import SelectList from '../ui/select-list/SelectList.js'
-import { LanguageContext } from '../../context/languageContext.js'
+import { LanguageContext } from '../../context/languageContext.jsx'
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -51,7 +51,7 @@ export default function NavBar () {
   }
 
   return (
-    <div className='top-0 z-50 w-full '>
+    <div className='top-0 z-50 w-full opacity-100'>
       <div
         style={{
           transitionDuration: '600ms',
@@ -62,7 +62,7 @@ export default function NavBar () {
       >
         <div className=' ml-8 col-span-2 flex justify-center items-center'>
           <a href={text.menu[0].home_pathname} className='w-full self-center'>
-            <img src='/logos/TangleLogoNewWhite.png' alt='Tangle Logo' width='150px' height='auto' />
+            <motion.img layoutId='navbarLogo' src='/logos/TangleLogoNewWhite.png' alt='Tangle Logo' width='150px' height='auto' />
           </a>
         </div>
         <div className='hidden md:flex'>

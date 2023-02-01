@@ -29,7 +29,7 @@ function SubMenu ({
           <p className='hover:text-tangle-green-blue-crayola '>{name}</p>
           <div className={`${subIsOpen ? 'rotate-90' : ''}`}>
             <svg width='8' height='15' viewBox='0 0 8 15' fill='none' xmlns='http://www.w3.org/2000/svg'>
-              <path className='hover:stroke-tangle-green-blue-crayola' d='M1 13.5L7 7.5L1 1.5' stroke='#0D111B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />
+              <path className='hover:stroke-tangle-green-blue-crayola' d='M1 13.5L7 7.5L1 1.5' stroke='#0D111B' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
             </svg>
           </div>
         </div>

@@ -4,7 +4,7 @@
 ul.select-list {
   display: flex;
   flex-direction: column;
-  clip-path: inset(0% round 0px);
+  clipPath: inset(0% round 0px);
 }
 
 

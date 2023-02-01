@@ -35,5 +35,9 @@
       "/activities/balloons.jpeg",
       "/activities/castle.jpeg",
       "/activities/stadium.jpeg"
+    ],
+    "logos":
+    [
+      "/logos/TangleLogoNewWhite.png"
     ]
 }

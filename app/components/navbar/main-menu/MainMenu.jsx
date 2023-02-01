@@ -3,7 +3,7 @@ import { useContext, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import SubMenu from '../sub-menu/SubMenu.jsx'
 import CountrySelector from '../../forms/CountrySelector.jsx'
-import { LanguageContext } from '../../../context/languageContext.js'
+import { LanguageContext } from '../../../context/languageContext.jsx'
 
 const MainMenu = ({ isOpen }) => {
   const [isOpenGeneral, setIsOpenGeneral] = useState(false)
@@ -57,7 +57,7 @@ const MainMenu = ({ isOpen }) => {
                   <div className='flex justify-between align-middle items-center'>
                     <p>{text.menu[0].home}</p>
                     <svg width='8' height='15' viewBox='0 0 8 15' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                      <path className='hover:stroke-tangle-green-blue-crayola' d='M1 13.5L7 7.5L1 1.5' stroke='#0D111B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />
+                      <path className='hover:stroke-tangle-green-blue-crayola' d='M1 13.5L7 7.5L1 1.5' stroke='#0D111B' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
                     </svg>
                   </div>
                 </motion.a>
@@ -73,7 +73,7 @@ const MainMenu = ({ isOpen }) => {
                   <div className='flex justify-between align-middle items-center'>
                     <p>{text.menu[0].merchant}</p>
                     <svg width='8' height='15' viewBox='0 0 8 15' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                      <path className='hover:stroke-tangle-green-blue-crayola' d='M1 13.5L7 7.5L1 1.5' stroke='#0D111B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />
+                      <path className='hover:stroke-tangle-green-blue-crayola' d='M1 13.5L7 7.5L1 1.5' stroke='#0D111B' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
                     </svg>
                   </div>
                 </motion.a>
