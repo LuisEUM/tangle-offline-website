@@ -9,8 +9,6 @@ import { LanguageContext } from '../context/languageContext'
 import { motion } from 'framer-motion'
 import LettersAnimation from '../components/ui/animation/lettersAnimation'
 import WordsAnimation from '../components/ui/animation/wordsAnimation'
-import NavBar from '../components/navbar/NavBar'
-import Footer from '../components/footer/Footer'
 
 const Merchant = () => {
   const { text } = useContext(LanguageContext)
