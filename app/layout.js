@@ -1,8 +1,8 @@
 import Head from './head'
 import '../styles/globals.css'
 import { LanguageProvider } from './context/languageContext'
-import NavBar from './components/navbar/NavBar'
-import Footer from './components/footer/Footer'
+// import NavBar from './components/navbar/NavBar'
+// import Footer from './components/footer/Footer'
 
 export default function RootLayout ({ children }) {
   return (
@@ -11,11 +11,11 @@ export default function RootLayout ({ children }) {
       <body className='bg-tangle-rich-black-FOGBRA-29 text-white font-body grid grid-cols-1 '>
         <LanguageProvider>
           <section className='max-w-full z-50'>
-            <NavBar />
+            {/* <NavBar /> */}
           </section>
           {children}
           <section className='max-w-full'>
-            <Footer />
+            {/* <Footer /> */}
           </section>
         </LanguageProvider>
       </body>
