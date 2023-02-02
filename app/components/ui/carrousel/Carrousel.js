@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import PropTypes from 'prop-types'
 
@@ -49,6 +49,13 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
       setPage((prevCount) => prevCount - 1)
     }
   }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleClickAfter()
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [page])
 
   return (
     <div className={`${className}`}>

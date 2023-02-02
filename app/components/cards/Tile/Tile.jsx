@@ -7,14 +7,15 @@ export const Tile = forwardRef(
       children,
       perspective = false,
       dark = false,
-      perspectiveDist = 400
+      perspectiveDist = 400,
+      className
     },
     ref
   ) => {
     const wrapperRef = useRef()
 
     return (
-      <div ref={wrapperRef} className='relative pt-[100%] overflow-hidden rounded-lg outline-none'>
+      <div ref={wrapperRef} className={`relative pt-[100%] overflow-hidden rounded-lg outline-none ${className}`}>
         <div
           className='absolute top-0 right-0 left-0 bottom-0'
           ref={ref}

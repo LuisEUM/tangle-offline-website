@@ -4,12 +4,10 @@ import { motion } from 'framer-motion'
 import VerticalLine from '../ui/progress/verticalLine'
 import WordsAnimation from '../ui/animation/wordsAnimation'
 import LettersAnimation from '../ui/animation/lettersAnimation'
-import { ComplexCards } from '../cards/ComplexCards'
-import { ComplexCardsFull } from '../cards/ComplexCardsFull'
+import ComplexCards from '../cards/ComplexCards'
 import { useEffect, useState } from 'react'
 
 export default function SectionSeven ({ text }) {
-  const [heigth, setHeigth] = useState(1400)
   const [matches, setMatches] = useState(false)
 
   useEffect(() => {
@@ -33,7 +31,7 @@ export default function SectionSeven ({ text }) {
             <div className='bg- w-fit flex justify-end content-end  align-middle relative md:h-[1100px] lg:h-[800px] bg-green- '>
               <div className=' absolute top-0 left-0 w-[62%] hidden lg:grid '>
                 <div className='grid grid-cols-1 gap-3 grid-flow-row-dense box-border w-full max-w-full absolute top-0 lg:-mx-32 h-[700px] overflow-hidden'>
-                  <ComplexCards />
+                  <ComplexCards desktop />
                 </div>
               </div>
               <div className='bg-blue- flex justify-center content-center  align-middle gap-6 lg:max-w-[68%] z-30'>
@@ -50,7 +48,8 @@ export default function SectionSeven ({ text }) {
                     </motion.div>
                     <div className=' '>
                       <div className='grid lg:hidden grid-cols-1 gap-3 grid-flow-row-dense box-border md:-mx-14 h-[700px] overflow-hidden'>
-                        <ComplexCardsFull />
+                        <ComplexCards tablet className='hidden md:grid lg:hidden' />
+                        <ComplexCards mobile className='md:hidden' />
                       </div>
                     </div>
                   </div>

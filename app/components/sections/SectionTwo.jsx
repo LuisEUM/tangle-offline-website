@@ -41,7 +41,7 @@ export default function SectionTwo ({ text }) {
   return (
     <div>
       <div className='relative  '>
-        <div className='px-2 md:px-14 lg:px-32 w-full'>
+        <div className='px-2 md:px-14 lg:px-32 w-full max-w-full overflow-hidden'>
           <motion.div className='  '>
             <div>
               <div className='flex gap-12'>
@@ -58,7 +58,7 @@ export default function SectionTwo ({ text }) {
                         <motion.div>
                           <div className='flex flex-col'>
                             <div className='-mr-8 '>
-                              <LettersAnimation className='mt-2 mr-2 text-3xl md:text-6xl lg:text-6xl font-bold ' text={`${text.header}`} tag='h3'>
+                              <LettersAnimation className='mt-2 mr-2 text-3xl md:text-6xl lg:text-6xl font-bold max-w-full ' text={`${text.header}`} tag='h3'>
                                 <span className='text-center inline-block relative self-baseline'>
                                   <AnimatePresence>
                                     <motion.em

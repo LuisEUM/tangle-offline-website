@@ -1,16 +1,6 @@
-'use client'
-
-import Footer from '../components/footer/Footer'
-import NavBar from '../components/navbar/NavBar'
-
 export default function PrivacyPolicy () {
   return (
-    <div>
-      <div className='grid grid-cols-1'>
-        <div className='z-50'>
-          <NavBar />
-        </div>
-      </div>
+    <>
       <div className='w-full flex align-middle justify-center content-center mb-6 mt-20'>
         <div className='max-w-3xl px-2 md:px-8'>
           <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-title mb-3'>Privacy Policy</h1>
@@ -51,7 +41,6 @@ export default function PrivacyPolicy () {
           <p className='mb-6'>If you have questions or comments about this notice, you may email us at info@tangleoffline.com. Based on the applicable laws of your country, you may have the right to request access to the personal Information we collect from you, change that information, or delete it. :) </p>
         </div>
       </div>
-      <Footer />
-    </div>
+    </>
   )
 }

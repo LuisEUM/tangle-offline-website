@@ -1,6 +1,6 @@
 'use client'
 import { motion, useSpring } from 'framer-motion'
-import { useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { useParentSize } from './hook/Hooks'
 import { Tile } from './Tile/Tile'
 
@@ -45,7 +45,7 @@ const dataClone = [
 // *                                                * //
 // ************************************************** //
 
-export const ComplexCards = () => {
+export default function ComplexCards ({ desktop, tablet, mobile, className }) {
   // I like to work with relative sizes, rather than px
   // useParentSize gets parent size, so I can
   // size everything relatively to the container.
@@ -58,7 +58,8 @@ export const ComplexCards = () => {
   // (btw. This could be a signle loop)
   // I just find it easier to read
 
-  const rotateArray = (n = 1) => {
+
+  const rotateArray = useCallback((n = 1) => {
     const newArr = [...state.arr]
     if (n > 0) {
       for (let i = 0; i < n; i++) {
@@ -73,13 +74,21 @@ export const ComplexCards = () => {
       }
       setState({ current: n, arr: newArr })
     }
-  }
+  }, [state.arr])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      rotateArray()
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [rotateArray])
 
   return (
     <Tile
       ref={ref}
       perspective
       perspectiveDist={size * 90}
+      className={className}
     >
       {state.arr.map(
         (item, i) =>
@@ -97,6 +106,9 @@ export const ComplexCards = () => {
               length={data.length}
               size={size}
               style={state.style}
+              desktop={desktop}
+              tablet={tablet}
+              mobile={mobile}
             />
           )
       )}
@@ -113,7 +125,7 @@ const spring = {
   restSpeed: 0.0001
 }
 
-const Card = ({ i, name, length, size, rotateArray, current }) => {
+const Card = ({ i, name, length, size, rotateArray, current, desktop, tablet, mobile }) => {
   // Card is sized relatively to the container,
   // just to maintain all ratios.
 
@@ -154,42 +166,128 @@ const Card = ({ i, name, length, size, rotateArray, current }) => {
   // – left (out of container but matters for exit animation)
   // – right (out of container but matters for initial animation)
 
-  const styles = {
-    [isLeft]: {
-      posX: offsetCalc(-1.25, 0),
-      posY: offsetCalc(-0.25, 0),
-      posZ: offsetCalc(0, 1),
-      rotX: 0,
-      rotY: 45,
-      rotZ: -90,
-      background: backgroundCalc(95, 0)
-    },
-    [isFirst]: {
-      posX: offsetCalc(-0.25, -cardWidth / 6 / i),
-      posY: offsetCalc(-0.4, 2.5),
-      posZ: offsetCalc(-1, i * i * -0.1),
-      rotX: 0,
-      rotY: 0,
-      rotZ: 0,
-      background: backgroundCalc(95, 0)
-    },
-    [isCenter]: {
-      posX: offsetCalc(i * 0.20, -i * 2.9 - 0.7 * cardWidth),
-      posY: offsetCalc(-0.4, 2),
-      posZ: offsetCalc(-1, i * i * -0.1),
-      rotX: i * 1,
-      rotY: i * 1,
-      rotZ: 30 + i * -6.3,
-      background: backgroundCalc(100, -25)
-    },
-    [isRight]: {
-      posX: offsetCalc(-1.5, 0),
-      posY: offsetCalc(0.25, 0),
-      posZ: offsetCalc(-0.25, -20),
-      rotX: 0,
-      rotY: 0,
-      rotZ: 0,
-      background: backgroundCalc(0, 0)
+  let styles = {}
+
+  if (desktop) {
+    styles = {
+      [isLeft]: {
+        posX: offsetCalc(-1.25, 0),
+        posY: offsetCalc(-0.25, 0),
+        posZ: offsetCalc(0, 1),
+        rotX: 0,
+        rotY: 45,
+        rotZ: -90,
+        background: backgroundCalc(95, 0)
+      },
+      [isFirst]: {
+        posX: offsetCalc(-0.25, -cardWidth / 6 / i),
+        posY: offsetCalc(-0.4, 2.5),
+        posZ: offsetCalc(-1, i * i * -0.1),
+        rotX: 0,
+        rotY: 0,
+        rotZ: 0,
+        background: backgroundCalc(95, 0)
+      },
+      [isCenter]: {
+        posX: offsetCalc(i * 0.20, -i * 2.9 - 0.7 * cardWidth),
+        posY: offsetCalc(-0.4, 2),
+        posZ: offsetCalc(-1, i * i * -0.1),
+        rotX: i * 1,
+        rotY: i * 1,
+        rotZ: 30 + i * -6.3,
+        background: backgroundCalc(100, -25)
+      },
+      [isRight]: {
+        posX: offsetCalc(-1.5, 0),
+        posY: offsetCalc(0.25, 0),
+        posZ: offsetCalc(-0.25, -20),
+        rotX: 0,
+        rotY: 0,
+        rotZ: 0,
+        background: backgroundCalc(0, 0)
+      }
+    }
+  }
+
+  if (tablet) {
+    styles = {
+      [isLeft]: {
+        posX: offsetCalc(-1.25, 0),
+        posY: offsetCalc(-0.25, 0),
+        posZ: offsetCalc(0, 1),
+        rotX: 0,
+        rotY: 45,
+        rotZ: -90,
+        background: backgroundCalc(95, 0)
+      },
+      [isFirst]: {
+        posX: offsetCalc(0.12, -cardWidth / 6 / i),
+        posY: offsetCalc(-0.4, 2.5),
+        posZ: offsetCalc(-1, i * i * -0.1),
+        rotX: 0,
+        rotY: 0,
+        rotZ: 2,
+        background: backgroundCalc(95, 0)
+      },
+      [isCenter]: {
+        posX: offsetCalc(i * 0.205, -i * 5.5 - 0.5 * cardWidth),
+        posY: offsetCalc(-0.4, 2),
+        posZ: offsetCalc(-1, i * i * -0.1),
+        rotX: i * 1,
+        rotY: i * 1,
+        rotZ: 30 + i * -6.3,
+        background: backgroundCalc(100, -25)
+      },
+      [isRight]: {
+        posX: offsetCalc(-1.5, 0),
+        posY: offsetCalc(0.25, 0),
+        posZ: offsetCalc(-0.25, -20),
+        rotX: 0,
+        rotY: 0,
+        rotZ: 0,
+        background: backgroundCalc(0, 0)
+      }
+    }
+  }
+
+  if (mobile) {
+    styles = {
+      [isLeft]: {
+        posX: offsetCalc(-1.25, 0),
+        posY: offsetCalc(-0.25, 0),
+        posZ: offsetCalc(0, 1),
+        rotX: 0,
+        rotY: 45,
+        rotZ: -90,
+        background: backgroundCalc(95, 0)
+      },
+      [isFirst]: {
+        posX: offsetCalc(0.12, -cardWidth / 6 / i),
+        posY: offsetCalc(-0.4, 2.5),
+        posZ: offsetCalc(-1, i * i * -0.1),
+        rotX: 0,
+        rotY: 0,
+        rotZ: 2,
+        background: backgroundCalc(95, 0)
+      },
+      [isCenter]: {
+        posX: offsetCalc(i * 0.205, -i * 5.5 - 0.5 * cardWidth),
+        posY: offsetCalc(-0.4, 2),
+        posZ: offsetCalc(-1, i * i * -0.1),
+        rotX: i * 1,
+        rotY: i * 1,
+        rotZ: 30 + i * -6.3,
+        background: backgroundCalc(100, -25)
+      },
+      [isRight]: {
+        posX: offsetCalc(-1.5, 0),
+        posY: offsetCalc(0.25, 0),
+        posZ: offsetCalc(-0.25, -20),
+        rotX: 0,
+        rotY: 0,
+        rotZ: 0,
+        background: backgroundCalc(0, 0)
+      }
     }
   }
 

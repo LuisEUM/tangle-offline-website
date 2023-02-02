@@ -28,12 +28,35 @@ const itemVariants = {
     }
   }
 }
+
+const mobileNavbar = {
+  open: {
+    clipPath: 'inset(0% 0% 0% 0% round 10px)',
+    transition: {
+      type: 'spring',
+      bounce: 0,
+      duration: 0.7,
+      delayChildren: 0.3,
+      staggerChildren: 0.05
+    }
+  },
+  closed: {
+    clipPath: 'inset(10% 50% 90% 50% round 10px)',
+    transition: {
+      type: 'spring',
+      bounce: 0,
+      duration: 0.3
+    }
+  }
+}
+
 export default function SelectList () {
   const { text } = useContext(LanguageContext)
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
   const currentLanguage = text.menu[0].languages_options.filter((category) => pathname.includes(category.pathname))
   const [selectedCategory, setSelectedCategory] = useState(text.menu[0].current_language)
+  const languageOptions = text.menu[0].languages_options
 
   return (
     <motion.nav
@@ -75,50 +98,34 @@ export default function SelectList () {
       <AnimatePresence>
         {isOpen &&
           <motion.ul
-            variants={{
-              open: {
-                clipPath: 'inset(0% 0% 0% 0% round 10px)',
-                transition: {
-                  type: 'spring',
-                  bounce: 0,
-                  duration: 0.7,
-                  delayChildren: 0.3,
-                  staggerChildren: 0.05
-                }
-              },
-              closed: {
-                clipPath: 'inset(10% 50% 90% 50% round 10px)',
-                transition: {
-                  type: 'spring',
-                  bounce: 0,
-                  duration: 0.3
-                }
-              }
-            }}
+            variants={mobileNavbar}
             className={`select-list w-28 absolute bg-white top-16 right-8 ${isOpen ? 'p-2' : 'hidden'}`}
             exit='closed'
             style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
           >
             <AnimatePresence>
-              {isOpen && text.menu[0].languages_options.map((category, index) => (
-                <motion.li
-                  key={index}
-                  className='text-center text-base last:border-b-0  border-b-2 text-neutral-600 font-normal first:mt-0 mt-2 flex-row w-full content-center justify-center'
-                  whileHover={{ color: 'rgb(24,31,49)', fontSize: '18px' }}
-                  whileTap={{ color: 'rgb(24,31,49)', fontSize: '14px' }}
-                  variants={itemVariants}
-                  initial='closed'
-                  animate={isOpen ? 'open' : 'closed'}
-                  exit='closed'
-                  value={category.id}
-                  onClick={() => {
-                    setIsOpen(false)
-                    setSelectedCategory(category)
-                  }}
-                >
-                  <a href={`${currentLanguage[0].pathname === category.pathname ? pathname : (category.pathname + pathname.slice(3))}`} className={`${currentLanguage[0].pathname === category.pathname ? 'text-tangle-green-blue-crayola' : ''}`}> {category.name} </a>
-                </motion.li>
-              )
+              {isOpen && (
+                <>
+                  {languageOptions && languageOptions.map((category, index) => (
+                    <motion.li
+                      key={index}
+                      className='text-center text-base last:border-b-0  border-b-2 text-neutral-600 font-normal first:mt-0 mt-2 flex-row w-full content-center justify-center'
+                      whileHover={{ color: 'rgb(24,31,49)', fontSize: '18px' }}
+                      whileTap={{ color: 'rgb(24,31,49)', fontSize: '14px' }}
+                      variants={itemVariants}
+                      initial='closed'
+                      animate={isOpen ? 'open' : 'closed'}
+                      exit='closed'
+                      value={category.id}
+                      onClick={() => {
+                        setIsOpen(false)
+                      }}
+                    >
+                      <a href={`${currentLanguage[0].pathname === category.pathname ? pathname : (category.pathname + pathname.slice(3))}`} className={`${currentLanguage[0].pathname === category.pathname ? 'text-tangle-green-blue-crayola' : ''}`}> {category.name} </a>
+                      {console.log(currentLanguage[0].pathname, category.pathname, pathname, (category.pathname + pathname.slice(3)), category.name)}
+                    </motion.li>
+                  ))}
+                </>
               )}
             </AnimatePresence>
           </motion.ul>}

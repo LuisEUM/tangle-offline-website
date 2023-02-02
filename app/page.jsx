@@ -14,11 +14,9 @@ import SectionEleven from './components/sections/SectionEleven'
 import SectionTwelve from './components/sections/SectionTwelve'
 import SectionThirteen from './components/sections/SectionThirteen'
 import SectionFifteen from './components/sections/SectionFifteen'
-import NavBar from './components/navbar/NavBar'
 import { useContext } from 'react'
 import { LanguageContext } from './context/languageContext'
 import SectionFourteen from './components/sections/SectionFourteen'
-import Footer from './components/footer/Footer'
 
 export default function Homepage () {
   const { text } = useContext(LanguageContext)
@@ -27,7 +25,7 @@ export default function Homepage () {
       <div className='max-w-full'>
         <div className='grid grid-cols-1'>
           <div className='z-50'>
-            <NavBar />
+            {/* <NavBar /> */}
           </div>
           <SectionAnimation>
             {/* Hero section and section with the words changing */}
@@ -90,7 +88,7 @@ export default function Homepage () {
             <SectionAnimation>
               {/* Email section, images section */}
               <SectionFifteen text={text.home[14]} />
-              <Footer />
+              {/* <Footer /> */}
             </SectionAnimation>
             <div className='w-full flex'>
               <StarsBackground id='stars2' />
