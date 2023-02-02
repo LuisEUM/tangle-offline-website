@@ -3,11 +3,12 @@ import { motion, useSpring } from 'framer-motion'
 import { useCallback, useEffect, useState } from 'react'
 import { useParentSize } from './hook/Hooks'
 import { Tile } from './Tile/Tile'
-
+import imgageData from '../../data/images.json'
 //  Create some data where each item
 //  in the array will represent an unique card
 
-const data = ['a', 'b', 'c', 'd', 'e']
+// const data = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+const data = imgageData.cards
 
 // Mapping function to create duplicates with UIDs
 const mapData = (data, prefix) =>
@@ -57,7 +58,6 @@ export default function ComplexCards ({ desktop, tablet, mobile, className }) {
   // A function to rotate the array by n steps
   // (btw. This could be a signle loop)
   // I just find it easier to read
-
 
   const rotateArray = useCallback((n = 1) => {
     const newArr = [...state.arr]
@@ -129,8 +129,8 @@ const Card = ({ i, name, length, size, rotateArray, current, desktop, tablet, mo
   // Card is sized relatively to the container,
   // just to maintain all ratios.
 
-  const cardWidth = size * 0.35 * 1
-  const cardHeight = size * 0.5 * 1
+  const cardWidth = size * 0.35 * 1 * (mobile ? 1.15 : 1)
+  const cardHeight = size * 0.55 * 1 * (mobile ? 1.15 : 1)
 
   // Bunch of helpers
   // to get the correct array slice
@@ -189,12 +189,12 @@ const Card = ({ i, name, length, size, rotateArray, current, desktop, tablet, mo
         background: backgroundCalc(95, 0)
       },
       [isCenter]: {
-        posX: offsetCalc(i * 0.20, -i * 2.9 - 0.7 * cardWidth),
+        posX: offsetCalc(i * 0.20, -i * 1 - 0.67 * cardWidth),
         posY: offsetCalc(-0.4, 2),
         posZ: offsetCalc(-1, i * i * -0.1),
         rotX: i * 1,
         rotY: i * 1,
-        rotZ: 30 + i * -6.3,
+        rotZ: 30 + i * -4.3,
         background: backgroundCalc(100, -25)
       },
       [isRight]: {
@@ -230,12 +230,12 @@ const Card = ({ i, name, length, size, rotateArray, current, desktop, tablet, mo
         background: backgroundCalc(95, 0)
       },
       [isCenter]: {
-        posX: offsetCalc(i * 0.205, -i * 5.5 - 0.5 * cardWidth),
+        posX: offsetCalc(i * 0.205, -i * 5.5 - 0.45 * cardWidth),
         posY: offsetCalc(-0.4, 2),
         posZ: offsetCalc(-1, i * i * -0.1),
         rotX: i * 1,
         rotY: i * 1,
-        rotZ: 30 + i * -6.3,
+        rotZ: 30 + i * -3.3,
         background: backgroundCalc(100, -25)
       },
       [isRight]: {
@@ -262,8 +262,8 @@ const Card = ({ i, name, length, size, rotateArray, current, desktop, tablet, mo
         background: backgroundCalc(95, 0)
       },
       [isFirst]: {
-        posX: offsetCalc(0.12, -cardWidth / 6 / i),
-        posY: offsetCalc(-0.4, 2.5),
+        posX: offsetCalc(-0.105, -cardWidth / 10 / i),
+        posY: offsetCalc(-0.45, 4),
         posZ: offsetCalc(-1, i * i * -0.1),
         rotX: 0,
         rotY: 0,
@@ -271,12 +271,12 @@ const Card = ({ i, name, length, size, rotateArray, current, desktop, tablet, mo
         background: backgroundCalc(95, 0)
       },
       [isCenter]: {
-        posX: offsetCalc(i * 0.205, -i * 5.5 - 0.5 * cardWidth),
-        posY: offsetCalc(-0.4, 2),
+        posX: offsetCalc(i * 0.205, -i * 1.1 - 0.52 * cardWidth),
+        posY: offsetCalc(-0.45, 4),
         posZ: offsetCalc(-1, i * i * -0.1),
         rotX: i * 1,
         rotY: i * 1,
-        rotZ: 30 + i * -6.3,
+        rotZ: 2,
         background: backgroundCalc(100, -25)
       },
       [isRight]: {
@@ -366,39 +366,15 @@ const Card = ({ i, name, length, size, rotateArray, current, desktop, tablet, mo
         top: '50%',
         left: '50%',
         zIndex: length - i,
-        borderRadius: `${size * 0.025}px`,
+        borderRadius: `${size * 0.035}px`,
         userSelect: 'none',
         overflow: 'hidden',
         cursor: isFirst ? 'grab' : 'pointer',
-        boxShadow: `0 ${size * 0.025}px ${size * 0.05}px ${
-          size * 0.025
-        }px hsla(0.63,0.40%,0.08%,0.2),
-        inset 2px 2px 0 0 hsla(0,0%,100%, 0.1)`,
-        touchAction: 'auto'
+        touchAction: 'auto',
+        backgroundColor: '#0C101C'
       }}
     >
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          background:
-            'linear-gradient(135deg, hsla(0,0%,100%,0.25), hsla(0,0%,13%,0.5)'
-        }}
-      >
-        <div
-          style={{
-            fontSize: `${size * 0.5}px`,
-            fontWeight: 800,
-            color: 'hsla(0,0%,0%,0.25)',
-            transform: `translateX(${size * 0.1}px) translateY(${
-              size * 0.1
-            }px)`,
-            textShadow: '1.5px 1.5px 0px hsla(0,100%,100%,0.1)'
-          }}
-        >
-          {name}
-        </div>
-      </div>
+      <div className='w-full h-full bg-cover bg-no-repeat bg-tangle-oxford-blue' style={{ backgroundImage: `url(${name})` }} />
     </motion.div>
   )
 }

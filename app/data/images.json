@@ -36,6 +36,17 @@
       "/activities/castle.jpeg",
       "/activities/stadium.jpeg"
     ],
+    "cards": [
+      "/activities/cards/card1.png",
+      "/activities/cards/card2.png",
+      "/activities/cards/card3.png",
+      "/activities/cards/card4.png",
+      "/activities/cards/card5.png",
+      "/activities/cards/card6.png",
+      "/activities/cards/card7.png",
+      "/activities/cards/card8.png",
+      "/activities/cards/card9.png"
+    ],
     "logos":
     [
       "/logos/TangleLogoNewWhite.png"
