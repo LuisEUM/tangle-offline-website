@@ -15,6 +15,7 @@ module.exports = {
       },
       fontFamily: {
         title: ['Righteous'],
+        titleMain: ['Typo Hoop'],
         body: ['Source Sans Pro']
       },
       backgroundImage: {
