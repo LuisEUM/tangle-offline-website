@@ -20,7 +20,8 @@ const MainMenu = ({ isOpen }) => {
         damping: 40,
         staggerChildren: 1 * i,
         delayChildren: 0.75 * i,
-        when: 'beforeChildren'
+        when: 'beforeChildren',
+        staggerDirection: 1
       }
     }),
     closed: {

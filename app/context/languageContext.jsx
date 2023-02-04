@@ -4,7 +4,7 @@ import textData from '../data/text.json'
 import imageData from '../data/images.json'
 import LettersAnimation from '../components/ui/animation/lettersAnimation'
 import { AnimatePresence, LayoutGroup, motion, useInView } from 'framer-motion'
-import { getCookie } from 'cookies-next'
+import { getCookie, setCookie } from 'cookies-next'
 
 export const LanguageContext = createContext()
 
@@ -50,6 +50,10 @@ export const LanguageProvider = ({ children }) => {
   }
 
   useEffect(() => {
+    if (languageCookie === undefined) {
+      setCookie('language', 'en')
+    }
+
     const finalText = getText(languageCookie, textData)
     setText(finalText)
   }, [languageCookie])
