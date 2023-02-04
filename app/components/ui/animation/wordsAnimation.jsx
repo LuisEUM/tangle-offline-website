@@ -1,8 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-export default function WordsAnimation ({ text, tag, className }) {
+export default function WordsAnimation ({ text, tag, className, key }) {
   const words = text.split(' ')
+  key = key || text
 
   const container = {
     hidden: { opacity: 0 },
@@ -40,6 +41,7 @@ export default function WordsAnimation ({ text, tag, className }) {
         variants={container}
         initial='hidden'
         animate='visible'
+        key={key}
       >
         <Item words={words} child={child} className={className} />
       </motion.h1>
@@ -51,6 +53,7 @@ export default function WordsAnimation ({ text, tag, className }) {
         variants={container}
         initial='hidden'
         animate='visible'
+        key={key}
       >
         <Item words={words} child={child} className={className} />
       </motion.h2>
@@ -62,6 +65,7 @@ export default function WordsAnimation ({ text, tag, className }) {
         variants={container}
         initial='hidden'
         animate='visible'
+        key={key}
       >
         <Item words={words} child={child} className={className} />
       </motion.h3>
@@ -73,6 +77,7 @@ export default function WordsAnimation ({ text, tag, className }) {
         variants={container}
         initial='hidden'
         animate='visible'
+        key={key}
       >
         <Item words={words} child={child} className={className} />
       </motion.h4>
@@ -84,6 +89,7 @@ export default function WordsAnimation ({ text, tag, className }) {
         variants={container}
         initial='hidden'
         animate='visible'
+        key={key}
       >
         <Item words={words} child={child} className={className} />
       </motion.h5>
@@ -95,6 +101,7 @@ export default function WordsAnimation ({ text, tag, className }) {
         variants={container}
         initial='hidden'
         animate='visible'
+        key={key}
       >
         <Item words={words} child={child} className={className} />
       </motion.h6>
@@ -106,6 +113,7 @@ export default function WordsAnimation ({ text, tag, className }) {
         variants={container}
         initial='hidden'
         animate='visible'
+        key={key}
       >
         <Item words={words} child={child} className={className} />
       </motion.p>

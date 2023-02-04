@@ -18,10 +18,10 @@ export default function SectionFour ({ text }) {
                 <div className='bg-red- py-5'>
                   <div className='flex flex-col mt-10 align-middle content-top justify-top pr-10'>
                     <motion.div className='max-w-full pt-2'>
-                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-title' text={text.header} tag='h4' />
+                      <WordsAnimation key={text.header} className='text-base sm:text-lg md:text-xl lg:text-2xl font-title' text={text.header} tag='h4' />
                     </motion.div>
                     <motion.div className='max-w-full md:w-full lg:w-4/5 pr-2 pt-2'>
-                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body ' text={text.description} tag='p' />
+                      <WordsAnimation key={text.description} className='text-base sm:text-lg md:text-xl lg:text-2xl font-body ' text={text.description} tag='p' />
                     </motion.div>
                   </div>
                 </div>

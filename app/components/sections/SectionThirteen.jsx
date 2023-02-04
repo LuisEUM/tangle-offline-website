@@ -15,7 +15,7 @@ export default function SectionThirteen ({ text }) {
               <LettersAnimation className='text-3xl md:text-4xl lg:text-5xl font-bold text-[#00ADE4] ' text={text.header} tag='h3' />
             </motion.div>
             <motion.div className='max-w-full mb-7 md:mb-8  lg:mb-20'>
-              <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body' text={text.description} tag='p' />
+              <WordsAnimation key={text.description} className='text-base sm:text-lg md:text-xl lg:text-2xl font-body' text={text.description} tag='p' />
             </motion.div>
             <a href={text.button_url} className='self-center'>
               <motion.button className='bg-[#0086D3] rounded-full w-full py-3'>

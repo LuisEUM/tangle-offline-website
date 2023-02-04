@@ -20,13 +20,13 @@ export default function SectionTen ({ text }) {
                     </div>
                     <div className='flex flex-col align-bottom content-bottom pr-10 self-end'>
                       <motion.div className='max-w-full pt-2 ml-'>
-                        <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-title' text={text.subHeader} tag='h4' />
+                        <WordsAnimation key={text.subHeader} className='text-base sm:text-lg md:text-xl lg:text-2xl font-title' text={text.subHeader} tag='h4' />
                       </motion.div>
                       <motion.div className='max-w-full'>
-                        <LettersAnimation className='py-2 text-3xl md:text-6xl lg:text-6xl font-bold' text={text.header} tag='h3' />
+                        <LettersAnimation key={text.header} className='py-2 text-3xl md:text-6xl lg:text-6xl font-bold' text={text.header} tag='h3' />
                       </motion.div>
                       <motion.div className='max-w-full md:w-full lg:w-4/5 pr-2 pt-2'>
-                        <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body ' text={text.description} tag='p' />
+                        <WordsAnimation key={text.description} className='text-base sm:text-lg md:text-xl lg:text-2xl font-body ' text={text.description} tag='p' />
                       </motion.div>
                     </div>
                   </div>

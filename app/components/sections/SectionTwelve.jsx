@@ -19,10 +19,10 @@ export default function SectionTwelve ({ text }) {
                 <div className=' py-5'>
                   <div className='flex flex-col mt-10 align-middle content-top justify-top pr-10'>
                     <motion.div className='max-w-full pt-2'>
-                      <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-title' text={text.subHeader} tag='h4' />
+                      <WordsAnimation key={text.subHeader} className='text-base sm:text-lg md:text-xl lg:text-2xl font-title' text={text.subHeader} tag='h4' />
                     </motion.div>
                     <motion.div className='max-w-full'>
-                      <LettersAnimation className='py-2 text-3xl md:text-6xl lg:text-6xl font-bold ' text={text.header} tag='h3' />
+                      <LettersAnimation key={text.header} className='py-2 text-3xl md:text-6xl lg:text-6xl font-bold ' text={text.header} tag='h3' />
                     </motion.div>
                   </div>
                 </div>

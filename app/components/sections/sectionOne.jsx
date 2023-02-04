@@ -85,15 +85,12 @@ export default function SectionOne ({ text }) {
       <motion.div variants={fadeInAnimation} className='z-40 pt-[36rem] md:pt[42rem] lg:pt-96  bg-no-repeat lg:bg-right bg-center bg-cover bg-hero-mobile  lg:bg-hero-desktop '>
         <motion.div variants={titleVariants} initial='hidden' animate='visible' className='w-full  '>
           <motion.div variants={fadeInAnimation} className=' px-14 md:px-24 lg:px-40 max-w-full'>
-            {/* <motion.div variants={fadeInAnimation} className='max-w-full '>
-              <LettersAnimation className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-title' text='Tangle' tag='h1' />
-            </motion.div> */}
-            <motion.div>
-              <LettersAnimation className='text-4xl md:text-6xl lg:text-7xl font-titleMain' text={text[0].header} tag='h1' />
-            </motion.div>
-            <motion.div className='w-4/5 md:w-3/4 lg:w-1/2 mt-5 mb-12'>
-              <WordsAnimation className='font-normal text-base  md:text-2xl lg:text-3xl font-body' text={text[0].subHeader} tag='p' />
-            </motion.div>
+            <div>
+              <LettersAnimation key={text[0].header} className='text-4xl md:text-6xl lg:text-7xl font-titleMain' text={text[0].header} tag='h1' />
+            </div>
+            <div className='w-4/5 md:w-3/4 lg:w-1/2 mt-5 mb-12'>
+              <WordsAnimation key={text[0].subHeader} className='font-normal text-base  md:text-2xl lg:text-3xl font-body' text={text[0].subHeader} tag='p' />
+            </div>
           </motion.div>
           <motion.div variants={fadeInAnimation} className='flex flex-row align-top items-start '>
 

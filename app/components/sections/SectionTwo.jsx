@@ -53,7 +53,7 @@ export default function SectionTwo ({ text }) {
                     <div className='bg-red- py-5'>
                       <div className=' mt-5 flex flex-col align-middle justify-start'>
                         <motion.div className='pr-5'>
-                          <WordsAnimation className='text-lg md:text-2xl lg:text-3xl font-title ' text={text.subHeader} tag='h4' />
+                          <WordsAnimation key={text.subHeader} className='text-lg md:text-2xl lg:text-3xl font-title ' text={text.subHeader} tag='h4' />
                         </motion.div>
                         <motion.div>
                           <div className='flex flex-col'>
