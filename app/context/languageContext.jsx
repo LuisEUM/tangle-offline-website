@@ -50,7 +50,7 @@ export const LanguageProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    if (languageCookie === undefined) {
+    if (getCookie('language') || languageCookie === undefined) {
       setCookie('language', 'en')
     }
 
