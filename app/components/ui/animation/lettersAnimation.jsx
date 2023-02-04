@@ -1,8 +1,13 @@
 'use client'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 export default function LettersAnimation ({ text, tag, className, children }) {
-  const words = text.split(' ')
+  const [words, setWords] = useState(text.split(' '))
+
+  useEffect(() => {
+    setWords(text.split(' '))
+  }, [text, words])
 
   if (tag === 'h1') {
     return (

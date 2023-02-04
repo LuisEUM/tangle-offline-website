@@ -8,7 +8,6 @@ import { useForm } from 'react-hook-form'
 import { LanguageContext } from '../context/languageContext'
 import { motion } from 'framer-motion'
 import LettersAnimation from '../components/ui/animation/lettersAnimation'
-import WordsAnimation from '../components/ui/animation/wordsAnimation'
 
 const Merchant = () => {
   const { text } = useContext(LanguageContext)
@@ -108,13 +107,13 @@ const Merchant = () => {
     if (player.current) {
       player.current.play()
     }
-  }, [formDone])
+  }, [text, formDone])
 
   return (
     <div className='max-w-full grid grid-cols-1 mb-8'>
-      <motion.div className='max-w-full py-6 align-middle justify-center content-center mt-20'>
+      <div className='max-w-full py-6 align-middle justify-center content-center mt-20'>
         <LettersAnimation className='text-3xl md:text-4xl lg:text-5xl font-bold text-center' text={`${content.merchant[0].header[0].text}`} tag='h1' />
-      </motion.div>
+      </div>
       <div className='px-2 md:px-14 lg:px-32 w-full flex flex-col align-top justify-center content-center max-w-6xl m-auto'>
         <div className='h-full grid grid-cols-1 gap-y-12 gap-x-12 lg:grid-cols-2  align-center justify-center content-center bg-tangle-oxford-blue p-8 md:p-10 rounded-2xl'>
           <div className='w-full '>
@@ -122,9 +121,9 @@ const Merchant = () => {
             <p className='text-center mt-4'>{content.merchant[0].description}</p>
           </div>
           <div className='p-4 bg-white rounded-2xl'>
-            <motion.div className='max-w-full mb-4 '>
-              <WordsAnimation className='text-base sm:text-lg md:text-xl lg:text-2xl font-body text-tangle-rich-black-FOGBRA-29' text={content.merchant[0].form.header} tag='p' />
-            </motion.div>
+            <div className='max-w-full mb-4 '>
+              <p className='text-base sm:text-lg md:text-xl lg:text-2xl font-body text-tangle-rich-black-FOGBRA-29'>{content.merchant[0].form.header}</p>
+            </div>
             <form ref={form} onSubmit={(e) => handleSubmit(onSubmit(e))} className='grid grid-cols-1 gap-y-3 '>
               <div className=''>
                 <input

@@ -1,15 +1,15 @@
 'use client'
-import { usePathname } from 'next/navigation'
 import { createContext, useEffect, useRef, useState } from 'react'
 import textData from '../data/text.json'
 import imageData from '../data/images.json'
 import LettersAnimation from '../components/ui/animation/lettersAnimation'
 import { AnimatePresence, LayoutGroup, motion, useInView } from 'framer-motion'
+import { getCookie } from 'cookies-next'
 
 export const LanguageContext = createContext()
 
 export const LanguageProvider = ({ children }) => {
-  const pathname = usePathname()
+  const [languageCookie, setLanguageCookie] = useState(getCookie('language'))
   const [text, setText] = useState(null)
   const [loading, setLoading] = useState(true)
   const ref = useRef(null)
@@ -50,9 +50,9 @@ export const LanguageProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    const finalText = getText(pathname, textData)
+    const finalText = getText(languageCookie, textData)
     setText(finalText)
-  }, [])
+  }, [languageCookie])
 
   return (
     <LayoutGroup>
@@ -94,7 +94,7 @@ export const LanguageProvider = ({ children }) => {
             </motion.div>
             )
           : (
-            <LanguageContext.Provider value={{ text }}>{children}</LanguageContext.Provider>
+            <LanguageContext.Provider value={{ text, setLanguageCookie }}>{children}</LanguageContext.Provider>
             )}
       </AnimatePresence>
     </LayoutGroup>
@@ -103,12 +103,12 @@ export const LanguageProvider = ({ children }) => {
   // return <LanguageContext.Provider value={{ text }}>{children}</LanguageContext.Provider>
 }
 
-function getText (pathname, textData) {
-  if (pathname.includes('/es')) {
+function getText (languageCookie, textData) {
+  if (languageCookie.includes('en')) {
+    return textData.en
+  } else if (languageCookie.includes('es')) {
     return textData.es
-  } else if (pathname.includes('/es')) {
-    return textData.es
-  } else if (pathname.includes('/nl')) {
+  } else if (languageCookie.includes('nl')) {
     return textData.nl
   } else {
     return textData.en

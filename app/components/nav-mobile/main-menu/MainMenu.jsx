@@ -2,12 +2,11 @@
 import { useContext, useRef, useState } from 'react'
 import { AnimatePresence, motion, useInView } from 'framer-motion'
 import SubMenu from '../sub-menu/SubMenu.jsx'
-import CountrySelector from '../../forms/CountrySelector.jsx'
 import { LanguageContext } from '../../../context/languageContext.jsx'
 
 const MainMenu = ({ isOpen }) => {
   const [isOpenGeneral, setIsOpenGeneral] = useState(false)
-  const { text } = useContext(LanguageContext)
+  const { text, setLanguageCookie } = useContext(LanguageContext)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: false })
 
@@ -98,9 +97,9 @@ const MainMenu = ({ isOpen }) => {
                 exit='closed'
                 subIsOpen={isOpenGeneral}
                 setIsOpenList={setIsOpenGeneral}
-                name={text.menu[0].languages}
-                categories={text.menu[0].languages_options}
+                text={text}
                 className='mt-5 text-tangle-rich-black-FOGBRA-29  hover:stroke-tangle-green-blue-crayola'
+                setLanguageCookie={setLanguageCookie}
               />
             </motion.div>
           </>}

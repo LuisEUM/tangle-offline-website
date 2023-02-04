@@ -5,22 +5,22 @@
         "id": "en",
         "current_language": "English",
         "home":"Home",
-        "home_pathname": "/en",
+        "home_pathname": "/",
         "merchant":"Become a merchant",
-        "merchant_pathname":"/en/merchants",
+        "merchant_pathname":"/merchants",
         "languages":"Languages",
         "languages_options":[
           {
             "name": "English",
-            "pathname": "/en"
+            "pathname": "en"
           },
           {
             "name": "Spanish",
-            "pathname": "/es"
+            "pathname": "es"
           },
           {
             "name": "Dutch",
-            "pathname": "/nl"
+            "pathname": "nl"
           }  
         ]
       }
@@ -30,7 +30,7 @@
         "webside": "© 2022 Tangle Offline",
         "rights": "All rights reserved",
         "policy":"Policy",
-        "policy_pathname": "/en/privacy-policy",
+        "policy_pathname": "/privacy-policy",
         "email": "info@tangleoffline.com"
       }
     ],
@@ -108,7 +108,7 @@
         "header": "Partnering with <br/> Offline Businesses",
         "description": "Our goal is simple, minimize your digital interactions on our platform, and maximize the time you spend offline. To do that, We engineered a set of features aiming to generate excitement toward meeting people in real life.",
         "button": "Become a Merchant",
-        "button_url": "/en/merchants"
+        "button_url": "/merchants"
       },
       {
         "section": 14,
@@ -155,22 +155,22 @@
         "id": "es",
         "current_language": "Español",
         "home":"Inicio",
-        "home_pathname": "/es",
+        "home_pathname": "/",
         "merchant":"Conviértase en comerciante",
-        "merchant_pathname":"/en/merchants",
+        "merchant_pathname":"/merchants",
         "languages":"Lenguajes",
         "languages_options":[
           {
             "name": "Inglés",
-            "pathname": "/en"
+            "pathname": "en"
           },
           {
             "name": "Español",
-            "pathname": "/es"
+            "pathname": "es"
           },
           {
             "name": "Neerlandés",
-            "pathname": "/nl"
+            "pathname": "nl"
           }  
         ]
       }
@@ -180,7 +180,7 @@
         "webside": "© 2022 Tangle Offline",
         "rights": "Todos los derechos reservados",
         "policy":"Políticas",
-        "policy_pathname": "/es/privacy-policy",
+        "policy_pathname": "/privacy-policy",
         "email": "info@tangleoffline.com"
       }
     ],
@@ -258,7 +258,7 @@
         "header": "Asociación con empresas <br/> fuera de línea",
         "description": "Nuestro objetivo es sencillo: minimizar tus interacciones digitales en nuestra plataforma y maximizar el tiempo que pasas fuera de ella. Para ello, hemos diseñado una serie de funciones que te ayudarán a conocer gente en la vida real.",
         "button": "Conviértase en comerciante",
-        "button_url": "/es/merchants"
+        "button_url": "/merchants"
       },
       {
         "section": 14,
@@ -306,22 +306,22 @@
         "id": "nl",
         "current_language": "Nederlands",
         "home":"Home",
-        "home_pathname": "/nl",
+        "home_pathname": "/",
         "merchant":"Handelaar worden",
-        "merchant_pathname":"/nl/merchants",
+        "merchant_pathname":"/merchants",
         "languages":"Talen",
         "languages_options":[
           {
             "name": "Engels",
-            "pathname": "/en"
+            "pathname": "en"
           },
           {
             "name": "Spaans",
-            "pathname": "/es"
+            "pathname": "es"
           },
           {
             "name": "Nederlands",
-            "pathname": "/nl"
+            "pathname": "nl"
           }  
         ]
       }
@@ -331,7 +331,7 @@
         "webside": "© 2022 Tangle Offline",
         "rights": "Alle rechten voorbehouden",
         "policy":"Beleid",
-        "policy_pathname": "/nl/privacy-policy",
+        "policy_pathname": "/privacy-policy",
         "email": "info@tangleoffline.com"
       }
     ],
@@ -409,7 +409,7 @@
       "header": "Samenwerking met <br/> offline bedrijven",
       "description": "Ons doel is eenvoudig, het minimaliseren van uw digitale interacties op ons platform, en het maximaliseren van de tijd die u offline doorbrengt. Om dat te doen, hebben we een aantal functies ontworpen die erop gericht zijn mensen in het echt te ontmoeten.",
       "button": "Handelaar worden",
-      "button_url": "/nl/merchants"
+      "button_url": "/merchants"
     },
     {
       "section": 14,

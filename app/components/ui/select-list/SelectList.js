@@ -1,9 +1,9 @@
 'use client'
 import './Select.css'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { usePathname } from 'next/navigation'
 import { LanguageContext } from '../../../context/languageContext'
+import { setCookie } from 'cookies-next'
 
 const itemVariants = {
   open: (i = 1) => ({
@@ -51,12 +51,14 @@ const mobileNavbar = {
 }
 
 export default function SelectList () {
-  const { text } = useContext(LanguageContext)
+  const { text, setLanguageCookie } = useContext(LanguageContext)
   const [isOpen, setIsOpen] = useState(false)
-  const pathname = usePathname()
-  const currentLanguage = text.menu[0].languages_options.filter((category) => pathname.includes(category.pathname))
   const [selectedCategory, setSelectedCategory] = useState(text.menu[0].current_language)
   const languageOptions = text.menu[0].languages_options
+
+  useEffect(() => {
+    setSelectedCategory(text.menu[0].current_language)
+  }, [text])
 
   return (
     <motion.nav
@@ -119,10 +121,12 @@ export default function SelectList () {
                       value={category.id}
                       onClick={() => {
                         setIsOpen(false)
+                        setCookie('language', category.pathname)
+                        setLanguageCookie(category.pathname)
                       }}
                     >
-                      <a href={`${currentLanguage[0].pathname === category.pathname ? pathname : (category.pathname + pathname.slice(3))}`} className={`${currentLanguage[0].pathname === category.pathname ? 'text-tangle-green-blue-crayola' : ''}`}> {category.name} </a>
-                      {console.log(currentLanguage[0].pathname, category.pathname, pathname, (category.pathname + pathname.slice(3)), category.name)}
+                      {/* <a href={`${currentLanguage[0].pathname === category.pathname ? pathname : (category.pathname + pathname.slice(3))}`} className={`${currentLanguage[0].pathname === category.pathname ? 'text-tangle-green-blue-crayola' : ''}`}> {category.name} </a> */}
+                      {category.name}
                     </motion.li>
                   ))}
                 </>

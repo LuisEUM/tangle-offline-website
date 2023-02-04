@@ -1,18 +1,23 @@
 'use client'
+import { setCookie } from 'cookies-next'
 import { AnimatePresence, motion } from 'framer-motion'
-import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 function SubMenu ({
   isOpen,
   subIsOpen,
   setIsOpenList,
-  categories,
-  name,
+  text,
   itemVariants,
-  className
+  className,
+  setLanguageCookie
 }) {
-  const pathname = usePathname()
-  const currentLanguage = categories.filter((category) => pathname.includes(category.pathname))
+  const [selectedCategory, setSelectedCategory] = useState(text.menu[0].current_language)
+  const languageOptions = text.menu[0].languages_options
+
+  useEffect(() => {
+    setSelectedCategory(text.menu[0].current_language)
+  }, [text])
 
   return (
     <>
@@ -26,7 +31,7 @@ function SubMenu ({
         onClick={() => setIsOpenList(!subIsOpen)}
       >
         <div className='flex justify-between align-middle items-center hover:text-tangle-green-blue-crayola'>
-          <p className='hover:text-tangle-green-blue-crayola '>{name}</p>
+          <p className='hover:text-tangle-green-blue-crayola '>{text.menu[0].languages}</p>
           <div className={`${subIsOpen ? 'rotate-90' : ''}`}>
             <svg width='8' height='15' viewBox='0 0 8 15' fill='none' xmlns='http://www.w3.org/2000/svg'>
               <path className='hover:stroke-tangle-green-blue-crayola' d='M1 13.5L7 7.5L1 1.5' stroke='#0D111B' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
@@ -36,16 +41,20 @@ function SubMenu ({
         <AnimatePresence>
           {isOpen &&
             subIsOpen &&
-            categories.map((category, index) => (
+            languageOptions.map((category, index) => (
               <motion.li
                 variants={itemVariants}
                 initial='closed'
                 animate={isOpen ? 'open' : 'closed'}
                 exit='closed'
                 key={index}
-                className='text-left border-b-2 hover:text-tangle-green-blue-crayola  text-neutral-600 font-normal mt-5 flex-row w-full content-center justify-center'
+                className={`${(selectedCategory === category.name) ? 'text-tangle-green-blue-crayola' : 'text-neutral-600'} text-left border-b-2 hover:text-tangle-green-blue-crayola  text-neutral-600 font-normal mt-5 flex-row w-full content-center justify-center`}
+                onClick={() => {
+                  setCookie('language', category.pathname)
+                  setLanguageCookie(category.pathname)
+                }}
               >
-                <a href={`${currentLanguage[0].pathname === category.pathname ? pathname : (category.pathname + pathname.slice(3))}`} className={`${currentLanguage[0].pathname === category.pathname ? 'text-tangle-green-blue-crayola' : ''}`}> {category.name} </a>
+                {category.name}
               </motion.li>
             ))}
         </AnimatePresence>
