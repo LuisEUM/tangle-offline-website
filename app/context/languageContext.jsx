@@ -108,7 +108,9 @@ export const LanguageProvider = ({ children }) => {
 }
 
 function getText (languageCookie, textData) {
-  if (languageCookie.includes('en')) {
+  if (languageCookie === undefined) {
+    return textData.en
+  } else if (languageCookie.includes('en')) {
     return textData.en
   } else if (languageCookie.includes('es')) {
     return textData.es
