@@ -95,7 +95,7 @@ export default function SectionOne ({ text }) {
           <motion.div variants={fadeInAnimation} className='flex flex-row align-top items-start '>
 
             <motion.div variants={fadeInAnimation} className='relative mt-10 z-40 px-7 md:px-[4.75rem] lg:px-[9.25rem] w-full'>
-              <motion.div variants={child} className=' grid grid-cols-1 sm:grid-cols-2 ml-12 -mb-12 gap-4 align-top items-start absolute -top-6 z-10  '>
+              <motion.div variants={child} className=' grid grid-cols-1 sm:grid-cols-2 ml-12 sm:ml-0 -mb-12 gap-4 align-top items-start absolute -top-6 z-10  '>
                 <ButtonApps type='apple' text={text[0].appleStore} url={text[0].appleStoreUrl} />
                 <ButtonApps text={text[0].playStore} url={text[0].playStoreUrl} />
               </motion.div>
