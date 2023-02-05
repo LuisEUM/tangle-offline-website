@@ -1,7 +1,7 @@
 export default function ButtonApps ({ type, text, url }) {
   if (type === 'apple') {
     return (
-      <a target='_self' href={url || '#'} rel='noopener noreferrer' className='flex  place-content-center text-sm items-center w-full'>
+      <a target='_self' href={url || '#'} rel='noopener noreferrer' className='flex  place-content-center text-xs md:text-sm items-center w-full'>
         <button className='bg-tangle-oxford-blue flex px-7 py-3 rounded-lg w-full items-center justify-between gap-5'>
           <svg width='30' height='34' viewBox='0 0 30 34' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <path d='M22.375 0.666748C20.4533 0.778415 18.2472 1.84899 16.9355 3.21232C15.7505 4.45232 14.8156 6.29394 15.1973 8.0756C17.2856 8.1306 19.3817 7.03229 20.6367 5.64396C21.8084 4.34563 22.6967 2.53341 22.375 0.666748ZM22.4889 8.07235C19.4739 8.07235 18.2133 9.92456 16.125 9.92456C13.9767 9.92456 12.0128 8.18953 9.41276 8.18953C5.87609 8.1912 0.5 11.4673 0.5 19.1856C0.5 26.2073 6.86276 34.0001 10.4544 34.0001C12.6361 34.0217 13.165 32.6284 16.125 32.6134C19.0883 32.5917 19.7278 34.0184 21.9128 34.0001C24.3728 33.9817 26.2939 31.2785 27.6973 29.1368C28.7039 27.6035 29.1178 26.8207 29.8978 25.0873C24.1095 23.6207 22.9578 14.2862 29.8978 12.3562C28.5878 10.1212 24.7639 8.07235 22.4889 8.07235Z' fill='#FFFCFA' />
