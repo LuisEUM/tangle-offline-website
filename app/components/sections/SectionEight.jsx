@@ -47,7 +47,7 @@ export default function SectionEight ({ text }) {
   const isInView = useInView(ref, { once: false })
 
   return (
-    <div className='grid grid-cols-1 relative max-w-full z-50'>
+    <div className='grid grid-cols-1 relative max-w-full z-30'>
       <div className='flex w-full flex-col  max-w-full'>
         <div className='flex px-5 max-w-full relative mx-2 md:mx-14 lg:mx-32 '>
           <div className='ml-48 md:ml-0 lg:ml-0  '>

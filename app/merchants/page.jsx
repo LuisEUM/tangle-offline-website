@@ -111,7 +111,7 @@ const Merchant = () => {
 
   return (
     <div className='max-w-full grid grid-cols-1 mb-8'>
-      <div className='max-w-full py-6 align-middle justify-center content-center mt-20'>
+      <div className='max-w-full py-6 align-middle justify-center content-center mt-20 min-h-fit'>
         <LettersAnimation key={content.merchant[0].header[0].text} className='text-3xl md:text-4xl lg:text-5xl font-bold text-center' text={`${content.merchant[0].header[0].text}`} tag='h1' />
       </div>
       <div className='px-2 md:px-14 lg:px-32 w-full flex flex-col align-top justify-center content-center max-w-6xl m-auto'>

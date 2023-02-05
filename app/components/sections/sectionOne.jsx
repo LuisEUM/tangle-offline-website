@@ -82,7 +82,7 @@ export default function SectionOne ({ text }) {
 
   return (
     <motion.div variants={fadeInAnimationLong} initial='hidden' animate='visible' className='grid grid-cols-1 w-full '>
-      <motion.div variants={fadeInAnimation} className='z-40 pt-[36rem] md:pt[42rem] lg:pt-96  bg-no-repeat lg:bg-right bg-center bg-cover bg-hero-mobile  lg:bg-hero-desktop '>
+      <motion.div variants={fadeInAnimation} className='z-30 pt-[36rem] md:pt[42rem] lg:pt-96  bg-no-repeat lg:bg-right bg-center bg-cover bg-hero-mobile  lg:bg-hero-desktop '>
         <motion.div variants={titleVariants} initial='hidden' animate='visible' className='w-full  '>
           <motion.div variants={fadeInAnimation} className=' px-14 md:px-24 lg:px-40 max-w-full'>
             <div>
@@ -94,8 +94,8 @@ export default function SectionOne ({ text }) {
           </motion.div>
           <motion.div variants={fadeInAnimation} className='flex flex-row align-top items-start '>
 
-            <motion.div variants={fadeInAnimation} className='relative mt-10 z-50 px-7 md:px-[4.75rem] lg:px-[9.25rem] max-w-full'>
-              <motion.div variants={child} className=' flex ml-12 -mb-12 gap-4 align-top items-start absolute -top-6  z-10  '>
+            <motion.div variants={fadeInAnimation} className='relative mt-10 z-40 px-7 md:px-[4.75rem] lg:px-[9.25rem] w-full'>
+              <motion.div variants={child} className=' grid grid-cols-1 sm:grid-cols-2 ml-12 -mb-12 gap-4 align-top items-start absolute -top-6 z-10  '>
                 <ButtonApps type='apple' text={text[0].appleStore} url={text[0].appleStoreUrl} />
                 <ButtonApps text={text[0].playStore} url={text[0].playStoreUrl} />
               </motion.div>
@@ -103,7 +103,7 @@ export default function SectionOne ({ text }) {
                 <motion.div className='max-w-[42px] h-[150px]'>
                   <CurveLineWithVertical color='rgba(0,173,228,0.8)' />
                 </motion.div>
-                <motion.div className='-mt-[1px]'>
+                <motion.div className='-mt-[1px] max-w-[150px] overflow-hidden md:max-w-full'>
                   <HorizonatalLine heigth={42} width={250} color='rgba(0,173,228,0.8)' />
                 </motion.div>
               </motion.div>
