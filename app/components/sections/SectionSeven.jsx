@@ -45,7 +45,7 @@ export default function SectionSeven ({ text }) {
             </div>
             <div className='grid lg:hidden grid-cols-1 gap-3 grid-flow-row-dense box-border md:-mx-14 h-[700px] overflow-hidden'>
               <ComplexCards tablet className='hidden md:grid lg:hidden' />
-              <Carrousel bullets className='md:hidden -mb-6 mx-5' immagesArray={dataImages.cards} heigth={667} />
+              <Carrousel bullets className='md:hidden -mb-6 mx-5' immagesArray={dataImages.cards} heigth='667px' />
             </div>
           </div>
           <div className='flex h-[63px] mr-0.5 bg-tangle-rich-black-FOGBRA-29 rounded-full px-5 py-10 mt-10' style={{ background: 'radial-gradient(50% 50% at 50% 50%, rgba(13, 17, 28, 1) 85%, rgba(13, 17, 28, 0.6) 100%)' }}>
