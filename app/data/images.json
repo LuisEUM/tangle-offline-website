@@ -1,4 +1,8 @@
-{
+{  
+  "merchants": [
+  "/backgrounds/partneringWithOfflineBusinesses.png'",
+  "/backgrounds/becomeAMerchant.jpeg"
+  ],
   "carrousel": [
     "/collagePeople/pexels-caleb-oquendo-11140378.jpg",
     "/collagePeople/pexels-sangeet-rao-5775283.jpg",

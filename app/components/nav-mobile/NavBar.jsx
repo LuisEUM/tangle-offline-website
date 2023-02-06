@@ -64,7 +64,7 @@ export default function NavBar () {
         className={`flex h-20 absolute justify-between md:fixed top-0 w-full ${scrolled ? 'bg-opacity-50 bg-tangle-oxford-blue' : ''}`}
       >
         <div className=' ml-8 col-span-2 flex justify-center items-center'>
-          <a href={text.menu[0].home_pathname} className='w-full self-center'>
+          <a href='/' className='w-full self-center'>
             <motion.img layoutId='navbarLogo' src='/logos/TangleLogoNewWhite.png' alt='Tangle Logo' width='150px' height='auto' />
           </a>
         </div>
