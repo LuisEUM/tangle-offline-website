@@ -6,7 +6,7 @@ export default function SectionFour ({ text }) {
   return (
     <div className='px-2 md:px-14 lg:px-32 w-full'>
       <div className='flex justify-center content-center  align-middle relative h-[450px]'>
-        <div className='flex justify-center content-center  align-middle gap-6'>
+        <div className='flex justify-center content-center  align-middle gap-0 md:gap-4 lg:gap-6'>
           <div className=' flex h-[63px] ml-0.5 bg-tangle-rich-black-FOGBRA-29 rounded-full  px-5 py-10 self-start mt-10' style={{ background: 'radial-gradient(50% 50% at 50% 50%, rgba(13, 17, 28, 1) 85%, rgba(13, 17, 28, 0.6) 100%)' }}>
             <Ellipse icon='sad' className='h-16 p-12 my-5 max-w-[30px] ' color='rgba(255,0,0,0.4)' />
           </div>

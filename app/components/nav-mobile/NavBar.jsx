@@ -106,7 +106,7 @@ export default function NavBar () {
                     className={`${isOpen ? 'fixed' : 'hidden'} left-0 bottom-0 w-full px-14 transition-all`}
                     transition={{ duration: 0.1, delay: 1 }}
                   >
-                    <p className='text-teal-800 invite-place-two font-semibold text-sm'>{text.home[14].description}</p>
+                    <p className='invite-place-two font-semibold text-sm'>{text.home[14].description}</p>
                     <CountrySelector className='w-full' text={text.home[14]} navbar />
                   </motion.div>
                 </motion.div>

@@ -69,7 +69,7 @@ export default function SectionEight ({ text }) {
         </div>
         <div className='flex flex-col w-full  items-center align-middle absolute top-0 -mt-28 px-5'>
           <motion.div
-            className='grid grid-cols-1 h-48 md:grid-cols-3 gap-y-5 gap-x-4 lg:gap-6 max-w-4xl'
+            className='grid grid-cols-1 h-48 md:grid-cols-3 gap-y-5 gap-x-4 lg:gap-0 md:gap-4 lg:gap-6 max-w-4xl'
             variants={container}
             initial='hidden'
             animate={isInView ? 'visible' : 'hidden'}

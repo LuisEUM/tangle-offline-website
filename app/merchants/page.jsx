@@ -118,11 +118,8 @@ const Merchant = () => {
       </div>
       <div className='px-2 md:px-14 lg:px-32 w-full flex flex-col align-top justify-center content-center max-w-6xl m-auto'>
         <div className='h-full grid grid-cols-1 gap-y-12 gap-x-12 lg:grid-cols-2  align-center justify-center content-center bg-tangle-oxford-blue p-8 md:p-10 rounded-2xl'>
-          <div className='w-full '>
-            <div className='  ' />
-            <div>
-              <Image src={dataImages.merchants[1]} width={350} height={350} alt='Merchants' className='mx-auto rounded-2xl h-[165px] md:h-[325px] lg:h-[350px] w-full object-cover object-top lg:object-center ' />
-            </div>
+          <div className='w-full flex flex-col '>
+            <Image src={dataImages.merchants[1]} width={350} height={350} alt='Merchants' className='mx-auto rounded-2xl h-[165px] md:h-[325px] lg:h-[350px] w-full object-cover object-top lg:object-center ' />
             <p className='text-center mt-4'>{content.merchant[0].description}</p>
           </div>
           <div className='p-4 bg-white rounded-2xl'>

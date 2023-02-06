@@ -12,9 +12,9 @@ export default function SectionTen ({ text }) {
         <div>
           <div className='flex gap-12'>
             <div className='bg-red- flex justify-center content-center  align-middle relative h-[600px]'>
-              <div className='bg-fuchsia- flex justify-center content-center  align-middle gap-6'>
+              <div className='bg-fuchsia- flex justify-center content-center  align-middle gap-0 md:gap-4 lg:gap-6'>
                 <div className='bg-green- py-5 flex flex-col mt-10 align-bottom content-bottom mb-12 self-end relative'>
-                  <div className='flex align-bottom content-bottom self-end gap-6'>
+                  <div className='flex align-bottom content-bottom self-end gap-0 md:gap-4 lg:gap-6'>
                     <div className='flex h-[63px] ml-0.5 bg-tangle-rich-black-FOGBRA-29 rounded-full  px-5 py-10 self-start mt-10' style={{ background: 'radial-gradient(50% 50% at 50% 50%, rgba(13, 17, 28, 1) 85%, rgba(13, 17, 28, 0.6) 100%)' }}>
                       <Ellipse icon='share' className='h-16 p-12 my-5 max-w-[30px] ' color='rgba(1, 209, 46, 0.4)' />
                     </div>

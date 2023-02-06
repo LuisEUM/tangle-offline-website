@@ -30,7 +30,7 @@ export default function SectionSeven ({ text }) {
             <ComplexCards desktop />
           </div>
         </div>
-        <div className='flex justify-center content-center  align-middle gap-6 lg:max-w-[68%] z-30'>
+        <div className='flex justify-center content-center  align-middle gap-0 md:gap-4 lg:gap-6 lg:max-w-[68%] z-30'>
           <div className='flex flex-col py-5 bg-red- z-30 mt-10 align-middle content-top justify-top'>
             <div className='max-w-full pt-2'>
               <WordsAnimation key={text.subHeader} className='text-base sm:text-lg md:text-xl lg:text-2xl font-title text-end' text={text.subHeader} tag='h4' />

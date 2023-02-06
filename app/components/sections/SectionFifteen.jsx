@@ -11,7 +11,7 @@ export default function SectionFifteen ({ text }) {
   useEffect(() => {
     const i = setInterval(() => {
       setIndex((i) => (i + 1) % text.cities.length)
-    }, 5000)
+    }, 4000)
 
     return () => {
       clearInterval(i)
@@ -42,8 +42,6 @@ export default function SectionFifteen ({ text }) {
             {text.header} <br />
             <AnimatePresence>
               <motion.span
-                key={currentWord}
-                className='invite-place text-6xl md:text-8xl lg:text-9xl font-bold inline-block relative w-[max-content] self-baseline '
                 variants={variants}
                 initial='initial'
                 animate='enter'
@@ -54,8 +52,24 @@ export default function SectionFifteen ({ text }) {
                   stiffness: 300,
                   damping: 24
                 }}
+                className='invite-place text-6xl md:text-8xl lg:text-9xl font-bold inline-block relative w-[max-content] self-baseline overflow-hidden min-h-[60px] text-center'
               >
-                {currentWord}
+                <motion.strong
+                  className='invite-place text-6xl md:text-8xl lg:text-9xl font-bold inline-block relative w-[max-content] self-baseline mt-2  px-2'
+                  variants={variants}
+                  initial='initial'
+                  animate='enter'
+                  exit='exit'
+                  key={currentWord}
+                  transition={{
+                    duration: 3,
+                    type: 'spring',
+                    stiffness: 300,
+                    damping: 24
+                  }}
+                >
+                  {currentWord || text.cities[0]}
+                </motion.strong>
                 <span className='text-6xl md:text-8xl lg:text-9xl text-black header-invite self-baseline'>?</span>
               </motion.span>
             </AnimatePresence>

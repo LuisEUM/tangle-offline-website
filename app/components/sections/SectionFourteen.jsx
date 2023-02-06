@@ -7,7 +7,7 @@ export default function SectionFourteen ({ text }) {
 
   return (
     <>
-      <div className='w-full h-screen bg-red-400 hidden md:hidden lg:flex'>
+      <div className='w-full h-screen hidden md:hidden lg:flex'>
         <div
           className='w-[20%] hover:w-[25%] h-full flex justify-center bg-no-repeat bg-center bg-cover bg-activity-1'
           style={{
@@ -18,7 +18,7 @@ export default function SectionFourteen ({ text }) {
           onMouseEnter={() => setWord(text.gallery[0])}
         />
         <div
-          className='w-[20%] hover:w-[25%] bg-lime-600 h-full flex justify-center bg-no-repeat bg-center bg-cover bg-activity-2'
+          className='w-[20%] hover:w-[25%] h-full flex justify-center bg-no-repeat bg-center bg-cover bg-activity-2'
           style={{
             transitionDuration: '300ms',
             transitionProperty: 'all',
@@ -27,7 +27,7 @@ export default function SectionFourteen ({ text }) {
           onMouseEnter={() => setWord(text.gallery[1])}
         />
         <div
-          className='w-[20%] hover:w-[25%] bg-lime-400 h-full flex justify-center bg-no-repeat bg-center bg-cover bg-activity-3'
+          className='w-[20%] hover:w-[25%] h-full flex justify-center bg-no-repeat bg-center bg-cover bg-activity-3'
           style={{
             transitionDuration: '300ms',
             transitionProperty: 'all',
@@ -38,7 +38,7 @@ export default function SectionFourteen ({ text }) {
           <p className='self-center text-4xl font-normal'>{word}</p>
         </div>
         <div
-          className='w-[20%] hover:w-[25%] bg-lime-200 h-full flex justify-center bg-no-repeat bg-center bg-cover bg-activity-4'
+          className='w-[20%] hover:w-[25%] h-full flex justify-center bg-no-repeat bg-center bg-cover bg-activity-4'
           style={{
             transitionDuration: '300ms',
             transitionProperty: 'all',
@@ -47,7 +47,7 @@ export default function SectionFourteen ({ text }) {
           onMouseEnter={() => setWord(text.gallery[3])}
         />
         <div
-          className='w-[20%] hover:w-[25%] bg-lime-100 h-full flex justify-center bg-no-repeat bg-center bg-cover bg-activity-5'
+          className='w-[20%] hover:w-[25%] h-full flex justify-center bg-no-repeat bg-center bg-cover bg-activity-5'
           style={{
             transitionDuration: '300ms',
             transitionProperty: 'all',
