@@ -1,4 +1,3 @@
-'use client'
 import { useInView, motion } from 'framer-motion'
 import { useRef } from 'react'
 import HorizonatalLine from '../ui/progress/horizonatalLine'
@@ -73,23 +72,17 @@ export default function SectionFive ({ text }) {
             animate={isInView ? 'visible' : 'hidden'}
             ref={ref}
           >
-            <motion.div className='gird grid-cols-1  shadow h-full bg-tangle-oxford-blue rounded-lg px-5 py-10 my-5' variants={child}>
-              <div className='flex flex-col align-middle content-center justify-center h-full'>
-                <h3 className='text-center font-bold text-[#D90026] text-4xl lg:text-5xl mb-3'>{text.headerCardOne}</h3>
-                <p className='text-center'>{text.descriptionCardOne}</p>
-              </div>
+            <motion.div className='grid grid-cols-1 justify-center align-middle items-center content-center h-full bg-tangle-oxford-blue rounded-lg px-5 py-10 my-5 shadow' variants={child}>
+              <h3 className='text-center font-bold text-[#D90026] text-4xl lg:text-5xl mb-3'>{text.headerCardOne}</h3>
+              <p className='text-center'>{text.descriptionCardOne}</p>
             </motion.div>
-            <motion.div className='gird grid-cols-1 shadow h-full bg-tangle-oxford-blue rounded-lg px-5 py-10 my-5' variants={child}>
-              <div className='flex flex-col align-middle content-center justify-center h-full'>
-                <h3 className='text-center font-bold text-[#D90026] text-4xl lg:text-5xl mb-3'>{text.headerCardTwo}</h3>
-                <p className='text-center'>{text.descriptionCardTwo}</p>
-              </div>
+            <motion.div className='grid grid-cols-1 justify-center align-middle items-center content-center h-full bg-tangle-oxford-blue rounded-lg px-5 py-10 my-5 shadow' variants={child}>
+              <h3 className='text-center font-bold text-[#D90026] text-4xl lg:text-5xl mb-3'>{text.headerCardTwo}</h3>
+              <p className='text-center'>{text.descriptionCardTwo}</p>
             </motion.div>
-            <motion.div className='gird grid-cols-1  shadow h-full bg-tangle-oxford-blue rounded-lg px-5 py-10 my-5' variants={child}>
-              <div className='flex flex-col align-middle content-center justify-center h-full'>
-                <h3 className='text-center font-bold text-[#D90026] text-4xl lg:text-5xl mb-3'>{text.headerCardThree}</h3>
-                <p className='text-center'>{text.descriptionCardThree}</p>
-              </div>
+            <motion.div className='grid grid-cols-1 justify-center align-middle items-center content-center h-full bg-tangle-oxford-blue rounded-lg px-5 py-10 my-5 shadow' variants={child}>
+              <h3 className='text-center font-bold text-[#D90026] text-4xl lg:text-5xl mb-3'>{text.headerCardThree}</h3>
+              <p className='text-center'>{text.descriptionCardThree}</p>
             </motion.div>
           </motion.div>
         </div>

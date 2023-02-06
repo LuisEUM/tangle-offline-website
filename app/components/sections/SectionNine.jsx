@@ -1,13 +1,14 @@
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import dataImages from '../../data/images.json'
 
 export default function SectionNine ({ text }) {
-  const [images, setImages] = useState(dataImages.waves)
+  const [images, setImages] = useState(dataImages.radar)
   const containerRef = useRef(null)
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
-  const [showCard, setShowCard] = useState(true)
+  const [showCard, setShowCard] = useState(dataImages.radar[0].card)
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,8 +33,6 @@ export default function SectionNine ({ text }) {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
-
-  const centerImage = images[0]
 
   return (
     <div className=' h-[682px] md:[416px] lg:h-[600px] px-2 md:px-14 lg:px-32 w-full flex flex-col align-middle justify-center content-center '>
@@ -119,109 +118,30 @@ export default function SectionNine ({ text }) {
           </motion.svg>
 
         </div>
-
-        <FaceImage
-          src={centerImage.image}
-          boxWidth={dimensions.width}
-          boxHeigth={dimensions.height}
-          setShowCard={setShowCard}
-          showCard={showCard}
-        />
-        <FaceImage
-          src={images[1].image}
-          boxWidth={dimensions.width}
-          boxHeigth={dimensions.height}
-          moveX={550}
-          moveY={-500}
-          setShowCard={setShowCard}
-          showCard={showCard}
-        />
-        <FaceImage
-          src={images[2].image}
-          boxWidth={dimensions.width}
-          boxHeigth={dimensions.height}
-          moveX={150}
-          moveY={-50}
-          setShowCard={setShowCard}
-          showCard={showCard}
-        />
-        <FaceImage
-          src={images[3].image}
-          boxWidth={dimensions.width}
-          boxHeigth={dimensions.height}
-          moveX={-150}
-          moveY={150}
-          setShowCard={setShowCard}
-          showCard={showCard}
-        />
-        <FaceImage
-          src={images[4].image}
-          boxWidth={dimensions.width}
-          boxHeigth={dimensions.height}
-          moveX={350}
-          moveY={200}
-          setShowCard={setShowCard}
-          showCard={showCard}
-        />
-        <FaceImage
-          src={images[5].image}
-          boxWidth={dimensions.width}
-          boxHeigth={dimensions.height}
-          moveX={-700}
-          moveY={-300}
-          setShowCard={setShowCard}
-          showCard={showCard}
-        />
-        <FaceImage
-          src={images[6].image}
-          boxWidth={dimensions.width}
-          boxHeigth={dimensions.height}
-          moveX={-550}
-          moveY={150}
-          setShowCard={setShowCard}
-          showCard={showCard}
-        />
-        <FaceImage
-          src={images[7].image}
-          boxWidth={dimensions.width}
-          boxHeigth={dimensions.height}
-          moveX={-600}
-          moveY={300}
-          setShowCard={setShowCard}
-          showCard={showCard}
-        />
-        <FaceImage
-          src={images[8].image}
-          boxWidth={dimensions.width}
-          boxHeigth={dimensions.height}
-          moveX={350}
-          moveY={-350}
-          setShowCard={setShowCard}
-          showCard={showCard}
-        />
-        <FaceImage
-          src={images[9].image}
-          boxWidth={dimensions.width}
-          boxHeigth={dimensions.height}
-          moveX={-50}
-          moveY={-450}
-          setShowCard={setShowCard}
-          showCard={showCard}
-        />
-        <FaceImage
-          src={images[10].image}
-          boxWidth={dimensions.width}
-          boxHeigth={dimensions.height}
-          moveX={50}
-          moveY={450}
-          setShowCard={setShowCard}
-          showCard={showCard}
-        />
+        {images && images.map(item => {
+          return (
+            <FaceImage
+              key={item.image?.src}
+              src={item.image?.src}
+              boxWidth={dimensions.width}
+              boxHeigth={dimensions.height}
+              setShowCard={setShowCard}
+              showCard={item.image?.card}
+              moveX={item.image?.moveX}
+              moveY={item.image?.moveY}
+            />
+          )
+        })}
       </div>
       <div className='w-full relative'>
         {showCard && (
-          <div
-            className='shadow-lg h-[258px] w-[315px] absolute -top-32 right-[7%] z-10 bg-no-repeat bg-center bg-cover bg-activity-basket'
+          <Image
+            src={showCard}
+            alt='imagen alternativa'
+            onClick={() => setShowCard(showCard)}
+            width={315}
+            height={258}
+            className='shadow-lg absolute -top-32 right-[7%] z-10'
           />
         )}
       </div>
@@ -233,20 +153,26 @@ function FaceImage ({ src, boxWidth, boxHeigth, moveX, moveY, setShowCard, showC
   moveX = moveX || 0
   moveY = moveY || 0
   return (
-    <motion.img
-      src={src}
-      alt='imagen alternativa'
-      onClick={() => setShowCard(!showCard)}
-      width={50}
-      height={50}
+    <motion.div
       whileHover={{ scale: 1.5, transition: { duration: 0.5 } }}
       whileTap={{ scale: 1.25, transition: { duration: 0.1 } }}
       className='cursor-pointer'
+      width={50}
+      height={50}
       style={{
         position: 'absolute',
         left: `${(boxWidth - 50 + moveX) / 2}px`,
         top: `${(boxHeigth - 50 + moveY) / 2}px`
       }}
-    />
+    >
+      <Image
+        src={src}
+        alt='imagen alternativa'
+        onClick={() => setShowCard(showCard)}
+        width={50}
+        height={50}
+      />
+    </motion.div>
+
   )
 }

@@ -66,7 +66,7 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
             const direction = index - page
             return (
               <motion.img
-                className='absolute h-full w-full object-cover'
+                className='absolute h-full w-full object-cover rounded-3xl'
                 key={index}
                 src={image}
                 custom={direction}

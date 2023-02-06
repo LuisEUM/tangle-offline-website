@@ -1,54 +1,116 @@
 {
-  "carrousel":
-    [
-      "/collagePeople/pexels-caleb-oquendo-11140378.jpg",
-      "/collagePeople/pexels-sangeet-rao-5775283.jpg",
-      "/collagePeople/pexels-alessandro-kelvin-2376268.jpg",
-      "/collagePeople/top-view-from-colorful-stylish-happy-young-company-friends-lying-grass-park-man-women-having-fun-together.jpg",
-      "/collagePeople//pexels-mathias-pr-reding-4386145.jpg",
-      "/collagePeople/pexels-matheus-bertelli-8533826.jpg",
-      "/collagePeople/pexels-helena-lopes-745045.jpg"
-    ],
-    "waves":
-    [
-      "/circlesPeople/face1.png",
-      "/circlesPeople/face2.png",
-      "/circlesPeople/face3.png",
-      "/circlesPeople/face4.png",
-      "/circlesPeople/face5.png",
-      "/circlesPeople/face6.png",
-      "/circlesPeople/face7.png",
-      "/circlesPeople/face8.png",
-      "/circlesPeople/face9.png",
-      "/circlesPeople/face10.png",
-      "/circlesPeople/face11.png",
-      "/circlesPeople/face12.png",
-      "/circlesPeople/face13.png",
-      "/circlesPeople/face14.png",
-      "/circlesPeople/face15.png",
-      "/circlesPeople/face16.png"
-    ],
-    "activities":
-    [
-      "/activities/restaurant.jpeg",
-      "/activities/museum.jpeg",
-      "/activities/balloons.jpeg",
-      "/activities/castle.jpeg",
-      "/activities/stadium.jpeg"
-    ],
-    "cards": [
-      "/activities/cards/card1.png",
-      "/activities/cards/card2.png",
-      "/activities/cards/card3.png",
-      "/activities/cards/card4.png",
-      "/activities/cards/card5.png",
-      "/activities/cards/card6.png",
-      "/activities/cards/card7.png",
-      "/activities/cards/card8.png",
-      "/activities/cards/card9.png"
-    ],
-    "logos":
-    [
-      "/logos/TangleLogoNewWhite.png"
-    ]
+  "carrousel": [
+    "/collagePeople/pexels-caleb-oquendo-11140378.jpg",
+    "/collagePeople/pexels-sangeet-rao-5775283.jpg",
+    "/collagePeople/pexels-alessandro-kelvin-2376268.jpg",
+    "/collagePeople/top-view-from-colorful-stylish-happy-young-company-friends-lying-grass-park-man-women-having-fun-together.jpg",
+    "/collagePeople//pexels-mathias-pr-reding-4386145.jpg",
+    "/collagePeople/pexels-matheus-bertelli-8533826.jpg",
+    "/collagePeople/pexels-helena-lopes-745045.jpg"
+  ],
+  "waves": [
+    "/circlesPeople/face1.png",
+    "/circlesPeople/face2.png",
+    "/circlesPeople/face3.png",
+    "/circlesPeople/face4.png",
+    "/circlesPeople/face5.png",
+    "/circlesPeople/face6.png",
+    "/circlesPeople/face7.png",
+    "/circlesPeople/face8.png",
+    "/circlesPeople/face9.png",
+    "/circlesPeople/face10.png",
+    "/circlesPeople/face11.png",
+    "/circlesPeople/face12.png",
+    "/circlesPeople/face13.png",
+    "/circlesPeople/face14.png",
+    "/circlesPeople/face15.png",
+    "/circlesPeople/face16.png"
+  ],
+  "radar": [
+    {
+      "src": "/circlesPeople/face1.png",
+      "moveX": 0,
+      "moveY": 0,
+      "card": "/activities/basketCard.png"
+    },
+    {
+      "src": "/circlesPeople/face2.png",
+      "moveX": 550,
+      "moveY": -500,
+      "card": "/activities/basketCard.png"
+    },
+    {
+      "src": "/circlesPeople/face3.png",
+      "moveX": 150,
+      "moveY": -50,
+      "card": "/activities/basketCard.png"
+    },
+    {
+      "src": "/circlesPeople/face4.png",
+      "moveX": -150,
+      "moveY": 150,
+      "card": "/activities/basketCard.png"
+    },
+    {
+      "src": "/circlesPeople/face5.png",
+      "moveX": 350,
+      "moveY": 200,
+      "card": "/activities/basketCard.png"
+    },
+    {
+      "src": "/circlesPeople/face6.png",
+      "moveX": -700,
+      "moveY": -300,
+      "card": "/activities/basketCard.png"
+    },
+    {
+      "src": "/circlesPeople/face7.png",
+      "moveX": -550,
+      "moveY": 150,
+      "card": "/activities/basketCard.png"
+    },
+    {
+      "src": "/circlesPeople/face8.png",
+      "moveX": -600,
+      "moveY": 300,
+      "card": "/activities/basketCard.png"
+    },
+    {
+      "src": "/circlesPeople/face9.png",
+      "moveX": 350,
+      "moveY": -350,
+      "card": "/activities/basketCard.png"
+    },
+    {
+      "src": "/circlesPeople/face10.png",
+      "moveX": -50,
+      "moveY": -450,
+      "card": "/activities/basketCard.png"
+    },
+    {
+      "src": "/circlesPeople/face11.png",
+      "moveX": 50,
+      "moveY": 475,
+      "card": "/activities/basketCard.png"
+    }
+  ],
+  "activities": [
+    "/activities/restaurant.jpeg",
+    "/activities/museum.jpeg",
+    "/activities/balloons.jpeg",
+    "/activities/castle.jpeg",
+    "/activities/stadium.jpeg"
+  ],
+  "cards": [
+    "/activities/cards/card1.png",
+    "/activities/cards/card2.png",
+    "/activities/cards/card3.png",
+    "/activities/cards/card4.png",
+    "/activities/cards/card5.png",
+    "/activities/cards/card6.png",
+    "/activities/cards/card7.png",
+    "/activities/cards/card8.png",
+    "/activities/cards/card9.png"
+  ],
+  "logos": ["/logos/TangleLogoNewWhite.png"]
 }
