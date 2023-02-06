@@ -81,7 +81,7 @@ export default function SectionOne ({ text }) {
   }
 
   return (
-    <motion.div variants={fadeInAnimationLong} initial='hidden' animate='visible' className='grid grid-cols-1 w-full '>
+    <motion.div variants={fadeInAnimationLong} initial='hidden' animate='visible' className='grid grid-cols-1 w-full overflow-hidden'>
       <motion.div variants={fadeInAnimation} className='z-30 pt-[36rem] md:pt[42rem] lg:pt-96  bg-no-repeat lg:bg-right bg-center bg-cover bg-hero-mobile  lg:bg-hero-desktop '>
         <motion.div variants={titleVariants} initial='hidden' animate='visible' className='w-full  '>
           <motion.div variants={fadeInAnimation} className=' px-14 md:px-24 lg:px-40 max-w-full'>
@@ -92,9 +92,9 @@ export default function SectionOne ({ text }) {
               <WordsAnimation key={text[0].subHeader} className='font-normal text-base  md:text-2xl lg:text-3xl font-body' text={text[0].subHeader} tag='p' />
             </div>
           </motion.div>
-          <motion.div variants={fadeInAnimation} className='flex flex-row align-top items-start overflow-x-hidden'>
+          <motion.div variants={fadeInAnimation} className='flex flex-row align-top items-start'>
 
-            <motion.div variants={fadeInAnimation} className='relative mt-10 z-40 px-7 md:px-[4.75rem] lg:px-[9.25rem] w-full overflow-x-hidden'>
+            <motion.div variants={fadeInAnimation} className='relative mt-10 z-40 px-7 md:px-[4.75rem] lg:px-[9.25rem] w-full'>
               <motion.div variants={child} className=' grid grid-cols-2 ml-0 sm:ml-12 -mb-12 gap-4 align-top items-start absolute -top-6 z-10 overflow-hidden '>
                 <ButtonApps type='apple' text={text[0].appleStore} url={text[0].appleStoreUrl} />
                 <ButtonApps text={text[0].playStore} url={text[0].playStoreUrl} />
