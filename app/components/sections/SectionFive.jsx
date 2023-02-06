@@ -49,14 +49,16 @@ export default function SectionFive ({ text }) {
           <div className='-rotate-180 h-[42px]'>
             <CurveLine color='red' heigth={42} width={42} />
           </div>
+          {/* <div className='w-[calc(25%-37px)] md:w-1/2 max-w-full  h-[42px]  overflow-hidden'> */}
           <div className='w-1/2 max-w-full  h-[42px]  overflow-hidden'>
             <HorizonatalLine heigth={42} width={3000} color='red' />
           </div>
+          {/* <div className='w-[calc(25%-37px)] md:w-1/2 max-w-full  h-[42px]  overflow-hidden'> */}
           <div className='w-1/2 max-w-full  h-[42px]  overflow-hidden -rotate-180'>
             <HorizonatalLine heigth={42} width={3000} color='red' />
           </div>
           <div className='mr-5 '>
-            <div className='mr-48 md:mr-0 lg:mr-0'>
+            <div className='mr-0 md:mr-0 lg:mr-0'>
               <CurveLine color='red' heigth={42} width={42} />
               <div className=' md:max-h-60  overflow-hidden'>
                 <VerticalLine color='red' heigth={625} width={42} />
@@ -66,7 +68,7 @@ export default function SectionFive ({ text }) {
         </div>
         <div className='flex flex-col w-full  items-center align-middle absolute top-0 -mt-28 px-5'>
           <motion.div
-            className='grid grid-cols-1 h-48 md:grid-cols-3 gap-y-5 gap-x-4 lg:gap-0 md:gap-4 lg:gap-6 max-w-4xl'
+            className='grid grid-cols-1 h-48 md:grid-cols-3 gap-y-5 gap-x-4 gap-0 md:gap-4 lg:gap-6 max-w-4xl'
             variants={container}
             initial='hidden'
             animate={isInView ? 'visible' : 'hidden'}

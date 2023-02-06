@@ -61,7 +61,8 @@
   background: #0C101C !important;
   color: white !important;
   border: 0px solid transparent !important;
-  margin-top: 0px !important; 
+  margin-top: 0px !important;
+  max-height: 320px !important; 
 }
 
 .ReactFlagsSelect-module_selectOption__3pcgW, .ReactFlagsSelect-module_filterBox__3m8EU{

@@ -27,12 +27,13 @@ const variants = {
 
 const initialIndex = 0
 
-export default function Carrousel ({ numbers, bullets, arrows, className, immagesArray }) {
+export default function Carrousel ({ numbers, bullets, arrows, className, immagesArray, heigth }) {
   const [page, setPage] = useState(initialIndex)
   const images = immagesArray
   const paginationBullets = bullets || false
   const paginationNumbers = numbers || false
   const paginationArrows = arrows || false
+  const carrouselHeigth = heigth || 300
 
   const handleClickAfter = useCallback(() => {
     if (page >= images.length - 1) {
@@ -59,7 +60,7 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
 
   return (
     <div className={`${className} overflow-hidden rounded-3xl`}>
-      <div className='overflow-hidden rounded-3xl shadow relative flex w-full min-h-[300px] justify-center items-center'>
+      <div className={`overflow-hidden rounded-3xl shadow relative flex w-full min-h-[${carrouselHeigth}px] justify-center items-center`}>
         <AnimatePresence initial={false} custom={page}>
           {images.map((image, index) => {
             const isCurrent = index === page

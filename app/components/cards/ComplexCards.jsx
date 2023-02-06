@@ -129,8 +129,8 @@ const Card = ({ i, name, length, size, rotateArray, current, desktop, tablet, mo
   // Card is sized relatively to the container,
   // just to maintain all ratios.
 
-  const cardWidth = size * 0.35 * 1 * (mobile ? 1.15 : 1)
-  const cardHeight = size * 0.55 * 1 * (mobile ? 1.15 : 1)
+  const cardWidth = size * 0.35 * 1 * (mobile ? 1.50 : 1)
+  const cardHeight = size * 0.55 * 1 * (mobile ? 1.50 : 1)
 
   // Bunch of helpers
   // to get the correct array slice
@@ -263,7 +263,7 @@ const Card = ({ i, name, length, size, rotateArray, current, desktop, tablet, mo
       },
       [isFirst]: {
         posX: offsetCalc(-0.105, -cardWidth / 10 / i),
-        posY: offsetCalc(-0.45, 4),
+        posY: offsetCalc(0.005 * i, -cardHeight / 15),
         posZ: offsetCalc(-1, i * i * -0.1),
         rotX: 0,
         rotY: 0,
@@ -271,8 +271,8 @@ const Card = ({ i, name, length, size, rotateArray, current, desktop, tablet, mo
         background: backgroundCalc(95, 0)
       },
       [isCenter]: {
-        posX: offsetCalc(i * 0.205, -i * 1.1 - 0.52 * cardWidth),
-        posY: offsetCalc(-0.45, 4),
+        posX: offsetCalc(i * 0.205, -i * 0.04 - 0.42 * cardWidth),
+        posY: offsetCalc(-0.5105, i * 1.04 - cardHeight / 19),
         posZ: offsetCalc(-1, i * i * -0.1),
         rotX: i * 1,
         rotY: i * 1,
