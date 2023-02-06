@@ -15,19 +15,19 @@ export default function SectionTen ({ text }) {
               <div className='bg-fuchsia- flex justify-center content-center  align-middle gap-0 md:gap-4 lg:gap-6'>
                 <div className='bg-green- py-5 flex flex-col mt-10 align-bottom content-bottom mb-12 self-end relative'>
                   <div className='flex align-bottom content-bottom self-end gap-0 md:gap-4 lg:gap-6'>
-                    <div className='flex h-[63px] ml-0.5 bg-tangle-rich-black-FOGBRA-29 rounded-full  px-5 py-10 self-start mt-10' style={{ background: 'radial-gradient(50% 50% at 50% 50%, rgba(13, 17, 28, 1) 85%, rgba(13, 17, 28, 0.6) 100%)' }}>
+                    <div className='flex h-[63px] ml-0.5 bg-tangle-rich-black-FOGBRA-29 rounded-full  px-5 py-10 self-start -mt-4' style={{ background: 'radial-gradient(50% 50% at 50% 50%, rgba(13, 17, 28, 1) 85%, rgba(13, 17, 28, 0.6) 100%)' }}>
                       <Ellipse icon='share' className='h-16 p-12 my-5 max-w-[30px] ' color='rgba(1, 209, 46, 0.4)' />
                     </div>
-                    <div className='flex flex-col align-bottom content-bottom  self-end'>
-                      <motion.div className='max-w-full pt-2 ml-'>
+                    <div className='flex flex-col align-bottom content-bottom self-end'>
+                      <div className='max-w-full pt-2 ml-'>
                         <WordsAnimation key={text.subHeader} className='text-base sm:text-lg md:text-xl lg:text-2xl font-title' text={text.subHeader} tag='h4' />
-                      </motion.div>
-                      <motion.div className='max-w-full'>
-                        <LettersAnimation key={text.header} className='py-2 text-3xl md:text-6xl lg:text-6xl font-bold' text={text.header} tag='h3' />
-                      </motion.div>
-                      <motion.div className='max-w-full md:w-full lg:w-4/5 pr-2 pt-2'>
+                      </div>
+                      <div className='max-w-full py-2'>
+                        <LettersAnimation key={text.header} className='text-3xl md:text-6xl lg:text-6xl font-bold' text={text.header} tag='h3' />
+                      </div>
+                      <div className='max-w-full md:w-full lg:w-4/5 pr-2 pt-2'>
                         <WordsAnimation key={text.description} className='text-base sm:text-lg md:text-xl lg:text-2xl font-body ' text={text.description} tag='p' />
-                      </motion.div>
+                      </div>
                     </div>
                   </div>
                 </div>

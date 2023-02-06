@@ -39,11 +39,11 @@ export default function SectionTwo ({ text }) {
 
   return (
     <>
-      <div className='relative gap'>
+      <div className='relative gap z-50 -mt-20'>
         <div className='px-2 md:px-14 lg:px-32 w-full max-w-full overflow-hidden flex gap-12'>
           <div className='flex justify-center content-center align-middle relative h-[450px]'>
             <div className='flex justify-center content-center align-middle gap-0 md:gap-4 lg:gap-6'>
-              <div className=' flex h-[63px] ml-0.5 bg-tangle-rich-black-FOGBRA-29 rounded-full  px-5 py-10 self-start mt-10' style={{ background: 'radial-gradient(50% 50% at 50% 50%, rgba(13, 17, 28, 1) 85%, rgba(13, 17, 28, 0.6) 100%)' }}>
+              <div className=' flex h-[63px] ml-0.5 bg-tangle-rich-black-FOGBRA-29 rounded-full  px-5 py-10 self-start mt-4' style={{ background: 'radial-gradient(50% 50% at 50% 50%, rgba(13, 17, 28, 1) 85%, rgba(13, 17, 28, 0.6) 100%)' }}>
                 <Ellipse icon='heart' className='h-16 p-12 my-5 max-w-[30px]' color='rgba(0, 173, 228, 0.8)' />
               </div>
               <div className=' mt-5 flex flex-col align-middle justify-start py-5'>
@@ -55,6 +55,7 @@ export default function SectionTwo ({ text }) {
                 <div className='flex flex-col'>
                   <div className='-mr-8 '>
                     <LettersAnimation key={text.header} className='mt-2 mr-2 text-3xl md:text-6xl lg:text-6xl font-bold max-w-full' text={`${text.header}`} tag='h3'>
+                      <br className=' md:hidden' />
                       <motion.span
                         variants={variants}
                         initial='initial'
@@ -71,7 +72,7 @@ export default function SectionTwo ({ text }) {
                       >
                         <AnimatePresence>
                           <motion.em
-                            className=' inline-block relative w-[max-content] self-baseline mt-2 mr-2 text-3xl md:text-6xl lg:text-6xl font-bold '
+                            className='inline-block relative w-[max-content] self-baseline mt-2 mr-2 text-3xl md:text-6xl lg:text-6xl font-bold '
                             variants={variants}
                             initial='initial'
                             animate='enter'
