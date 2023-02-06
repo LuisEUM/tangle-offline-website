@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import PropTypes from 'prop-types'
 
@@ -34,13 +34,13 @@ export default function CarrouselText ({ numbers, bullets, arrows, className, im
   const paginationNumbers = numbers || false
   const paginationArrows = arrows || false
 
-  const handleClickAfter = () => {
+  const handleClickAfter = useCallback(() => {
     if (page >= images.length - 1) {
       setPage(initialIndex)
     } else {
       setPage((prevCount) => prevCount + 1)
     }
-  }
+  }, [images.length, page])
 
   const handleClickBefore = () => {
     if (page <= 0) {
@@ -55,7 +55,7 @@ export default function CarrouselText ({ numbers, bullets, arrows, className, im
       handleClickAfter()
     }, 3000)
     return () => clearInterval(interval)
-  }, [page])
+  }, [handleClickAfter, page])
 
   return (
     <div className={`${className}`}>
