@@ -61,13 +61,13 @@ export default function CarrouselText ({ numbers, bullets, arrows, className, im
     <div className={`${className}`}>
       <div className='overflow-hidden shadow relative flex w-full min-h-[589px] md:min-h-[934px] justify-center items-center'>
         <AnimatePresence initial={false} custom={page}>
-          <p className='z-50 text-base'>{text[page]}</p>
+          <p className='z-40 text-base'>{text[page]}</p>
           {images.map((image, index) => {
             const isCurrent = index === page
             const direction = index - page
             return (
               <motion.img
-                className='absolute h-full w-full object-cover'
+                className='absolute h-full w-full object-cover z-30'
                 key={index}
                 src={image}
                 custom={direction}
@@ -95,12 +95,12 @@ export default function CarrouselText ({ numbers, bullets, arrows, className, im
         </AnimatePresence>
         {paginationArrows && (
           <>
-            <div className='justify-center items-center select-none cursor-pointer flex font-bold z-30 w-10 h-10 text-lg rounded-full  absolute right-3 top-1/2 ' onClick={handleClickAfter}>
+            <div className=' justify-center items-center select-none cursor-pointer flex font-bold z-40 w-10 h-10 text-lg rounded-full  absolute right-3 top-1/2 ' onClick={handleClickAfter}>
               <svg xmlns='http://www.w3.org/2000/svg' className='w-full h-full m-3' viewBox='0 0 6.52 11.15'>
                 <path d='m.43.43l5.43,4.69c.3.26.3.72,0,.98L.43,10.71' stroke='#01ADE4' strokeLinecap='round' strokeLinejoin='round' strokeWidth='0.86px' fill='none' />
               </svg>
             </div>
-            <div className='justify-center items-center select-none cursor-pointer flex font-bold z-30 w-10 h-10 text-lg rounded-full  absolute left-3 top-1/2 -scale-100' onClick={handleClickBefore}>
+            <div className='justify-center items-center select-none cursor-pointer flex font-bold z-40 w-10 h-10 text-lg rounded-full  absolute left-3 top-1/2 -scale-100' onClick={handleClickBefore}>
               <svg xmlns='http://www.w3.org/2000/svg' className='w-full h-full m-3' viewBox='0 0 6.52 11.15'>
                 <path d='m.43.43l5.43,4.69c.3.26.3.72,0,.98L.43,10.71' stroke='#01ADE4' strokeLinecap='round' strokeLinejoin='round' strokeWidth='0.86px' fill='none' />
               </svg>
@@ -111,7 +111,7 @@ export default function CarrouselText ({ numbers, bullets, arrows, className, im
 
       {paginationBullets && (
         <>
-          <div className='flex content-center justify-center w-full -mt-6 z-50'>
+          <div className='flex content-center justify-center w-full -mt-6 z-40'>
             {images.map((image, index) => {
               const isCurrent = index === page
               return (
@@ -128,7 +128,7 @@ export default function CarrouselText ({ numbers, bullets, arrows, className, im
 
       {paginationNumbers && (
         <>
-          <div className='flex content-center justify-center w-full z-50'>
+          <div className='flex content-center justify-center w-full z-40'>
             <div className='mr-2 z-50'>{page + 1}</div>
             <div className='z-50'>/ </div>
             <div className='ml-2 z-50'>{images.length}</div>
