@@ -43,7 +43,7 @@ const child = {
 
 export default function SectionEight ({ text }) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false })
+  const isInView = useInView(ref, { once: true })
 
   return (
     <div className='grid grid-cols-1 relative max-w-full z-30'>

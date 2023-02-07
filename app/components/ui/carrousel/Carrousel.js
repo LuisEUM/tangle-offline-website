@@ -1,7 +1,8 @@
 'use client'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import PropTypes from 'prop-types'
+import Image from 'next/image'
 
 const variants = {
   enter: (direction) => {
@@ -27,12 +28,14 @@ const variants = {
 
 const initialIndex = 0
 
-export default function Carrousel ({ numbers, bullets, arrows, className, immagesArray, heigth }) {
+export default function Carrousel ({ numbers, bullets, arrows, className, immagesArray, longCard }) {
   const [page, setPage] = useState(initialIndex)
   const images = immagesArray
   const paginationBullets = bullets || false
   const paginationNumbers = numbers || false
   const paginationArrows = arrows || false
+  const imageRef = useRef(null)
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
 
   const handleClickAfter = useCallback(() => {
     if (page >= images.length - 1) {
@@ -57,18 +60,34 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
     return () => clearInterval(interval)
   }, [handleClickAfter, page])
 
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions({
+        width: imageRef.current.offsetWidth,
+        height: imageRef.current.offsetHeight
+      })
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
+  console.log(dimensions)
   return (
     <div className={`${className} overflow-hidden rounded-3xl`}>
-      <div className='overflow-hidden rounded-3xl shadow relative flex w-full min-h-[300px] justify-center items-center'>
+      <div className={`overflow-hidden rounded-3xl shadow relative flex  w-full ${longCard ? 'min-h-[800px] justify-center content-start items-center' : 'min-h-[300px] justify-center items-center'}`}>
         <AnimatePresence initial={false} custom={page}>
           {images.map((image, index) => {
             const isCurrent = index === page
             const direction = index - page
             return (
-              <motion.img
-                className='absolute h-full w-full object-cover rounded-3xl'
+              <motion.div
+                className='absolute h-full w-full rounded-3xl'
                 key={index}
-                src={image}
                 custom={direction}
                 variants={variants}
                 initial={!isCurrent ? 'enter' : 'center'}
@@ -88,7 +107,17 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
                     handleClickAfter()
                   }
                 }}
-              />
+              >
+                <Image
+                  width={300}
+                  height={300}
+                  alt={image}
+                  // className='w-full h-full bg-cover bg-no-repeat bg-tangle-oxford-blue pointer-events-none'
+                  ref={imageRef}
+                  src={image}
+                  className={`pointer-events-none ${longCard ? 'absolute object-scale-down h-full w-full' : 'absolute h-full w-full object-cover rounded-3xl'} `}
+                />
+              </motion.div>
             )
           })}
         </AnimatePresence>
@@ -110,12 +139,12 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
 
       {paginationBullets && (
         <>
-          <div className='flex content-center justify-center w-full my-2'>
+          <div style={{ bottom: `calc(${1 / dimensions.width * 1 / 1.25 * 10000}%)` }} className={`flex content-center justify-center w-full my-2 ${longCard && `absolute bottom-[calc(${dimensions.height / dimensions.width * 1 / 3}%)]`}`}>
             {images.map((image, index) => {
               const isCurrent = index === page
               return (
                 <div
-                  className={`bullet w-2 h-2 rounded-full bg-tangle-oxford-blue mx-2 my-0 cursor-pointer ${isCurrent ? 'bg-tangle-cyan-process' : ''}`}
+                  className={`w-2 h-2 rounded-full bg-tangle-oxford-blue mx-2 my-0 cursor-pointer ${isCurrent && 'bg-tangle-cyan-process'}`}
                   onClick={() => setPage(index)}
                   key={index}
                 />

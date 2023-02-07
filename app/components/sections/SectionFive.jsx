@@ -6,7 +6,7 @@ import VerticalLine from '../ui/progress/verticalLine'
 
 export default function SectionFive ({ text }) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false })
+  const isInView = useInView(ref, { once: true })
 
   const container = {
     hidden: { opacity: 0 },

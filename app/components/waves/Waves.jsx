@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import React, { useEffect, useRef } from 'react'
 import dataImages from '../../data/images.json'
 
@@ -8,55 +9,55 @@ export default function Waves () {
   const importedImages = dataImages.waves
 
   useEffect(() => {
-    const images = [].slice.call(
+    const Images = [].slice.call(
       document.getElementsByClassName('animated-path')
     )
     let i = 0
-    for (const image of images) {
-      image.counter = 0 + i
+    for (const Image of Images) {
+      Image.counter = 0 + i
       i += 0.125
-      if (images.indexOf(image) === images.length / 2) {
+      if (Images.indexOf(Image) === Images.length / 2) {
         i = 0
       }
     }
 
     function moveStar () {
-      for (const image of images) {
-        if (parseInt(image.counter, 10) === 1) {
-          image.counter = 0
+      for (const Image of Images) {
+        if (parseInt(Image.counter, 10) === 1) {
+          Image.counter = 0
         }
-        image.counter += 0.001
+        Image.counter += 0.001
         const straightLength = ref.current.getTotalLength()
-        image.setAttribute(
+        Image.setAttribute(
           'transform',
           'translate(' +
-            (ref.current.getPointAtLength(image.counter * straightLength).x -
+            (ref.current.getPointAtLength(Image.counter * straightLength).x -
               15) +
             ',' +
-            (ref.current.getPointAtLength(image.counter * straightLength).y -
+            (ref.current.getPointAtLength(Image.counter * straightLength).y -
               9) +
             '), scale(0.5)'
         )
 
         if (window.innerWidth >= 768) {
-          image.setAttribute(
+          Image.setAttribute(
             'transform',
             'translate(' +
-              (ref.current.getPointAtLength(image.counter * straightLength).x -
+              (ref.current.getPointAtLength(Image.counter * straightLength).x -
                 15) +
               ',' +
-              (ref.current.getPointAtLength(image.counter * straightLength).y -
+              (ref.current.getPointAtLength(Image.counter * straightLength).y -
                 9) +
               '), scale(0.5)'
           )
         } else {
-          image.setAttribute(
+          Image.setAttribute(
             'transform',
             'translate(' +
-              (ref.current.getPointAtLength(image.counter * straightLength).x -
+              (ref.current.getPointAtLength(Image.counter * straightLength).x -
                 15) +
               ',' +
-              (ref.current.getPointAtLength(image.counter * straightLength).y -
+              (ref.current.getPointAtLength(Image.counter * straightLength).y -
                 18) +
               '), scale(1)'
           )
@@ -85,8 +86,8 @@ export default function Waves () {
             stroke='#0089cf'
             strokeWidth='0.03rem'
           />
-          {importedImages.map((e, i) => {
-            return <image key={i} className='animated-path w-10 h-10' href={e} />
+          {importedImages && importedImages.map((e, i) => {
+            return <image className='animated-path w-10 h-10' key={i} href={e} width={40} height={40} alt='Faces on radar' />
           })}
         </svg>
       </div>
