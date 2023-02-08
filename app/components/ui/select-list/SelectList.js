@@ -3,7 +3,7 @@ import './Select.css'
 import { useContext, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { LanguageContext } from '../../../context/languageContext'
-import { setCookie } from 'cookies-next'
+import { deleteCookie, setCookie } from 'cookies-next'
 
 const itemVariants = {
   open: (i = 1) => ({
@@ -121,6 +121,7 @@ export default function SelectList () {
                       value={category.id}
                       onClick={() => {
                         setIsOpen(false)
+                        deleteCookie('language')
                         setCookie('language', category.pathname)
                         setLanguageCookie(category.pathname)
                       }}

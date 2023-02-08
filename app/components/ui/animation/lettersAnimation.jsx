@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion'
 
-export default function LettersAnimation ({ text, tag, className, children, key }) {
+export default function LettersAnimation ({ text, tag, className, children, keyText }) {
   const words = text.split(' ')
-  key = key || text
+  keyText = keyText || text
 
   if (tag === 'h1') {
     return (
       <h1
         className={`${className}`}
-        key={key}
+        key={keyText}
       >
         <Item words={words} className={className}>
           {children}
@@ -19,7 +19,7 @@ export default function LettersAnimation ({ text, tag, className, children, key 
     return (
       <h2
         className={`${className}`}
-        key={key}
+        key={keyText}
       >
         <Item words={words} className={className}>
           {children}
@@ -30,7 +30,7 @@ export default function LettersAnimation ({ text, tag, className, children, key 
     return (
       <h3
         className={`${className}`}
-        key={key}
+        key={keyText}
       >
         <Item words={words} className={className}>
           {children}
@@ -41,7 +41,7 @@ export default function LettersAnimation ({ text, tag, className, children, key 
     return (
       <h4
         className={`${className}`}
-        key={key}
+        key={keyText}
       >
         <Item words={words} className={className}>
           {children}
@@ -52,7 +52,7 @@ export default function LettersAnimation ({ text, tag, className, children, key 
     return (
       <h5
         className={`${className}`}
-        key={key}
+        key={keyText}
       >
         <Item words={words} className={className}>
           {children}
@@ -63,7 +63,7 @@ export default function LettersAnimation ({ text, tag, className, children, key 
     return (
       <h6
         className={`${className}`}
-        key={key}
+        key={keyText}
       >
         <Item words={words} className={className}>
           {children}
@@ -74,7 +74,7 @@ export default function LettersAnimation ({ text, tag, className, children, key 
     return (
       <p
         className={`${className}`}
-        key={key}
+        key={keyText}
       >
         <Item words={words} className={className}>
           {children}

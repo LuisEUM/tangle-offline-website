@@ -118,10 +118,10 @@ export default function SectionNine ({ text }) {
           </motion.svg>
 
         </div>
-        {images && images.map(item => {
+        {images && images.map((item, index) => {
           return (
             <FaceImage
-              key={item.image?.src}
+              key={index}
               src={item.image?.src}
               boxWidth={dimensions.width}
               boxHeigth={dimensions.height}
@@ -136,7 +136,7 @@ export default function SectionNine ({ text }) {
       <div className='w-full relative'>
         {showCard && (
           <Image
-            src={showCard}
+            src={showCard || dataImages.radar[0].card}
             alt='imagen alternativa'
             onClick={() => setShowCard(showCard)}
             width={315}
@@ -166,7 +166,7 @@ function FaceImage ({ src, boxWidth, boxHeigth, moveX, moveY, setShowCard, showC
       }}
     >
       <Image
-        src={src}
+        src={src || dataImages.radar[0].card}
         alt='imagen alternativa'
         onClick={() => setShowCard(showCard)}
         width={50}

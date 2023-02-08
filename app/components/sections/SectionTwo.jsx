@@ -39,7 +39,7 @@ export default function SectionTwo ({ text }) {
 
   return (
     <>
-      <div className='relative gap z-50 -mt-20'>
+      <div className='relative gap z-30 -mt-20'>
         <div className='px-2 md:px-14 lg:px-32 w-full max-w-full overflow-hidden flex gap-12'>
           <div className='flex justify-center content-center align-middle relative h-[450px]'>
             <div className='flex justify-center content-center align-middle gap-0 md:gap-4 lg:gap-6'>

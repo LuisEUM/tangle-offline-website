@@ -50,13 +50,16 @@ export const LanguageProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    if (getCookie('language') || languageCookie === undefined) {
+    if (languageCookie === undefined) {
       setCookie('language', 'en')
     }
 
     const finalText = getText(languageCookie, textData)
     setText(finalText)
   }, [languageCookie])
+
+  console.log(languageCookie)
+  console.log(getCookie('language'))
 
   return (
     <LayoutGroup>

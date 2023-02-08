@@ -1,5 +1,5 @@
 'use client'
-import { setCookie } from 'cookies-next'
+import { deleteCookie, setCookie } from 'cookies-next'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
@@ -50,6 +50,7 @@ function SubMenu ({
                 key={index}
                 className={`${(selectedCategory === category.name) ? 'text-tangle-green-blue-crayola' : 'text-neutral-600'} text-left border-b-2 hover:text-tangle-green-blue-crayola  text-neutral-600 font-normal mt-5 flex-row w-full content-center justify-center`}
                 onClick={() => {
+                  deleteCookie('language')
                   setCookie('language', category.pathname)
                   setLanguageCookie(category.pathname)
                 }}

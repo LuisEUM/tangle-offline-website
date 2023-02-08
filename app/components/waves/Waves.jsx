@@ -1,5 +1,5 @@
 'use client'
-import Image from 'next/image'
+import { motion } from 'framer-motion'
 import React, { useEffect, useRef } from 'react'
 import dataImages from '../../data/images.json'
 
@@ -87,7 +87,7 @@ export default function Waves () {
             strokeWidth='0.03rem'
           />
           {importedImages && importedImages.map((e, i) => {
-            return <image className='animated-path w-10 h-10' key={i} href={e} width={40} height={40} alt='Faces on radar' />
+            return <motion.image className='animated-path w-10 h-10' src={e} key={i} href={e} width={40} height={40} alt='Faces on radar' />
           })}
         </svg>
       </div>
