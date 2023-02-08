@@ -2,6 +2,7 @@ import LettersAnimation from '../ui/animation/lettersAnimation'
 import VerticalLine from '../ui/progress/verticalLine'
 import dataImages from '../../data/images.json'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function SectionThirteen ({ text }) {
   return (
@@ -15,11 +16,11 @@ export default function SectionThirteen ({ text }) {
             <div className='max-w-full mb-7 md:mb-8  lg:mb-20'>
               <p className='text-base sm:text-lg md:text-xl lg:text-2xl font-body'>{text.description}</p>
             </div>
-            <a href={text.button_url} className='self-center'>
+            <Link href={text.button_url} className='self-center'>
               <button className='bg-[#0086D3] rounded-full w-full py-3'>
                 {text.button}
               </button>
-            </a>
+            </Link>
           </div>
           <div className='m-auto lg:pl-16 h-[165px] md:h-[372px] lg:h-[400px] w-full order-1 lg:order-2'>
             <Image src={dataImages.merchants[0]} width={400} height={400} alt='Merchants' className='mx-auto rounded-2xl h-[165px] md:h-[372px] lg:h-[400px] w-full object-cover object-top lg:object-center ' />

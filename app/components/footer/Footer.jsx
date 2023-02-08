@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import { useContext } from 'react'
 import { LanguageContext } from '../../context/languageContext'
 
@@ -10,12 +11,12 @@ export default function Footer () {
       <div>
         <p>
           {text.footer[0].webside} | {text.footer[0].rights} | &nbsp;
-          <a href={text.footer[0].policy_pathname}>
+          <Link href={text.footer[0].policy_pathname}>
             {text.footer[0].policy} | &nbsp;
-          </a>
-          <a href={`mailto:${text.footer[0].email}`}>
+          </Link>
+          <Link href={`mailto:${text.footer[0].email}`}>
             {text.footer[0].email}
-          </a>
+          </Link>
         </p>
       </div>
     </footer>

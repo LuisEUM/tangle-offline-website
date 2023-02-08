@@ -7,6 +7,8 @@ import MainMenu from './main-menu/MainMenu'
 import SelectList from '../ui/select-list/SelectList.js'
 import { LanguageContext } from '../../context/languageContext.jsx'
 import CountrySelector from '../forms/CountrySelector.jsx'
+import Link from 'next/link.js'
+import imageData from '../../data/images.json'
 
 const sidebar = {
   open: {
@@ -64,17 +66,17 @@ export default function NavBar () {
         className={`flex h-20 absolute justify-between md:fixed top-0 w-full ${scrolled ? 'bg-opacity-50 bg-tangle-oxford-blue' : ''}`}
       >
         <div className=' ml-8 col-span-2 flex justify-center items-center'>
-          <a href='/' className='w-full self-center'>
-            <motion.img layoutId='navbarLogo' src='/logos/TangleLogoNewWhite.png' alt='Tangle Logo' width='150px' height='auto' />
-          </a>
+          <Link href='/' className='w-full self-center'>
+            <motion.img layoutId='navbarLogo' src={imageData.logos[0]} alt='Tangle Logo' width='150px' height='auto' />
+          </Link>
         </div>
         <div className='hidden md:flex'>
           <div className='flex justify-center px-4'>
-            <a href={text.home[12].button_url} className='self-center'>
+            <Link href={text.home[12].button_url} className='self-center'>
               <motion.button className='bg-[#0086D3] rounded-full py-3 px-5 h-12 self-center'>
                 {text.home[12].button}
               </motion.button>
-            </a>
+            </Link>
           </div>
           <div className='flex justify-center pr-8 pl-4'>
             <SelectList />

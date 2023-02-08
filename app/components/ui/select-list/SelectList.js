@@ -126,7 +126,6 @@ export default function SelectList () {
                         setLanguageCookie(category.pathname)
                       }}
                     >
-                      {/* <a href={`${currentLanguage[0].pathname === category.pathname ? pathname : (category.pathname + pathname.slice(3))}`} className={`${currentLanguage[0].pathname === category.pathname ? 'text-tangle-green-blue-crayola' : ''}`}> {category.name} </a> */}
                       {category.name}
                     </motion.li>
                   ))}

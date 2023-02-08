@@ -93,7 +93,7 @@ export const LanguageProvider = ({ children }) => {
                 exit='exit'
               >
                 <LettersAnimation
-                  className='text-center font-bold bg-transparent'
+                  className='text-center font-bold bg-transparent mt-5'
                   text='Loading...'
                   tag='p'
                 />

@@ -27,14 +27,14 @@ export default function Waves () {
           Image.counter = 0
         }
         Image.counter += 0.001
-        const straightLength = ref.current.getTotalLength()
+        const straightLength = ref.current?.getTotalLength()
         Image.setAttribute(
           'transform',
           'translate(' +
-            (ref.current.getPointAtLength(Image.counter * straightLength).x -
+            (ref.current?.getPointAtLength(Image.counter * straightLength).x -
               15) +
             ',' +
-            (ref.current.getPointAtLength(Image.counter * straightLength).y -
+            (ref.current?.getPointAtLength(Image.counter * straightLength).y -
               9) +
             '), scale(0.5)'
         )
@@ -43,10 +43,10 @@ export default function Waves () {
           Image.setAttribute(
             'transform',
             'translate(' +
-              (ref.current.getPointAtLength(Image.counter * straightLength).x -
+              (ref.current?.getPointAtLength(Image.counter * straightLength).x -
                 15) +
               ',' +
-              (ref.current.getPointAtLength(Image.counter * straightLength).y -
+              (ref.current?.getPointAtLength(Image.counter * straightLength).y -
                 9) +
               '), scale(0.5)'
           )
@@ -54,10 +54,10 @@ export default function Waves () {
           Image.setAttribute(
             'transform',
             'translate(' +
-              (ref.current.getPointAtLength(Image.counter * straightLength).x -
+              (ref.current?.getPointAtLength(Image.counter * straightLength).x -
                 15) +
               ',' +
-              (ref.current.getPointAtLength(Image.counter * straightLength).y -
+              (ref.current?.getPointAtLength(Image.counter * straightLength).y -
                 18) +
               '), scale(1)'
           )
