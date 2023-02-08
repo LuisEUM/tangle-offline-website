@@ -58,9 +58,6 @@ export const LanguageProvider = ({ children }) => {
     setText(finalText)
   }, [languageCookie])
 
-  console.log(languageCookie)
-  console.log(getCookie('language'))
-
   return (
     <LayoutGroup>
       <AnimatePresence>

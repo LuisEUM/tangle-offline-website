@@ -62,7 +62,7 @@ export default function SectionEight ({ text }) {
             <div className='mr-0 md:mr-0 lg:mr-0'>
               <CurveLine color='rgb(1, 209, 46)' heigth={42} width={42} />
               <div className=' md:max-h-60  overflow-hidden'>
-                <VerticalLine color='rgb(1, 209, 46)' heigth={625} width={42} />
+                <VerticalLine color='rgb(1, 209, 46)' heigth={675} width={42} />
               </div>
             </div>
           </div>

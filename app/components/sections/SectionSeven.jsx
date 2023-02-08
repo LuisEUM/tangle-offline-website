@@ -9,34 +9,53 @@ import Carrousel from '../ui/carrousel/Carrousel'
 import dataImages from '../../data/images.json'
 
 export default function SectionSeven ({ text }) {
-  const [matches, setMatches] = useState(false)
+  const [desktop, setDesktop] = useState(false)
+  const [tablet, setTablet] = useState(false)
+  const [mobile, setMobile] = useState(false)
+  const [matches, setMatches] = useState(800)
 
   useEffect(() => {
     const mediaQuery1024 = window.matchMedia('(min-width: 1024px)')
     const mediaQuery768 = window.matchMedia('(min-width: 768px)')
-    const mediaQuerySmall = window.matchMedia('(max-width: 767px)')
+    const mediaQuerySmall = window.matchMedia('(min-width: 0px) and (max-width: 767px)')
 
     const handleMediaQueryChange1024 = (event) => {
-      setMatches(event.matches)
+      setDesktop(event.matches)
+      setTablet(false)
+      setMobile(false)
     }
 
     const handleMediaQueryChange768 = (event) => {
-      setMatches(event.matches)
+      setDesktop(false)
+      setTablet(event.matches)
+      setMobile(false)
     }
 
     const handleMediaQuerySmallChange = (event) => {
-      setMatches(event.matches)
+      setDesktop(false)
+      setTablet(false)
+      setMobile(event.matches)
     }
 
     mediaQuery1024.addEventListener('change', handleMediaQueryChange1024)
     mediaQuery768.addEventListener('change', handleMediaQueryChange768)
+    mediaQuerySmall.addEventListener('change', handleMediaQuerySmallChange)
+
+    if (mobile) setMatches(500)
+    if (tablet) setMatches(1100)
+    if (desktop) setMatches(800)
 
     return () => {
       mediaQuery1024.removeEventListener('change', handleMediaQueryChange1024)
       mediaQuery768.removeEventListener('change', handleMediaQueryChange768)
       mediaQuerySmall.removeEventListener('change', handleMediaQuerySmallChange)
     }
-  }, [])
+  }, [desktop, mobile, tablet])
+
+  console.log('Mobile', mobile)
+  console.log('Tablet', tablet)
+  console.log('Desktop', desktop)
+  console.log(matches)
 
   return (
     <>
@@ -67,14 +86,14 @@ export default function SectionSeven ({ text }) {
             </div>
           </div>
           <div className='absolute -z-30 right-5 top-0 overflow-hidden max-h-full'>
-            <VerticalLine color='rgb(1, 209, 46)' width={42} heigth={matches ? 800 : 1100} />
+            <VerticalLine color='rgb(1, 209, 46)' width={42} heigth={matches} />
           </div>
         </div>
       </div>
-      <div className='h-[900px] px-2 w-full md:hidden flex flex-col items-start align-super justify-start content-start relative'>
+      <div className='h-[815px] px-2 w-full md:hidden flex flex-col items-start align-super justify-start content-start relative'>
         <Carrousel bullets className='md:hidden -mb-6 w-full' immagesArray={dataImages.cards} longCard />
         <div className='absolute -z-30 right-7 top-0 overflow-hidden max-h-full'>
-          <VerticalLine color='rgb(1, 209, 46)' width={42} heigth={900} />
+          <VerticalLine color='rgb(1, 209, 46)' width={42} heigth={815} />
         </div>
       </div>
     </>

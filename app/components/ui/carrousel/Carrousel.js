@@ -76,17 +76,16 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
     }
   }, [])
 
-  console.log(dimensions)
   return (
-    <div className={`${className} overflow-hidden rounded-3xl`}>
-      <div className={`overflow-hidden rounded-3xl shadow relative flex  w-full ${longCard ? 'min-h-[800px] justify-center content-start items-center' : 'min-h-[300px] justify-center items-center'}`}>
+    <div className={`${className} overflow-hidden rounded-3xl max-w-full flex flex-col`}>
+      <div className={`overflow-hidden rounded-3xl shadow relative flex  w-full ${longCard ? 'max-h-[600px] h-[600px] justify-center content-start items-start' : 'min-h-[300px] justify-center items-center'}`}>
         <AnimatePresence initial={false} custom={page}>
           {images.map((image, index) => {
             const isCurrent = index === page
             const direction = index - page
             return (
               <motion.div
-                className='absolute h-full w-full rounded-3xl'
+                className='absolute h-full w-full rounded-3xl top-0'
                 key={index}
                 custom={direction}
                 variants={variants}
@@ -115,7 +114,7 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
                   // className='w-full h-full bg-cover bg-no-repeat bg-tangle-oxford-blue pointer-events-none'
                   ref={imageRef}
                   src={image}
-                  className={`pointer-events-none ${longCard ? 'absolute object-scale-down h-full w-full' : 'absolute h-full w-full object-cover rounded-3xl'} `}
+                  className={`pointer-events-none top-0 ${longCard ? 'absolute object-scale-down h-full w-full' : 'absolute h-full w-full object-cover rounded-3xl'} `}
                 />
               </motion.div>
             )
@@ -139,7 +138,7 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
 
       {paginationBullets && (
         <>
-          <div style={{ bottom: `calc(${1 / dimensions.width * 1 / 1.25 * 10000}%)` }} className={`flex content-center justify-center w-full my-2 ${longCard && `absolute bottom-[calc(${dimensions.height / dimensions.width * 1 / 3}%)]`}`}>
+          <div style={{ bottom: `calc(${1 / dimensions.width * 1 / 0.85 * 10000}%)` }} className={`flex self-center justify-self-center place-self-center content-center justify-center my-2 ${longCard && 'absolute'}`}>
             {images.map((image, index) => {
               const isCurrent = index === page
               return (
