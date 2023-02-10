@@ -1,4 +1,8 @@
-{  
+{    
+  "parallax": [
+  "/parallax/parallax1.png",
+  "/parallax/parallax2.png"
+  ],
   "merchants": [
   "/backgrounds/partneringWithOfflineBusinesses.png",
   "/backgrounds/becomeAMerchant.png"

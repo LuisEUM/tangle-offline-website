@@ -1,9 +1,9 @@
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 
-export default function SectionAnimation ({ children, once }) {
+export default function SectionAnimation ({ children, repeat }) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: !once })
+  const isInView = useInView(ref, { once: !repeat })
 
   return (
     <section ref={ref}>
