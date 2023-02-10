@@ -8,7 +8,7 @@ export default function SectionThirteen ({ text }) {
   return (
     <>
       <div className=' px-2 md:px-14 lg:px-32 w-full flex flex-col align-middle justify-center content-center '>
-        <div className='h-full grid grid-cols-1 gap-y-12 lg:grid-cols-2  align-middle justify-center content-center bg-tangle-oxford-blue p-8 md:p-10 lg:p-16 rounded-2xl'>
+        <div className='h-full grid grid-cols-1  lg:grid-cols-2  align-middle justify-center content-center bg-tangle-oxford-blue p-8 md:p-10 lg:p-16 rounded-2xl'>
           <div className='lg:pr-16 order-2 bg-green-500'>
             <div className='max-w-full mb-4 lg:mb-10'>
               <LettersAnimation key={text.header} className='text-3xl md:text-4xl lg:text-5xl font-bold text-[#00ADE4]' text={text.header} tag='h3' />
