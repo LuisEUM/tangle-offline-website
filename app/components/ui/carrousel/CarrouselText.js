@@ -84,9 +84,9 @@ export default function CarrouselText ({ numbers, bullets, arrows, className, im
                 dragElastic={1}
                 onDragEnd={(e, { offset, velocity }) => {
                   if (offset.x > 50) {
-                    handleClickBefore()
-                  } else if (offset.x < -50) {
                     handleClickAfter()
+                  } else if (offset.x < -50) {
+                    handleClickBefore()
                   }
                 }}
               />

@@ -78,7 +78,7 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
 
   return (
     <div className={`${className} overflow-hidden rounded-3xl max-w-full flex flex-col`}>
-      <div className={`overflow-hidden rounded-3xl shadow relative flex  w-full ${longCard ? 'max-h-[600px] h-[600px] justify-center content-start items-start' : 'min-h-[300px] justify-center items-center'}`}>
+      <div className={`overflow-hidden rounded-3xl shadow relative flex  w-full ${longCard ? 'max-h-[667px] h-[667px] justify-center content-start items-start' : 'min-h-[300px] justify-center items-center'}`}>
         <AnimatePresence initial={false} custom={page}>
           {images.map((image, index) => {
             const isCurrent = index === page
@@ -101,9 +101,9 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
                 dragElastic={1}
                 onDragEnd={(e, { offset, velocity }) => {
                   if (offset.x > 50) {
-                    handleClickBefore()
-                  } else if (offset.x < -50) {
                     handleClickAfter()
+                  } else if (offset.x < -50) {
+                    handleClickBefore()
                   }
                 }}
               >
