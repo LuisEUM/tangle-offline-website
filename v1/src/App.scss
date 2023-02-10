@@ -1,0 +1,548 @@
+@import "./scss-variables";
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.header-sm {
+  @include header($header-sm);
+}
+
+.header-md {
+  @include header($header-md);
+}
+
+.header-lg {
+  @include header($header-lg);
+}
+
+.header-xl {
+  @include header($header-xl);
+}
+
+.paragraph {
+  @include paragraph($paragraph-size);
+}
+
+.text-break {
+  @include text-break($md, $lg);
+}
+
+.gradient {
+  position:relative;
+}
+
+
+.gradient::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(rgba(3, 9, 25, 0), rgba(3, 9, 25, 0), rgba(3, 9, 25, 0), rgba(3, 9, 25, 0), rgba(3, 9, 25, 0), rgba(3, 9, 25, 1));
+}
+
+.hero-bg {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./resources/backgrounds/girlWalkingPhoneCentered.jpeg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: $primary-bg;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  
+  @include screen-min($lg) {
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url('./resources/backgrounds/girlWalkingPhone.jpeg');
+  }
+
+  .hero-container {
+    @include screen-min($lg) {
+
+      margin-left: 20%;
+    }
+    .tangle-logo {
+      display: none;
+      @include screen-min($lg) {
+        display: block;
+        max-width: 150px;
+        margin: auto;
+      }
+    }
+
+    h1 {
+      @include header($header-lg);
+      @include screen-min($lg) {
+        @include header($header-xl);
+      }
+    }
+  
+    .download-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      color: $tangle-blue;
+      margin-top: 20px;
+  
+      .download-box {
+        z-index: 500;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: $tangle-blue 2px solid;
+        padding: 8px 14px;
+        margin-bottom: 80px;
+        background-color: $black;
+        
+        @include screen-min($lg) {
+          padding: 20px 32px;
+        }
+        
+        .download-icon {
+          height: 18px;
+          width: 14px;
+        }
+  
+        p {
+          margin-left: 9px;
+        }
+      }
+  
+      .download-box-left {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 5px;
+        margin-right: 1px;
+      }
+    
+      .download-box-right {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 10px;
+        margin-left: 1px;
+      }
+    }
+  }
+
+}
+
+#path {  
+  .path-wrapper {
+    position: relative; 
+    height: 0; 
+    width: 100%; 
+    padding: 0;
+    padding-bottom: 100%; 
+
+    svg {
+      position: absolute; 
+      height: 100%; 
+      width: 100%; 
+      left: 0; 
+      top: 0;
+      
+      path {
+        width: 100%;
+        stroke: $tangle-blue;
+        stroke-width: 0.1em;
+        
+        @include screen-min($lg) {
+          stroke-width: 0.03em;
+        }
+      }
+      .animated-path {
+        width: 2.5em;
+        height: 2.5em;
+      }
+    }
+  }
+}
+
+.carousel-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .carousel-content-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15px;
+    
+    .carousel-content {
+      display: flex;
+      transition: all 250ms linear;
+      -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
+      scrollbar-width: none;  /* hide scrollbar in Firefox */
+    
+      .card-image {
+        @include card-carousel;
+      }
+      
+      .thumb-wrapper {
+        @include card-carousel;
+        position: relative;
+      
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      
+        .thumb-text {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    
+    /* hide scrollbar in webkit browser */
+    .carousel-content::-webkit-scrollbar, .carousel-content::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .carousel-dot {
+    @include dot;
+    background-color: $carousel-dot;
+  }
+  
+  .active-dot {
+    @include dot;
+    background-color: $tangle-blue;
+  }
+}
+
+.cards-padding {
+  padding: 0 42px;
+}
+
+.card-bg {
+  background-image: url('./resources/backgrounds/5ActivityCards.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 95%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.small-card-wrapper {
+  @include screen-min($lg) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .small-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+    text-align: center;
+  
+    @include screen-min($md) {
+      flex-direction: row;
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    @include screen-min($lg) {
+      flex-direction: column;
+      width: 33.33333%;
+      text-align: center;
+      margin: 0 20px;
+    }
+    
+    .small-card-image {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      width:80px;
+      height: 80px;
+    }
+    
+    div {
+      font-family: Helvetica, sans-serif;
+      p:nth-of-type(1) {
+        margin-top: 25px;
+        margin-bottom: 20px;
+      }
+      p:nth-of-type(2) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.merchant-wrapper {
+  margin-bottom: 28px;
+}
+
+.hover-bgs { 
+  height: 100vh;
+  position: relative;
+
+  p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .background-images {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    
+    div {
+      background-position: center;
+      background-size: cover;
+      width: 20%;
+      display: inline;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      transition: 0.2s ease-in-out;
+    }
+  
+    div:not(:hover).background-images:hover{
+      width: 18.75%;
+    }
+  
+    div:hover{
+      width: 25%;
+    }
+  
+    div:nth-child(1){
+      background-image: url("resources/backgrounds/restaurant.jpeg");
+    }
+  
+    div:nth-child(2){
+      background-image: url("resources/backgrounds/museum.jpeg");
+    }
+    
+    div:nth-child(3){
+      background-image: url("resources/backgrounds/balloons.jpeg");
+    }
+  
+    div:nth-child(4){
+      background-image: url("resources/backgrounds/castle.jpeg");
+    }
+  
+    div:nth-child(5){
+      background-image: url("resources/backgrounds/stadium.jpeg");
+    }
+  }
+}
+
+
+.signup-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  text-align: center;
+  @include screen-min($lg) {
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 80px;
+  }
+
+  .signup-bg {
+    background-image: url('./resources/backgrounds/merchantOriginal.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 375px;
+    
+    @include screen-min($md) {
+      width: 510px;
+      height: 510px;
+      background-size: cover;
+      border-radius: 25px;
+    }
+    
+    @include screen-min($lg) {
+      order: 2;
+      margin-left: 40px;
+    }  
+  }
+    
+  p:nth-of-type(1) {
+    margin-top: 23px;
+    margin-bottom: 20px;
+  }
+
+  p:nth-of-type(2) {
+    margin: auto;
+    text-align: justify;
+    
+    @include screen-min($lg) {
+      max-width: 400px;
+    }
+    @include screen-min($xl) {
+      max-width: 600px;
+    }
+  }
+
+  .signup-btn {
+    background-color: $tangle-blue;
+    border-radius: 35px;
+    color: $white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+.get-offline {
+  background-image: url('./resources/backgrounds/peopleBackground.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  box-sizing: border-box;
+
+  .desktop-bg {
+    width: 100%;
+
+    @include screen-min($lg) {
+      background-image: url('./resources/backgrounds/girlWalkingPhone.jpeg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 80%;
+      height: 350px;
+      margin: 0 auto;
+      margin-top: 100px;
+      border: none;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 100px;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include screen-min($lg) {
+        width: 400px;
+      }
+
+      form {
+        padding: 0 30px;
+        margin-bottom: 20px;
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        
+        input {
+          background: $white;
+          border: 0;
+          border-radius: 35px;
+          color: $black;
+          padding: 12px 20px;
+          width: 100%;
+        }
+        
+        input:focus {
+          outline: none;
+        }
+        
+        input::placeholder {
+          color: $placeholder;
+        }
+        
+        button {
+          background: $tangle-blue;
+          border: 0;
+          border-radius: 35px;
+          width: 46px;
+          height: 36px;
+          position: absolute;
+          right: 36px;
+          top: 6px;
+    
+          .arrow-right-icon {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bg {
+    background-image: url('./resources/backgrounds/footerBackground.jpeg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 210px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 20px;
+    
+    .footer-merchant {
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    div {
+      border-top: 1px solid $white;
+      margin-top: 20px;
+
+      p {
+        margin-top: 10px;
+        text-align: center;
+      }
+  
+      br {
+        display: inline;
+        @media (min-width: $md) { 
+            display: none;
+        }
+      }
+
+      .privacy {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+}

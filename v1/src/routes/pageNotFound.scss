@@ -1,0 +1,56 @@
+@import "../scss-variables";
+
+.wrapper {
+    height: 100vh;
+    @include screen-min($sm) {
+        height: 80vh;
+    }
+}
+.title {
+    font-size: 120px;
+    color: $white;
+    text-align: center;
+    margin: 0;
+    margin-top: 100px;
+}
+
+.image-wrapper {
+    width: 100%;
+
+    @include screen-min($sm) {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .image404 {
+        margin: 0 20px;
+    }
+}
+
+.btn-wrapper {
+    margin-top: 38px;
+    margin-bottom: 38px;
+    padding: 0 20px;
+    
+    @include screen-min($sm) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .btn {
+        background-color: $tangle-blue;
+        width: 100%;
+        border: none;
+        border-radius: 35px;
+        line-height: 40px;
+        font-size: 20px;
+        font-weight: bold;
+        z-index: 1000;
+    
+        @include screen-min($sm) {
+            width: 250px;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@import '../scss-variables';
+
+.offline-wrapper {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p:nth-of-type(1) {
+        font-size: 100px;
+        color: $white;
+        margin: 0;
+    }
+    
+    p:nth-of-type(2) {
+        margin: 0;
+    }
+}
