@@ -1,0 +1,445 @@
+{
+  "en": {
+    "menu": [
+      {
+        "id": "en",
+        "current_language": "English",
+        "home":"Home",
+        "home_pathname": "/",
+        "merchant":"Become an Ambassador",
+        "merchant_pathname":"/ambassadors",
+        "languages":"Languages",
+        "languages_options":[
+          {
+            "name": "English",
+            "pathname": "en"
+          },
+          {
+            "name": "Dutch",
+            "pathname": "nl"
+          }  
+        ]
+      }
+    ],
+    "footer": [
+      {
+        "webside": "© 2023 Tangle Offline",
+        "rights": "All rights reserved",
+        "policy":"Policy",
+        "policy_pathname": "/privacy-policy",
+        "email": "info@tangleoffline.com"
+      }
+    ],
+    "home": [
+      {
+        "section": 1,
+        "header": "The First <br/> Social Network",
+        "subHeader": "To break down social barriers",
+        "appleStore": "Comming Soon",
+        "appleStoreUrl": "#",
+        "playStore": "Comming Soon",
+        "playStoreUrl": "#"     
+      },
+      {
+        "section": 2,
+        "subHeader": "Tangle is changing the future of social networking by focusing on real-life interactions",
+        "header": "We bring <span> thousands </span> <br/> of people out to",
+        "activities": ["Bowling", "Cafe", "Restaurant", "Boat", "Tour", "Clubbling"]
+      },
+      {
+        "section": 3,
+        "tittle": "Tangle video about what matters the most"
+      },
+      {
+        "section": 4,
+        "header": "Make memories worth living",
+        "description": "Do you feel like bungee jumping, flying an air balloon, hang out with strangers or reconnect with your old friends? Tangle will make all of this possible. Stop posting stories, make memories instead. ",
+        "newsletterHeader": "Get early access to our Beta",
+        "button":"Submit"
+      },
+      {
+        "section": 5,
+        "headerCardOne": "160 times",
+        "descriptionCardOne": "a day an average person picks up a mobile phone",
+        "headerCardTwo": "2.5 hours",
+        "descriptionCardTwo": "spent on social media, 80% of people consider a waste of time",
+        "headerCardThree": "62 Days",
+        "descriptionCardThree": "A year wasted on social media and online entertainment"
+      },
+      {
+        "section": 6,
+        "tv": "Tangle tv with parallax"
+      },
+      {
+        "section": 7,
+        "subHeader": "Be part of the community",
+        "header": "Join the local chat",
+        "description": "We divided the globe into millions of local chats to help you interact only with people who are within walking distance from you. Join and organize activities, and always know what’s happening around you."
+      },
+      {
+        "section": 8,
+        "headerCardOne": "Minimize digital interactions",
+        "headerCardTwo": "Join activities and events",
+        "headerCardThree": "Explore your city and discover new ones"
+      },
+      {
+        "section": 9,
+        "map": "Tangle map with radar"
+      },
+      {
+        "section": 10,
+        "subHeader": "Get out of your comfort zone, and...",
+        "header": "Find people to Tangle with",
+        "description": "Discover who wants to meet you, expand your social interactions, think creatively, and, most importantly, love yourself."
+      },
+      {
+        "section": 11,
+        "gallery": "Tangle gallery"
+      },
+      {
+        "section": 12,
+        "subHeader": "One person can make a difference, and everyone should try",
+        "header": "Take Initiative"
+      },
+      {
+        "section": 13,
+        "header": "Join Us",
+        "description": "Nothing changes if nothing changes,  at Tangle, we believe that every individual has the power to make a positive impact.  We're looking for passionate team members to join our Ambassador Program, organize activities hang out with others, and help us in  our mission to connect people and break down social barriers!",
+        "button": "Become an Ambassador",
+        "button_url": "/ambassadors"
+      },
+      {
+        "section": 14,
+        "gallery": ["Create", "Memories", "Not", "Just", "Stories"]
+      },
+      {
+        "section": 15,
+        "header": "Do you live in ",
+        "cities": ["Amsterdam", "Berlin", "Barcelona", "New York"],
+        "description": "We will invite you to our next exclusive event",
+        "placeholder":"Your email",
+        "button":"Submit!",
+        "submited":"Submited"
+      }
+    ],
+    "merchant": [
+      {
+      "header": [{ "text": "Be part of the Team!" }, { "text": "" }],
+      "videoLink": "https://www.youtube.com/embed/hWHSanK6Rd4",
+      "lottieText": "Done",
+      "form": {
+        "header": "Get started",
+        "body": [
+          { "text": "Name" },
+          { "text": "Email address" },
+          { "text": "Phone Number (optional)" },
+          { "text": "Anything that you would like to share about yourself" },
+          { "text": "Submit" }
+        ]
+      },
+      "description": "Thank you for being here! Tangle Ambassadors do what they love to do: meet new people and engage in real-life social interactions. If you would like to join us, fill in the form and we will get back to you :)"
+    }
+    ]
+  },
+  "es":{
+    "menu": [
+      {
+        "id": "es",
+        "current_language": "Español",
+        "home":"Inicio",
+        "home_pathname": "/",
+        "merchant":"Conviértase en comerciante",
+        "merchant_pathname":"/ambassadors",
+        "languages":"Lenguajes",
+        "languages_options":[
+          {
+            "name": "Inglés",
+            "pathname": "en"
+          },
+          {
+            "name": "Español",
+            "pathname": "es"
+          },
+          {
+            "name": "Neerlandés",
+            "pathname": "nl"
+          }  
+        ]
+      }
+    ],
+    "footer": [
+      {
+        "webside": "© 2022 Tangle Offline",
+        "rights": "Todos los derechos reservados",
+        "policy":"Políticas",
+        "policy_pathname": "/privacy-policy",
+        "email": "info@tangleoffline.com"
+      }
+    ],
+    "home": [
+      {
+        "section": 1,
+        "header": "La red mundial <br/> offline",
+        "subHeader": "Una red social real para conocer gente, descubrir tu ciudad y participar en actividades offline.",
+        "appleStore": "Próximamente",
+        "appleStoreUrl": "#",
+        "playStore": "Próximamente",
+        "playStoreUrl": "#"   
+      },
+      {
+        "section": 2,
+        "subHeader": "Tangle Offline está cambiando la forma de relacionarse",
+        "header": "Traemos a <span> miles </span> <br/> de personas a",
+        "activities": ["Boleras", "Cafeterías", "Restaurantes", "Barcos", "Excursiones", "Clubbling"]
+      }, 
+      {
+        "section": 3,
+        "tittle": "Vídeo sobre lo que más importa"
+      },
+      {
+        "section": 4,
+        "header": "Problema",
+        "description": "Encuentra gente con la que pasar el rato, interactuar socialmente, pensar de forma creativa y desarrollar sólidas habilidades comunicativas. Haz todo esto y mucho más en Tangle, uniéndote a eventos y participando en actividades que se celebran por toda tu ciudad.",
+        "newsletterHeader": "Consigue acceso a la Beta",
+        "button":"Enviar"
+      },
+      {
+        "section": 5,
+        "headerCardOne": "160 veces",
+        "descriptionCardOne": "al día una persona media coge un teléfono móvil",
+        "headerCardTwo": "2,5 horas",
+        "descriptionCardTwo": "dedicadas a las redes sociales, que el 80% de las personas considera una pérdida de tiempo",
+        "headerCardThree": "62 días",
+        "descriptionCardThree": "Al año malgastados en redes sociales y entretenimiento online"
+      },
+      {
+        "section": 6,
+        "tv": "Tangle tv con paralaje"
+      },
+      {
+        "section": 7,
+        "subHeader": "Solución",
+        "header": "Centrarse en lo importante",
+        "description": "Encuentra gente con la que pasar el rato, interactuar socialmente, pensar de forma creativa y desarrollar sólidas habilidades comunicativas. Haz todo esto y mucho más en Tangle, uniéndote a eventos y participando en actividades que se celebran por toda tu ciudad."
+      },
+      {
+        "section": 8,
+        "headerCardOne": "Minimiza las interacciones digitales",
+        "headerCardTwo": "Únete a actividades y eventos",
+        "headerCardThree": "Explora tu ciudad y descubre otras nuevas"
+      },
+      {
+        "section": 9,
+        "map": "Mapa de Tangle"
+      },
+      {
+        "section": 10,
+        "subHeader": "Únase a eventos existentes y cree los suyos propios",
+        "header": "Haz amigos para toda la vida",
+        "description": "Encuentra gente con la que pasar el rato, interactuar socialmente, pensar de forma creativa y desarrollar sólidas habilidades comunicativas. Haz todo esto y mucho más en Tangle, uniéndote a eventos y participando en actividades que se celebran por toda tu ciudad."
+      },
+      {
+        "section": 11,
+        "gallery": "Galeria de Tangle"
+      },
+      {
+        "section": 12,
+        "subHeader": "Tangle Offline está cambiando la forma de relacionarse",
+        "header": "Sacamos a la gente"
+      },
+      {
+        "section": 13,
+        "header": "Asociación con empresas <br/> fuera de línea",
+        "description": "Nuestro objetivo es sencillo: minimizar tus interacciones digitales en nuestra plataforma y maximizar el tiempo que pasas fuera de ella. Para ello, hemos diseñado una serie de funciones que te ayudarán a conocer gente en la vida real.",
+        "button": "Conviértase en comerciante",
+        "button_url": "/ambassadors"
+      },
+      {
+        "section": 14,
+        "gallery": ["Crea", "Recuerdos", "No", "Solo", "Historias"]
+      },
+      {
+        "section": 15,
+        "header": "¿Vives en ",
+        "cities": ["Amsterdam", "Berlín", "Barcelona", "Nueva York"],
+        "description": "Le invitaremos a nuestro próximo evento exclusivo",
+        "placeholder":"Tu correo electrónico",
+        "button":"¡Envíalo!",
+        "submited":"Envíado"
+      }
+    ],
+    "merchant": [
+      {
+      "header": [{ "text": "¡Se uno de nosotros!" }, { "text": "" }],
+      "videoLink": "https://www.youtube.com/embed/hWHSanK6Rd4",
+      "lottieText": "Listo",
+      "form": {
+        "header": "Comencemos",
+        "body": [
+          { "text": "Nombre de la tienda" },
+          { "text": "Dirección de la tienda" },
+          { "text": "Tipo de negocio" },
+          { "text": "Enlace web" },
+          { "text": "Numero de tienda KvK (registro)" },
+          { "text": "Nombre" },
+          { "text": "Apellido" },
+          { "text": "Dirección de correo" },
+          { "text": "Numero de teléfono" },
+          { "text": "Comparte tu opinión con nosotros (opcional)" },
+          { "text": "Enviar" }
+        ]
+      },
+      "description": "Estamos ayudando a los negocios offline a llegar más lejos. En Tangle estamos redoblando nuestros esfuerzos para ayudar a crecer y prosperar a las actividades comerciales locales que giran en torno a las interacciones sociales fuera de línea."
+      }
+    ]
+    
+  },
+  "nl":{
+    "menu": [
+      {
+        "id": "nl",
+        "current_language": "Nederlands",
+        "home":"Home",
+        "home_pathname": "/",
+        "merchant":"Handelaar worden",
+        "merchant_pathname":"/ambassadors",
+        "languages":"Talen",
+        "languages_options":[
+          {
+            "name": "Engels",
+            "pathname": "en"
+          },
+          {
+            "name": "Nederlands",
+            "pathname": "nl"
+          }  
+        ]
+      }
+    ],
+    "footer": [
+      {
+        "webside": "© 2023 Tangle Offline",
+        "rights": "Alle rechten voorbehouden",
+        "policy":"Beleid",
+        "policy_pathname": "/privacy-policy",
+        "email": "info@tangleoffline.com"
+      }
+    ],
+    "home": [
+    {
+      "section": 1,
+      "header": "Het offline <br/> wereld wijde web",
+      "subHeader": "Een real-life sociaal netwerk om mensen te ontmoeten, je stad te ontdekken en je offline in te zetten.",
+      "appleStore": "Binnenkort",
+      "appleStoreUrl": "#",
+      "playStore": "Binnenkort",
+      "playStoreUrl": "#"  
+    },
+    {
+      "section": 2,
+      "subHeader": "Tangle Offline verandert hoe mensen met elkaar omgaan",
+      "header": "We brengen <span> duizenden </span> <br/> mensen naar",
+      "activities": ["Bowling", "Café", "Restaurant", "Boot", "Tour", "Clubbling"]
+    },
+    {
+      "section": 3,
+      "tittle": "Tangle video over wat het belangrijkst is"
+    },
+    {
+      "section": 4,
+      "header": "Probleem",
+      "description": "Vind mensen om mee om te gaan, heb sociale interacties, denk creatief, en bouw sterke communicatieve vaardigheden op. Doe dit alles, en meer, op Tangle, door deel te nemen aan evenementen en activiteiten in je stad.",
+      "newsletterHeader": "Krijg vroegtijdig toegang tot onze Beta",
+      "button":"Subtmit!"
+    },
+    {
+      "section": 5,
+      "headerCardOne": "160 keer",
+      "descriptionCardOne": "een gemiddelde persoon per dag een mobiele telefoon pakt",
+      "headerCardTwo": "2.5 uur",
+      "descriptionCardTwo": "besteed aan sociale media, beschouwt 80% van de mensen als tijdverspilling...",
+      "headerCardThree": "62 dagen",
+      "descriptionCardThree": "Een jaar verspild aan sociale media en online entertainment"
+    },
+    {
+      "section": 6,
+      "tv": "Tangle tv met parallax"
+    },
+    {
+      "section": 7,
+      "subHeader": "Oplossing",
+      "header": "Focus op wat belangrijk is",
+      "description": "Vind mensen om mee om te gaan, heb sociale interacties, denk creatief, en bouw sterke communicatieve vaardigheden op. Doe dit alles, en meer, op Tangle, door deel te nemen aan evenementen en activiteiten in je stad."
+    },
+    {
+      "section": 8,
+      "headerCardOne": "Minimaliseer digitale interacties",
+      "headerCardTwo": "Deelnemen aan activiteiten en evenementen",
+      "headerCardThree": "Verken uw stad en ontdek nieuwe"
+    },
+    {
+      "section": 9,
+      "map": "Klitkaart met radar"
+    },
+    {
+      "section": 10,
+      "subHeader": "Neem deel aan bestaande evenementen en creëer uw eigen ",
+      "header": "Levenslange vrienden maken",
+      "description": "Vind mensen om mee om te gaan, heb sociale interacties, denk creatief, en bouw sterke communicatieve vaardigheden op. Doe dit alles, en meer, op Tangle, door deel te nemen aan evenementen en activiteiten in je stad."
+    },
+    {
+      "section": 11,
+      "gallery": "Tangle galerij"
+    },
+    {
+      "section": 12,
+      "subHeader": "Tangle Offline verandert hoe mensen met elkaar omgaan",
+      "header": "We brengen mensen naar buiten"
+    },
+    {
+      "section": 13,
+      "header": "Samenwerking met <br/> offline bedrijven",
+      "description": "Ons doel is eenvoudig, het minimaliseren van uw digitale interacties op ons platform, en het maximaliseren van de tijd die u offline doorbrengt. Om dat te doen, hebben we een aantal functies ontworpen die erop gericht zijn mensen in het echt te ontmoeten.",
+      "button": "Handelaar worden",
+      "button_url": "/ambassadors"
+    },
+    {
+      "section": 14,
+      "gallery": ["Creëer", "herinneringen", "niet", "alleen", "verhalen"]
+    },
+    {
+      "section": 15,
+      "header": "Woont u in ",
+      "cities": ["Amsterdam", "Berlijn", "Barcelona", "New York"],
+      "description": "We zullen u uitnodigen voor ons volgende exclusieve evenement",
+      "placeholder":"Uw e-mail",
+      "button":"Subtmit!",
+      "submited":"Ingezonden"
+    }
+    ],
+    "merchant": [
+      {
+        "header": [{ "text": "Wees een van de eersten!" }, { "text": "" }],
+        "videoLink": "https://www.youtube.com/embed/-4qMa7GmKio",
+        "lottieText": "Klaar",
+        "form": {
+          "header": "Aan de slag",
+          "body": [
+            { "text": "Naam winkel" },
+            { "text": "Winkeladres" },
+            { "text": "Type bedrijf" },
+            { "text": "Website link" },
+            { "text": "Store KvK number (registration)" },
+            { "text": "Naam" },
+            { "text": "Achternaam" },
+            { "text": "E-mailadres" },
+            { "text": "Telefoonnummer" },
+            { "text": "Deel uw feedback met ons (optioneel)" },
+            { "text": "Verzenden" }
+          ]
+        },
+        "description": "We helpen offline bedrijven verder te gaan. Bij Tangle verdubbelen we onze inspanningen om lokale commerciële ondernemingen die draaien om offline sociale interacties te helpen groeien en bloeien."      
+      }
+    ]
+  }
+}

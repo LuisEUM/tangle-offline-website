@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+/* @font-face {
+  font-family: 'Typo Hoop';
+  src: url('/resources/fonts/Typo_Hoop.otf');
+} */
+
+
+@font-face {
+  font-family: 'Hiruko Regular';
+  src:  url('/resources/fonts/HirukoPro_Regular.otf')
+}
+
+@font-face {
+  font-family: 'Hiruko Bold';
+  src:  url('/resources/fonts/HirukoPro_Bold.otf')
+}
+
+@font-face {
+  font-family: 'Hiruko Black';
+  src:  url('/resources/fonts/HirukoPro_Black.otf')
+}
+
+@font-face {
+  font-family: 'Hiruko Light';
+  src:  url('/resources/fonts/HirukoPro_Light.otf')
+}
+
+@font-face {
+  font-family: 'Hiruko Outline';
+  src:  url('/resources/fonts/HirukoProOutline_Regular.otf')
+}
+
+/* @font-face {
+  font-family: 'Hiruko Pro';
+  src:  url('/resources/fonts/HirukoPro-Black.woff2') format('woff2'),
+        url('/resources/fonts/HirukoPro-Black.woff') format('woff'),
+        url('/resources/fonts/HirukoPro-Black.tff') format('truetype');
+} */
+
+
+/* Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  /* height: 10px; */
+  background-color: #0C101C;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #D9D9D9;
+}
+
+/* Mozilla (Firefox) */
+scrollbar {
+  width: 10px;
+  /* height: 10px; */
+  background-color: #0C101C;
+}
+
+scrollbar thumb {
+  border-radius: 10px;
+  background-color: #D9D9D9;
+}
+
+/* Microsoft (Edge, Internet Explorer) */
+scrollbar {
+  width: 10px;
+  /* height: 10px; */
+  background-color: #0C101C;
+}
+
+scrollbar thumb {
+  border-radius: 10px;
+  background-color: #D9D9D9;
+}
+
+/* Universal (todos los navegadores) */
+::-webkit-scrollbar,
+scrollbar,
+*::-ms-scrollbar {
+  width: 10px;
+  /* height: 10px; */
+  background-color: #0C101C;
+}
+
+::-webkit-scrollbar-thumb,
+scrollbar thumb,
+*::-ms-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #D9D9D9;
+}
+
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+
