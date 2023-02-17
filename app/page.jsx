@@ -3,7 +3,6 @@ import SectionFour from './components/sections/SectionFour'
 import SectionOne from './components/sections/sectionOne'
 import SectionThree from './components/sections/SectionThree'
 import SectionAnimation from './components/ui/animation/sectionsAnimation'
-import SectionFive from './components/sections/SectionFive'
 import SectionSix from './components/sections/SectionSix'
 import SectionSeven from './components/sections/SectionSeven'
 import SectionEight from './components/sections/SectionEight'
@@ -39,9 +38,9 @@ export default function Page () {
             {/* About problem Section, red section */}
             <SectionFour text={text.home[3]} />
           </SectionAnimation>
-          {/* <SectionAnimation> */}
-            {/* Squares section, red section */}
-            {/* <SectionFive text={text.home[4]} />
+          {/* <SectionAnimation>
+            Squares section, red section
+            <SectionFive text={text.home[4]} />
           </SectionAnimation> */}
           <SectionAnimation>
             {/* Big Image with fade section */}

@@ -78,7 +78,7 @@ export default function SelectList () {
             <path d='M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2V2Z' stroke='white' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
           </svg>
         </div>
-        <p className='fs-6 fw-normal text-secondary mx-2 font-semibold '>
+        <p className='fs-6 fw-normal text-secondary mx-2 font-main_regular '>
           {selectedCategory || 'Language'}
         </p>
         <motion.div
@@ -111,7 +111,7 @@ export default function SelectList () {
                   {languageOptions && languageOptions.map((category, index) => (
                     <motion.li
                       key={index}
-                      className='text-center text-base last:border-b-0  border-b-2 text-neutral-600 font-normal first:mt-0 mt-2 flex-row w-full content-center justify-center'
+                      className='text-center text-base last:border-b-0  border-b-2 text-neutral-600 font-main_light first:mt-0 mt-2 flex-row w-full content-center justify-center'
                       whileHover={{ color: 'rgb(24,31,49)', fontSize: '18px' }}
                       whileTap={{ color: 'rgb(24,31,49)', fontSize: '14px' }}
                       variants={itemVariants}

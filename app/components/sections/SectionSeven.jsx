@@ -16,7 +16,7 @@ export default function SectionSeven ({ text }) {
 
   useEffect(() => {
     const mediaQuery1024 = window.matchMedia('(min-width: 1024px)')
-    const mediaQuery768 = window.matchMedia('(min-width: 768px)')
+    const mediaQuery768 = window.matchMedia('(min-width: 768px)  and (max-width: 1023px)')
     const mediaQuerySmall = window.matchMedia('(min-width: 0px) and (max-width: 767px)')
 
     const handleMediaQueryChange1024 = (event) => {

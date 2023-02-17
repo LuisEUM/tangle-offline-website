@@ -143,7 +143,7 @@ export default function Carrousel ({ numbers, bullets, arrows, className, immage
               const isCurrent = index === page
               return (
                 <div
-                  className={`w-2 h-2 rounded-full bg-tangle-oxford-blue mx-2 my-0 cursor-pointer ${isCurrent && 'bg-tangle-cyan-process'}`}
+                  className={`w-2 h-2 rounded-full  mx-2 my-0 cursor-pointer ${isCurrent ? 'bg-tangle-cyan-process' : 'bg-tangle-oxford-blue'} `}
                   onClick={() => setPage(index)}
                   key={index}
                 />

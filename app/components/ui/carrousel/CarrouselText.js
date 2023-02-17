@@ -70,6 +70,7 @@ export default function CarrouselText ({ numbers, bullets, arrows, className, im
                 className='absolute h-full w-full object-cover z-30'
                 key={index}
                 src={image}
+                alt={image}
                 custom={direction}
                 variants={variants}
                 initial={!isCurrent ? 'enter' : 'center'}
@@ -116,7 +117,7 @@ export default function CarrouselText ({ numbers, bullets, arrows, className, im
               const isCurrent = index === page
               return (
                 <div
-                  className={`z-50 bullet w-2 h-2 rounded-full bg-slate-400 mx-2 my-0 cursor-pointer ${isCurrent ? 'bg-slate-200' : ''}`}
+                  className={`z-50 bullet w-2 h-2 rounded-full mx-2 my-0 cursor-pointer ${isCurrent ? 'bg-slate-200' : 'bg-slate-400'}`}
                   onClick={() => setPage(index)}
                   key={index}
                 />

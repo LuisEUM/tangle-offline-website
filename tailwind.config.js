@@ -21,8 +21,7 @@ module.exports = {
         main_bold: ['Hiruko Bold'],
         main_black: ['Hiruko Black'],
         main_light: ['Hiruko Light'],
-        main_outline: ['Hiruko Outline'],
-        
+        main_outline: ['Hiruko Outline']
       },
       backgroundImage: {
         'hero-desktop': "url('/backgrounds/girlWalkingPhone.png')",

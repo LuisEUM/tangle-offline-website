@@ -120,5 +120,15 @@
     "/activities/cards/card8.png",
     "/activities/cards/card9.png"
   ],
-  "logos": ["/logos/tangleOfflineLogoWhite.svg"]
+  "logos": [
+    "/logos/tangleOfflineLogoWhite.svg",
+    {
+      "merchants": [
+        "/logos/merchantLogo4.png",
+        "/logos/merchantLogo1.png",
+        "/logos/merchantLogo2.png",
+        "/logos/merchantLogo3.png"
+      ]
+    } 
+  ]
 }

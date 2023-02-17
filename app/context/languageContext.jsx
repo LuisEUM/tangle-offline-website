@@ -75,7 +75,7 @@ export const LanguageProvider = ({ children }) => {
                 layout
                 src={imageData.logos[0]}
                 alt=''
-                className='w-1/4 self-end mx-auto '
+                className='w-1/4 self-end mx-auto max-w-[250px]'
                 variants={child}
                 layoutId='navbarLogo'
                 onAnimationComplete={() => { setLoading(false) }}

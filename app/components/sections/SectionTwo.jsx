@@ -6,6 +6,7 @@ import VerticalLine from '../ui/progress/verticalLine'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import LettersAnimation from '../ui/animation/lettersAnimation'
+import imageData from '../../data/images.json'
 
 export default function SectionTwo ({ text }) {
   const [index, setIndex] = useState(0)
@@ -41,7 +42,7 @@ export default function SectionTwo ({ text }) {
     <>
       <div className='relative gap z-30 -mt-20'>
         <div className='px-2 md:px-14 lg:px-32 w-full max-w-full overflow-hidden flex gap-12'>
-          <div className='flex justify-center content-center align-middle relative h-[450px]'>
+          <div className='flex justify-center content-center align-middle relative h-[500px]'>
             <div className='flex justify-center content-center align-middle gap-0 md:gap-4 lg:gap-6'>
               <div className=' flex h-[63px] ml-0.5 bg-tangle-rich-black-FOGBRA-29 rounded-full  px-5 py-10 self-start mt-4' style={{ background: 'radial-gradient(50% 50% at 50% 50%, rgba(13, 17, 28, 1) 85%, rgba(13, 17, 28, 0.6) 100%)' }}>
                 <Ellipse icon='heart' className='h-16 p-12 my-5 max-w-[30px]' color='rgba(0, 173, 228, 0.8)' />
@@ -92,16 +93,16 @@ export default function SectionTwo ({ text }) {
                     </LettersAnimation>
                   </div>
                   <div className='grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-20 max-h-[64px] mt-11'>
-                    <Image src='/logos/merchantLogo4.png' alt='Logo The Amsterdam Dungeon' width={181} height={38} className='max-w-full max-h-full m-auto self-center' />
-                    <Image src='/logos/merchantLogo1.png' alt='Logo Merlin' width={57} height={45} className='max-w-full max-h-full m-auto self-center' />
-                    <Image src='/logos/merchantLogo2.png' alt='Logo Madame Tussauds' width={175} height={32} className='max-w-full max-h-full m-auto self-center' />
-                    <Image src='/logos/merchantLogo3.png' alt='Logo Paradiso' width={97} height={19} className='max-w-full max-h-full m-auto self-center' />
+                    <Image src={imageData.logos[1].merchants[0]} alt='Logo The Amsterdam Dungeon' width={181} height={38} className='max-w-full max-h-full m-auto self-center w-auto h-auto' />
+                    <Image src={imageData.logos[1].merchants[1]} alt='Logo Merlin' width={57} height={45} className='max-w-full max-h-full m-auto self-center w-auto h-auto' />
+                    <Image src={imageData.logos[1].merchants[2]} alt='Logo Madame Tussauds' width={175} height={32} className='max-w-full max-h-full m-auto self-center w-auto h-auto' />
+                    <Image src={imageData.logos[1].merchants[3]} alt='Logo Paradiso' width={97} height={19} className='max-w-full max-h-full m-auto self-center w-auto h-auto' />
                   </div>
                 </div>
               </div>
             </div>
             <div className='flex absolute -z-30 left-5 top-0'>
-              <VerticalLine width={42} heigth={450} color='rgba(0,173,228,0.8)' />
+              <VerticalLine width={42} heigth={500} color='rgba(0,173,228,0.8)' />
             </div>
           </div>
         </div>

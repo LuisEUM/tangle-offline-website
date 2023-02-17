@@ -92,6 +92,89 @@ scrollbar thumb,
 }
 
 
+.header-invite {
+  -webkit-text-fill-color: white
+}
+
+.invite-place {
+  background: linear-gradient(
+    107.26deg,
+    #ff41e1 -0.02%,
+    #5238f4 20.32%,
+    #4772ec 45.87%,
+    #34d3dd 63.6%,
+    #abff8d 81.33%,
+    #e7f356 100.11%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke-width: 0px; 
+}
+
+.invite-place-two {
+  background: linear-gradient(108.11deg, #34D3DD -0.02%, #5238F4 50.41%, #FF41E1 99.8%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* country dropdown list */
+
+.ReactFlagsSelect-module_selectBtn__19wW7 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  border: 0px solid transparent !important;
+}
+
+.ReactFlagsSelect-module_flagsSelect__2pfa2 {
+  width: 100%;
+}
+
+
+.ReactFlagsSelect-module_selectValue__152eS {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.ReactFlagsSelect-module_flagsSelect__2pfa2 {
+  padding: 0px !important;
+  border-radius: 8px;
+}
+
+.ReactFlagsSelect-module_selectOptionWithlabel__2GpmM {
+  color: white;
+}
+
+.ReactFlagsSelect-module_selectOptions__3LNBJ, .ReactFlagsSelect-module_filterBox__3m8EU, .ReactFlagsSelect-module_filterBox__3m8EU input {
+  background: #0C101C !important;
+  color: white !important;
+  border: 0px solid transparent !important;
+  margin-top: 0px !important;
+  max-height: 320px !important; 
+}
+
+.ReactFlagsSelect-module_selectOption__3pcgW, .ReactFlagsSelect-module_filterBox__3m8EU{
+  margin: 0px !important;
+  border: 1px solid #171e32 !important
+}
+
+.ReactFlagsSelect-module_selectOption__3pcgW:hover{
+  background-color: #171e32 !important;
+}
+
+.mobile-navbar .ReactFlagsSelect-module_fullWidthOptions__1XeR6{
+  top: -321px;
+  position: absolute;
+}
+
+
+
+
+
 @tailwind base;
 
 @tailwind components;
