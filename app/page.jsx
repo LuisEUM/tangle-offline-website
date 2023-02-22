@@ -23,9 +23,6 @@ export default function Page () {
     <>
       <div className='max-w-full'>
         <div className='grid grid-cols-1'>
-          <div className='z-50'>
-            {/* <NavBar /> */}
-          </div>
           <SectionAnimation>
             {/* Hero section and section with the words changing */}
             <SectionOne text={[text.home[0], text.home[1]]} />

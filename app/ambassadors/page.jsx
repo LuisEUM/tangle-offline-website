@@ -10,7 +10,6 @@ import { motion } from 'framer-motion'
 import LettersAnimation from '../components/ui/animation/lettersAnimation'
 import Image from 'next/image'
 import dataImages from '../data/images.json'
-import Waves from '../components/waves/Waves'
 
 const Merchant = () => {
   const { text } = useContext(LanguageContext)
@@ -114,8 +113,7 @@ const Merchant = () => {
 
   return (
     <div className='max-w-full grid grid-cols-1 mb-8'>
-      <div className='max-w-full py-6 align-middle justify-center content-center mt-20 min-h-fit'>
-      </div>
+      <div className='max-w-full py-6 align-middle justify-center content-center mt-20 min-h-fit' />
       <div className='px-2 w-full flex flex-col align-top justify-center content-center max-w-6xl m-auto'>
         <div className='h-full items-center flex flex-col lg:flex-row gap-y-12 gap-x-12 lg:grid-cols-2  align-center justify-center content-center rounded-2xl'>
           <div className='flex flex-col w-full lg:w-1/2 '>

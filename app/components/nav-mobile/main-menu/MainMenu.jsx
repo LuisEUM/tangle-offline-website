@@ -66,7 +66,6 @@ const MainMenu = ({ isOpen }) => {
                 </svg>
               </div>
             </motion.a>
-
             <motion.a
               variants={itemVariants}
               initial='closed'

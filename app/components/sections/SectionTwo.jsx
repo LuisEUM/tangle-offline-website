@@ -102,7 +102,7 @@ export default function SectionTwo ({ text }) {
               </div>
             </div>
             <div className='flex absolute -z-30 left-5 top-0'>
-              <VerticalLine width={42} heigth={500} color='rgba(0,173,228,0.8)' />
+              <VerticalLine width={42} heigth={300} color='rgba(0,173,228,0.8)' />
             </div>
           </div>
         </div>

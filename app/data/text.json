@@ -6,6 +6,8 @@
         "current_language": "English",
         "home":"Home",
         "home_pathname": "/",
+        "contact":"Contact",
+        "contact_pathname": "/contact",
         "merchant":"Become an Ambassador",
         "merchant_pathname":"/ambassadors",
         "languages":"Languages",
@@ -309,7 +311,7 @@
             "name": "Engels",
             "pathname": "en"
           },
-          {
+          { 
             "name": "Nederlands",
             "pathname": "nl"
           }  
