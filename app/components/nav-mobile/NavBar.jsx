@@ -33,12 +33,29 @@ const sidebar = {
   }
 }
 
-export default function NavBar () {
+export default function NavBar() {
   const { text } = useContext(LanguageContext)
   const [isOpen, toggleOpen] = useCycle(false, true)
   const containerRef = useRef(null)
   const { height } = useDimensions(containerRef)
   const [scrolled, setScrolled] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  //choose the screen size 
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+      setIsMobile(true)
+    } else {
+      setIsMobile(false)
+    }
+  }
+  useEffect(() => {
+    handleResize();
+  }, []);
+  // create an event listener
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+  })
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -55,6 +72,7 @@ export default function NavBar () {
     }
   }
 
+
   return (
     <div className='top-0 z-50 w-full opacity-100'>
       <div
@@ -63,14 +81,23 @@ export default function NavBar () {
           transitionProperty: 'all',
           transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
         }}
-        className={`flex h-20 absolute justify-between  md:fixed top-0 w-full ${scrolled ? 'bg-opacity-50 bg-tangle-oxford-blue' : ''}`}
+        className={`flex h-20 absolute ${isMobile ? 'justify-start' : 'justify-between'}  md:fixed top-0 w-full ${scrolled ? 'bg-opacity-50 bg-tangle-oxford-blue' : ''}`}
       >
         <div className=' ml-8 col-span-2 flex justify-center items-center'>
           <Link href='/' className='w-full self-center flex items-center'>
-            <motion.img layoutId='navbarLogo' src={imageData.logos[0]} alt='Tangle Logo' width='50px' height='50px' className='max-h-[50px] max-w-full' />
-            <p className='font-main_regular  text-3xl '>Tangle</p>
+            <motion.img layoutId='navbarLogo' src={imageData.logos[0]} alt='Tangle Logo' width='50px' height='50px' className='max-h-[50px] max-w-full ' />
+            <p className='font-main_regular  text-3xl hidden md:flex'>Tangle</p>
+          </Link>
+
+        </div>
+        <div className={`flex justify-center px-4 ${isMobile ? '' : 'hidden'}`}>
+          <Link href={text.home[12].button_url} className='self-center'>
+            <motion.button className='bg-[#0086D3] rounded-full py-3 px-5 h-12 self-center' >
+              {text.home[12].button}
+            </motion.button>
           </Link>
         </div>
+
         <div className='hidden md:flex'>
           <div className='flex justify-center px-4'>
             <Link href={text.home[12].button_url} className='self-center'>
@@ -79,7 +106,7 @@ export default function NavBar () {
               </motion.button>
             </Link>
           </div>
-          <div className='flex justify-center pr-8 pl-4'>
+          <div className='flex justify-center pr-8 pl-4 hidden md:flex'>
             <SelectList />
           </div>
         </div>

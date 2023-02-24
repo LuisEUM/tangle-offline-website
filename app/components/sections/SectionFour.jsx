@@ -2,7 +2,55 @@ import { Ellipse } from '../ui/svg/elipse'
 import VerticalLine from '../ui/progress/verticalLine'
 import WordsAnimation from '../ui/animation/wordsAnimation'
 
-export default function SectionFour ({ text }) {
+import { useContext, useEffect, useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { useForm } from 'react-hook-form'
+
+export default function SectionFour({ text }) {
+
+  const { handleSubmit } = useForm()
+  const [formData, setFormData] = useState({
+    email_id: ''
+  })
+  const onSubmit = (event) => {
+    // alert();
+    sendEmail(event)
+  }
+  const updateFormData = (event, property) => {
+    const target = event.target
+    event.preventDefault()
+
+    setFormData((prevState) => ({
+      ...prevState,
+      [property]: target.value
+    }))
+  }
+  const sendEmail = (event) => {
+    event.preventDefault()
+    // setFormDone(true)
+    console.log(formData)
+
+    emailjs
+      .send(
+        'service_g8pfoei',
+        'template_9qrqkza',
+        formData,
+        'howejlV7p3kue6F_D'
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
+
+    setFormData({
+      email_id: ''
+    })
+  }
+
   return (
     <div className='px-2 md:px-14 lg:px-32 w-full'>
       <div className='flex flex-col justify-center content-center  align-middle relative h-[500px]'>
@@ -10,11 +58,13 @@ export default function SectionFour ({ text }) {
           <div className='max-w-full pt-2 mt-10'>
             <WordsAnimation key={text.header} className='text-base sm:text-lg md:text-xl lg:text-2xl font-main_bold' text={text.newsletterHeader} tag='h4' />
           </div>
-          <form className='flex align-middle self-center content-center justify-center lg:w-1/2 mt-5'>
+          <form className='flex align-middle self-center content-center justify-center lg:w-1/2 mt-5' onSubmit={(e) => handleSubmit(onSubmit(e))}>
             <input
               className=' flex w-full rounded-full border border-solid border-zinc-400  rounded-r-none flex-row items-center  py-3 px-6  email-input text-xl text-gray-700'
               placeholder='Email Address'
               type='email'
+              value={formData.emailAddress}
+              onChange={(e) => updateFormData(e, 'email_id')}
               id='email'
               name='email'
             />

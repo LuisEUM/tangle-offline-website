@@ -152,7 +152,7 @@ const Merchant = () => {
                   value={formData.phoneNumber}
                   onChange={(e) => updateFormData(e, 'phoneNumber')}
                   className='form-input w-full rounded-lg bg-gray-200 text-black border-none h-45 placeholder:text-slate-600 px-3 py-1'
-                  required
+                //required
                 />
               </div>
               <div className=''>
@@ -166,7 +166,8 @@ const Merchant = () => {
               </div>
               {!formDone
                 ? (
-                  <motion.button className='bg-tangle-cyan-process rounded-lg w-full py-1'>
+                  <motion.button className='bg-[#0086D3] rounded-full py-3 px-5 h-12'>
+                    {/* <motion.button className='bg-tangle-cyan-process rounded-lg w-full py-1'> */}
                     {content.merchant[0].form.body[4].text}
                   </motion.button>)
                 : ('')}

@@ -17,7 +17,7 @@ import { useContext } from 'react'
 import { LanguageContext } from './context/languageContext'
 import SectionFourteen from './components/sections/SectionFourteen'
 
-export default function Page () {
+export default function Page() {
   const { text } = useContext(LanguageContext)
   return (
     <>
