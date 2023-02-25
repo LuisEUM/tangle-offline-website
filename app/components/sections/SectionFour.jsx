@@ -5,6 +5,8 @@ import WordsAnimation from '../ui/animation/wordsAnimation'
 import { useContext, useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { useForm } from 'react-hook-form'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function SectionFour({ text }) {
 
@@ -29,23 +31,24 @@ export default function SectionFour({ text }) {
     event.preventDefault()
     // setFormDone(true)
     console.log(formData)
-
-    emailjs
-      .send(
-        'service_g8pfoei',
-        'template_9qrqkza',
-        formData,
-        'howejlV7p3kue6F_D'
-      )
-      .then(
-        (result) => {
-          console.log(result.text)
-        },
-        (error) => {
-          console.log(error.text)
-        }
-      )
-
+    if (formData.email_id) {
+      emailjs
+        .send(
+          'service_g8pfoei',
+          'template_9qrqkza',
+          formData,
+          'howejlV7p3kue6F_D'
+        )
+        .then(
+          (result) => {
+            toast(text.email_subscribe);
+            console.log(result.text)
+          },
+          (error) => {
+            console.log(error.text)
+          }
+        )
+    }
     setFormData({
       email_id: ''
     })
@@ -68,12 +71,14 @@ export default function SectionFour({ text }) {
               id='email'
               name='email'
             />
+
             <button
               className='rounded-full flex row items-center justify-center border-none font-bold py-3 px-8  md:px-20 rounded-l-none bg-tangle-green-blue-crayola hover:bg-tangle-cyan-process cursor-pointer btn text-xl text-white'
               type='submit'
             >
               {text.button || 'Send'}
             </button>
+            <ToastContainer />
           </form>
         </section>
         <div className='flex justify-center content-center  align-middle gap-0 md:gap-4 lg:gap-6'>

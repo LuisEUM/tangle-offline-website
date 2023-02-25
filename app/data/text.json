@@ -64,7 +64,8 @@
         "header": "Make memories worth living",
         "description": "Do you feel like bungee jumping, flying an air balloon, hang out with strangers or reconnect with your old friends? Tangle will make all of this possible. Stop posting stories, make memories instead. ",
         "newsletterHeader": "Get early access to our Beta",
-        "button": "Submit"
+        "button": "Submit",
+        "email_subscribe": "Thank you, we will update you soon!"
       },
       {
         "section": 5,
@@ -440,7 +441,8 @@
         "header": "Probleem",
         "description": "Vind mensen om mee om te gaan, heb sociale interacties, denk creatief, en bouw sterke communicatieve vaardigheden op. Doe dit alles, en meer, op Tangle, door deel te nemen aan evenementen en activiteiten in je stad.",
         "newsletterHeader": "Krijg vroegtijdig toegang tot onze Beta",
-        "button": "Subtmit!"
+        "button": "Subtmit!",
+        "email_subscribe": "Bedankt, we zullen je snel updaten!"
       },
       {
         "section": 5,
