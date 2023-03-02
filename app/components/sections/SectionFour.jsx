@@ -37,7 +37,7 @@ export default function SectionFour({ text }) {
       const response = await axios.post(
         'https://api.sendinblue.com/v3/contacts',
         { listIds: [2], email: formData.email_id },
-        { headers: { 'Content-Type': 'application/json', 'api-key': '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' } }
+        { headers: { 'api-key': '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', 'Content-Type': 'application/json' } }
       )
       console.log(response.data)
       if (response.data.id) {
