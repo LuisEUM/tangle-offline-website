@@ -29,22 +29,28 @@ export default function SectionFour({ text }) {
       [property]: target.value
     }))
   }
-  const sendEmail = async (event) => {
+  const sendEmail = (event) => {
     event.preventDefault()
     // setFormDone(true)
     console.log(formData)
     if (formData.email_id) {
-      const response = await axios.post(
+      axios.post(
         'https://api.sendinblue.com/v3/contacts',
         { listIds: [2], email: formData.email_id },
-        { headers: { 'api-key': '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', 'Content-Type': 'application/json' } }
-      )
-      console.log(response.data)
-      if (response.data.id) {
+        { headers: { 'api-key': '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', 'Content-Type': 'application/json' } }
+      ).then((response) => {
+        console.log('response', response.data)
         toast(text.email_subscribe);
-      } else {
+      })
+        .catch((error) => {
+          console.log('error', error.response)
+        })
+      // console.log(response.data)
+      // if (response.data.id) {
+      //   toast(text.email_subscribe);
+      // } else {
 
-      }
+      // }
     }
     // if (formData.email_id) {
     //   emailjs
