@@ -8,6 +8,8 @@ import { useForm } from 'react-hook-form'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import axios, { AxiosError, AxiosInstance, AxiosRequestConfig } from "axios";
+
 export default function SectionFour({ text }) {
 
   const { handleSubmit } = useForm()
@@ -27,28 +29,41 @@ export default function SectionFour({ text }) {
       [property]: target.value
     }))
   }
-  const sendEmail = (event) => {
+  const sendEmail = async (event) => {
     event.preventDefault()
     // setFormDone(true)
     console.log(formData)
     if (formData.email_id) {
-      emailjs
-        .send(
-          'service_g8pfoei',
-          'template_9qrqkza',
-          formData,
-          'howejlV7p3kue6F_D'
-        )
-        .then(
-          (result) => {
-            toast(text.email_subscribe);
-            console.log(result.text)
-          },
-          (error) => {
-            console.log(error.text)
-          }
-        )
+      const response = await axios.post(
+        'https://api.sendinblue.com/v3/contacts',
+        { listIds: [2], email: formData.email_id },
+        { headers: { 'Content-Type': 'application/json', 'api-key': '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' } }
+      )
+      console.log(response.data)
+      if (response.data.id) {
+        toast(text.email_subscribe);
+      } else {
+
+      }
     }
+    // if (formData.email_id) {
+    //   emailjs
+    //     .send(
+    //       'service_g8pfoei',
+    //       'template_9qrqkza',
+    //       formData,
+    //       'howejlV7p3kue6F_D'
+    //     )
+    //     .then(
+    //       (result) => {
+    //         toast(text.email_subscribe);
+    //         console.log(result.text)
+    //       },
+    //       (error) => {
+    //         console.log(error.text)
+    //       }
+    //     )
+    // }
     setFormData({
       email_id: ''
     })
