@@ -1,20 +1,20 @@
-{    
+{
   "parallax": [
-  "/parallax/parallax1.png",
-  "/parallax/parallax2.png"
+    "/parallax/parallax1.webp",
+    "/parallax/parallax2.png"
   ],
   "merchants": [
-  "/backgrounds/partneringWithOfflineBusinesses.png",
-  "/backgrounds/becomeAMerchant.png"
+    "/backgrounds/partneringWithOfflineBusinesses.png",
+    "/backgrounds/becomeAMerchant.png"
   ],
   "carrousel": [
-    "/collagePeople/pexels-caleb-oquendo-11140378.png",
+    "/collagePeople/pexels-caleb-oquendo-11140378.webp",
     "/collagePeople/pexels-sangeet-rao-5775283.png",
-    "/collagePeople/pexels-alessandro-kelvin-2376268.png",
-    "/collagePeople/top-view-from-colorful-stylish-happy-young-company-friends-lying-grass-park-man-women-having-fun-together.png",
-    "/collagePeople/pexels-mathias-pr-reding-4386145.png",
+    "/collagePeople/pexels-alessandro-kelvin-2376268.webp",
+    "/collagePeople/top-view-from-colorful-stylish-happy-young-company-friends-lying-grass-park-man-women-having-fun-together.webp",
+    "/collagePeople/pexels-mathias-pr-reding-4386145.webp",
     "/collagePeople/pexels-matheus-bertelli-8533826.png",
-    "/collagePeople/pexels-helena-lopes-745045.png"
+    "/collagePeople/pexels-helena-lopes-745045.webp"
   ],
   "waves": [
     "/circlesPeople/face1.png",
@@ -104,9 +104,9 @@
   ],
   "activities": [
     "/activities/restaurant.png",
-    "/activities/museum.png",
+    "/activities/museum.webp",
     "/activities/balloons.png",
-    "/activities/castle.png",
+    "/activities/castle.webp",
     "/activities/stadium.png"
   ],
   "cards": [
@@ -129,6 +129,6 @@
         "/logos/merchantLogo2.png",
         "/logos/merchantLogo3.png"
       ]
-    } 
+    }
   ]
 }
